@@ -71,7 +71,10 @@ class WelcomeController extends Controller
             return response()->json($data);
         }
 
-        return view('welcome', compact('data', 'banners'));
+        return view('frontend.home', compact('data', 'banners'));
+
+        
+
     }
 
     public function wallet()
@@ -145,12 +148,12 @@ class WelcomeController extends Controller
 
     public function twoD()
     {
-        return view('frontend.twod');
+        return view('frontend.twoD');
     }
 
     public function twoDPlay()
     {
-        return view('frontend.twodplay');
+        return view('frontend.twoDplay');
     }
 
     public function twoDQuick()
@@ -239,15 +242,13 @@ class WelcomeController extends Controller
     }
 
 
-    public function twodLive()
+    public function twodHistory()
     {
-        // return view('two_d.api_test');
-        return view('frontend.twod-live');
+        return view('frontend.twod-history');
     }
 
     public function twodCalendar()
     {
-        // return view('two_d.api_test');
         return view('frontend.twod-calendar');
     }
 
@@ -258,7 +259,6 @@ class WelcomeController extends Controller
 
     public function threedResult()
     {
-        // return view('two_d.api_test');
         return view('frontend.threed-result');
     }
 
@@ -385,12 +385,12 @@ class WelcomeController extends Controller
 
     public function userLogin()
     {
-        return view('frontend.user-login');
+        return view('frontend.login');
     }
 
     public function userRegister()
     {
-        return view('frontend.user-register');
+        return view('frontend.register');
     }
 
     public function winnerList()

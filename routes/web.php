@@ -219,3 +219,12 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
     */
   
 });
+
+Route::get('/login', [App\Http\Controllers\User\WelcomeController::class, 'userLogin'])->name('login');
+Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
+
+Route::get('/2d', [App\Http\Controllers\User\WelcomeController::class, 'twoD'])->name('twoD');
+Route::get('/2dPlay', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlay'])->name('twodPlay');
+Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
+Route::get('/service', [App\Http\Controllers\User\WelcomeController::class, 'servicePage'])->name('service');
+Route::get('/dashboard', [App\Http\Controllers\User\WelcomeController::class, 'dashboard'])->name('dashboard');
