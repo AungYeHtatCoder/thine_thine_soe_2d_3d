@@ -2,7 +2,7 @@
     <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 py-3 footers">
       <div class="d-flex justify-content-around">
         <div class="text-center">
-          <a href="index.html" class="text-decoration-none active">
+          <a href="{{ url('/') }}" class="text-decoration-none active">
             <i class="fas fa-house-chimney"></i>
             <span class="d-block">ပင်မ</span>
           </a>

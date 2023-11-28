@@ -744,3 +744,23 @@ hr {
 .banks img {
   border-radius: 5px;
 }
+
+.blur-image {
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+.blur-image.active {
+  opacity: 1;
+}
+
+.two-history-results {
+  background: #c50408;
+  border-radius: 50%;
+  border: 2px solid #ebc03c;
+  color: #fff !important;
+  width: 150px;
+  height: 150px;
+  box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19);
+}

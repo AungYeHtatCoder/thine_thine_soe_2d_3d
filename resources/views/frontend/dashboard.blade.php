@@ -12,45 +12,45 @@
           <p class="ps-3">ကိုယ်ရေးအချက်လက်(Profile)</p>
           </div>
         </a>
-        <a href="./2d-winner-history.html" class="text-decoration-none">
+        <a href="{{ url('/twoDWinnerHistory') }}" class="text-decoration-none">
           <div class="d-flex list-card">
           <i class="fa-solid fa-language fs-3 ms-2"></i>
           <p class="ps-3">ကံထူးရှင်များ</p>
           </div>
         </a>
-      <a href="#" class="text-decoration-none">
+      <a href="{{ url('/twoDPrize') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
           <i class="fas fa-calendar-days fs-3 ms-2"></i>
           <p class="ps-3">ထွက်ဂဏန်းများ</p>
         </div>
       </a>
-      <a href="#" class="text-decoration-none">
+      <a href="{{ url('/twod-live') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
-          <i class="fas fa-list-ul fs-3 ms-2"></i>
-          <p class="ps-3">မနက်ပိုင်းထီထိုးမှတ်တမ်း</p>
+          <i class="fas fa-tower-broadcast fs-3 ms-2" aria-hidden="true"></i>
+          <p class="ps-3">2D Live</p>
         </div>
       </a>
       <a href="#" class="text-decoration-none">
 
         <div class="d-flex list-card">
-        <i class="fas fa-list-ul fs-3 ms-2"></i>
-        <p class="ps-3">ညနေပိုင်းထီထိုးမှတ်တမ်း</p>
-        </div>
-      </a>
-      <a href="#" class="text-decoration-none">
-
-        <div class="d-flex list-card">
-        <i class="fas fa-calendar-days fs-3 ms-2"></i>
-        <p class="ps-3">မနက်ပိုင်းထွက်ဂဏန်းများ</p>
+          <i class="fas fa-calendar fs-3 ms-2" aria-hidden="true"></i>
+          <p class="ps-3">2D Calendar</p>
         </div>
       </a>
       <a href="#" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-calendar-days fs-3 ms-2"></i>
-        <p class="ps-3">ညနေပိုင်းထွက်ဂဏန်းများ</p>
+        <p class="ps-3">2D Holiday</p>
+        </div>
+      </a>
+      <a href="#" class="text-decoration-none">
+
+        <div class="d-flex list-card">
+          <i class="fas fa-tower-broadcast fs-3 ms-2" aria-hidden="true"></i>
+        <p class="ps-3">3D Live</p>
         </div>
       </a>
       <a href="#" class="text-decoration-none">
@@ -60,28 +60,28 @@
         <p class="ps-3">အမှတ် 0 (ကျပ်)</p>
         </div>
       </a>
-      <a href="my-bank.html" class="text-decoration-none">
+      <a href="{{ url('/myBank') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-wallet fs-3 ms-2"></i>
         <p class="ps-3">ဘဏ်အကောင့်များ</p>
         </div>
       </a>
-      <a href="change-new-password-form.html" class="text-decoration-none">
+      <a href="{{ url('/changePassword') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-lock fs-3 ms-2"></i>
         <p class="ps-3">လျှို့ဝှက်နံပါတ်ပြောင်းရန်</p>
         </div>
       </a>
-      <a href="inviteCode.html" class="text-decoration-none">
+      <a href="{{ url('/inviteCode') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-user-group fs-3 ms-2"></i>
         <p class="ps-3">မိတ်ဆက်ကုဒ်</p>
         </div>
       </a>
-      <a href="comment.html" class="text-decoration-none">
+      <a href="{{ url('/comment') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-comment-dots fs-3 ms-2"></i>

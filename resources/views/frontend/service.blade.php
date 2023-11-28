@@ -14,7 +14,7 @@
     <!-- first block -->
     <div class="first-block d-none mt-3 pb-5">
       <p>လူကြီးမင်းသည် ကိုယ်စားလှယ်တစ်စုံတစ်ဦး၏မိတ်ဆက်ကုဒ်ကို ဖြည့်ထားခြင်းမရှိသေးပါ။</p>
-      <a href="" class="btn btn-success my-2">မိတ်ဆက်ကုဒ်ဖြည့်ပါ</a>
+      <a href="#" class="btn my-2 top-up-btn w-50" >မိတ်ဆက်ကုဒ်ဖြည့်ပါ</a>
     </div>
     <!-- first block -->
 

@@ -84,7 +84,7 @@ class WelcomeController extends Controller
 
     public function topUp()
     {
-        return view('frontend.topUp');
+        return view('frontend.top-up');
     }
 
     public function topUpSubmit()
@@ -95,7 +95,7 @@ class WelcomeController extends Controller
 
     public function withDraw()
     {
-        return view('frontend.withDraw');
+        return view('frontend.withdraw');
     }
 
     public function promo()
@@ -123,9 +123,9 @@ class WelcomeController extends Controller
         return view('frontend.winnerDigit');
     }
 
-    public function winnerPage()
+    public function twoDWinnerHistory()
     {
-        return view('frontend.winner_page');
+        return view('frontend.twoD-winner-history');
     }
 
     public function myDigit()
@@ -137,12 +137,12 @@ class WelcomeController extends Controller
 
     public function myBank()
     {
-        return view('frontend.my-bank');
+        return view('frontend.myBank');
     }
 
     public function changePassword()
     {
-        return view('frontend.change-password');
+        return view('frontend.new-password-change');
     }
 
 
@@ -216,9 +216,9 @@ class WelcomeController extends Controller
         return view('frontend.winning-record');
     }
 
-    public function moriningPrize()
+    public function twoDPrize()
     {
-        return view('frontend.morning-session-prize-no-history');
+        return view('frontend.twoD-prize-history');
     }
 
     public function moriningRecord()
@@ -375,7 +375,7 @@ class WelcomeController extends Controller
 
     public function userProfile()
     {
-        return view('frontend.user_profile');
+        return view('frontend.user-profile');
     }
 
     public function userFillMoney()
@@ -416,5 +416,10 @@ class WelcomeController extends Controller
     public function userRequestMoney()
     {
         return view('request_money');
+    }
+
+    public function twodLive()
+    {
+        return view('frontend.twoD-live');
     }
 }
