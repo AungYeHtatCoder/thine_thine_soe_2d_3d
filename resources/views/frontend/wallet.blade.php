@@ -24,7 +24,7 @@
       <div class="row pt-2 text-center">
         <div class="col">
           <a
-            href="top-up.html"
+            href="{{ url('/topUp') }}"
             style="color: black; text-decoration: none"
           >
             <i class="fa-solid fa-money-bill-1"></i>
@@ -33,7 +33,7 @@
         </div>
         <div class="col">
           <a
-            href="withdraw.html"
+            href="{{ url('/withDraw') }}"
             style="color: black; text-decoration: none"
           >
             <i class="fa-solid fa-money-bill-transfer"></i>
