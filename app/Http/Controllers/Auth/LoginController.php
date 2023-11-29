@@ -51,7 +51,7 @@ class LoginController extends Controller
 protected function sendFailedLoginResponse(Request $request)
 {
     throw ValidationException::withMessages([
-        'email' => ['Your email is not correct and your password did not match.'],
+        'phone' => ['Your phone is not correct and your password did not match.'],
         'password' => ['Your email is not correct and your password did not match.'],
     ]);
 }

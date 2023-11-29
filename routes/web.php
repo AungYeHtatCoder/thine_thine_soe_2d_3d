@@ -220,7 +220,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   
 });
 
-Route::get('/login', [App\Http\Controllers\User\WelcomeController::class, 'userLogin'])->name('login');
+// Route::get('/login', [App\Http\Controllers\User\WelcomeController::class, 'userLogin'])->name('login');
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
 
 Route::get('/2d', [App\Http\Controllers\User\WelcomeController::class, 'twoD'])->name('twoD');
@@ -241,5 +241,3 @@ Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBa
 
 Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
-
-

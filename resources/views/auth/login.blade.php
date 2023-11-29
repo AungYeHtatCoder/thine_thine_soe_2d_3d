@@ -1,56 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-     <!-- custom css -->
-    <link rel="stylesheet" href="{{ asset('user_app/assets/css/style.css') }}">
-    <!-- material icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/material-icons@1.13.11/iconfont/material-icons.min.css"
-    />
-    <!-- fontawesoome icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Diamond 2D | 3D</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 mx-auto" style="position: relative;">
-          <div class="card login-card">
-            <h5 class="mx-auto">Diamond 2D | 3D</h5>
-            <!-- <h5 class="mx-auto">Login</h5> -->
-            <form action="{{route('login')}}" method="post">
-              @csrf
-             <div class="form-group mt-3">
-              <label for="" class="form-label">Email</label>
-              <input type="email" name="email" name="email" placeholder="youremail@gmail.com" class="form-control">
-            </div>
-            <div class="form-group mt-2">
-              <label for="" class="form-label">Password</label>
-              <input type="password" name="password" placeholder="password" class="form-control">
-            </div>
-            <p>Don't you have account? <a href="{{ route('register')}}" style="text-decoration: none;color: #1aacac;">Register</a> Here!</p>
-            <div class="mx-auto">              
-              {{-- <a href="index.html" class="btn login-btn">Login</a> --}}
-              <button type="submit" class="btn login-btn">Login</button>
-            </div>
-            </form>
-          </div>
-        </div>
+@extends('frontend.layouts.app')
+@section('content')
+<div class="row">
+    <div
+      class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers"
+      style="height:100vh;"
+    >
+    <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-4" alt="" />
+    <form action="{{ route('login') }}" method="POST">
+        @csrf
+      <div class="mb-4">
+      <div class="input-group">
+      <input
+        type="text"
+        name="login"
+        class="form-control w-75 py-2 my-4 mx-auto"
+        placeholder="ဖုန်းနံပါတ် (သို့) အီးမေးလ်"
+      />
       </div>
+                    @error('login')
+                    <span class="text-danger d-block ps-3 pt-2">{{ "The email or phone field is required." }}</span>
+                    @enderror
+      </div>
+      <div class="mb-4">
+      <div class="input-group">
+     <span class="input-group-text bg-white border border-0"><i class="fas fa-key text-purple"></i></span>
+                        <input type="password" name="password" id="password" class="form-control border border-0" placeholder="လျှို့ဝှက်နံပါတ်ထည့်ပါ">
+                        <span class="input-group-text bg-white border border-0"><i class="fas fa-eye text-purple" id="eye" onclick="PwdView()" style="cursor: pointer;"></i></span>
+      </div>
+                    @error('password')
+                    <span class="text-danger d-block ps-3 pt-2">{{ $message }}</span>
+                    @enderror
+      </div>
+
+      <div class="d-flex justify-content-end align-items-center me-5">
+        <small
+          ><a href="#" style="text-decoration: none; color: #f5bd02;" class="me-3"
+            >လျှို့ဝှက်နံပါတ် မေ့နေပါသလား။</a
+          ></small
+        >
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center">
+        <button
+          type="submit"
+          name="signin_btn"
+          class="btns w-75 mt-4"
+        >
+          ၀င်မည်
+        </button>
+      </div>
+
+      <hr />
+
+      <div class="d-flex justify-content-center align-items-center">
+        <a
+          href="{{ url('/register') }}"
+          type="button"
+          name="signin_btn"
+          class="btn btn-outline-success w-75 mx-auto mt-4 py-2"
+          style="text-decoration: none; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2),
+          3px 5px 10px 0 rgba(0, 0, 0, 0.19);"
+          >အကောင့် အသစ်ဖွင့်မည်</a
+        >
+      </div>
+    </form>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-  </body>
-</html>
+</div>
+{{-- @include('frontend.layouts.footer') --}}
+@endsection
+@section('script')
+<script>
+    function PwdView() {
+        var x = document.getElementById("password");
+        var y = document.getElementById("eye");
+
+        if (x.type === "password") {
+            x.type = "text";
+            y.classList.remove('fa-eye');
+            y.classList.add('fa-eye-slash');
+        } else {
+            x.type = "password";
+            y.classList.remove('fa-eye-slash');
+            y.classList.add('fa-eye');
+        }
+    }
+</script>
+@endsection
