@@ -225,6 +225,11 @@ class WelcomeController extends Controller
         return view('frontend.twoDplay');
     }
 
+    public function twoDPlayConfirm()
+    {
+        return view('frontend.twoDplay-confirm');
+    }
+
     public function twoDQuick()
     {
         return view('frontend.twod-quick');
