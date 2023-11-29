@@ -73,7 +73,7 @@ class WelcomeController extends Controller
             return response()->json($data);
         }
 
-        return view('frontend.home', compact('data', 'banners'));
+        return view('welcome', compact('data', 'banners'));
 
 
 
