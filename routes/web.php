@@ -32,6 +32,13 @@ Route::get('/user-profile', [App\Http\Controllers\HomeController::class, 'profil
 
 Route::get('/', [App\Http\Controllers\User\WelcomeController::class, 'index'])->name('welcome');
 
+//auth routes
+Route::get('/login', [App\Http\Controllers\User\WelcomeController::class, 'userLogin'])->name('login');
+Route::post('/login', [App\Http\Controllers\User\WelcomeController::class, 'login'])->name('login');
+Route::post('/register', [App\Http\Controllers\User\WelcomeController::class, 'register'])->name('register');
+Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
+//auth routes
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth']], function () {
 
   // Permissions
@@ -217,7 +224,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
     Write here Client Side Auth Routes
     **********
     */
-  
+
 });
 
 // Route::get('/login', [App\Http\Controllers\User\WelcomeController::class, 'userLogin'])->name('login');

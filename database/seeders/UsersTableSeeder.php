@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 1,
                 'name'           => 'Admin | NanDaAung',
-                'email'          => 'delight@gmail.com',
+                'phone'          => '0912345678',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2019-09-10 14:00:26',
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 2,
                 'name'           => 'Aung Myo Kyaw',
-                'email'          => 'user@gmail.com',
+                'phone'          => '0922345678',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2023-08-14 14:00:26',
@@ -35,17 +35,17 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 3,
                 'name'           => 'Customer',
-                'email'          => 'customer@gmail.com',
+                'phone'          => '0932345678',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2023-08-14 14:00:26',
                 'updated_at'     => '2023-08-14 14:00:26',
             ],
-            
+
             [
                 'id'             => 4,
                 'name'           => 'Super Admin',
-                'email'          => 'superadmin@gmail.com',
+                'phone'          => '0942345678',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2023-08-14 14:00:26',
@@ -54,7 +54,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 5,
                 'name'           => 'Super User',
-                'email'          => 'superuser@gmail.com',
+                'phone'          => '0952345678',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2023-08-14 14:00:26',
