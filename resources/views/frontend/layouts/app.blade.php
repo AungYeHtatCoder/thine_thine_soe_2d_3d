@@ -23,6 +23,8 @@
       href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css"
     />
 
+    @yield('style')
+
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
   </head>
