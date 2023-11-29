@@ -56,7 +56,7 @@ class HomeController extends Controller
         $playedMorningTwoDigits = User::getUserMorningTwoDigits($userId);
         $playedEarlyEveningTwoDigits = User::getUserEarlyEveningTwoDigits($userId);
         $playedEveningTwoDigits = User::getUserEveningTwoDigits($userId);
-        return view('frontend.user_profile', [
+        return view('frontend.user-profile', [
             'earlymorningDigits' => $playedearlyMorningTwoDigits,
             'morningDigits' => $playedMorningTwoDigits,
             'earlyeveningDigit' => $playedEarlyEveningTwoDigits,

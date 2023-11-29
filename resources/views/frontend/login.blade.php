@@ -6,19 +6,20 @@
       style="height:100vh;"
     >
     <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-4" alt="" />
-    <form action="">
+    <form class="mt-5" action="{{ route('login') }}" method="POST">
+        @csrf
       <div class="mb-4">
       <div class="input-group">
       <input
         type="text"
         name="login"
-        class="form-control w-75 py-2 my-4 mx-auto"
+        class="form-control w-75 py-2 mx-auto"
         placeholder="ဖုန်းနံပါတ် (သို့) အီးမေးလ်"
       />
       </div>
-                    @error('login')
-                    <span class="text-danger d-block ps-3 pt-2">{{ "The email or phone field is required." }}</span>
-                    @enderror
+        @error('login')
+            <span class="d-block ps-3" style="color:rgb(255, 255, 255); text-shadow: 1px 2px 3px #ff0000;">{{ "*The email or phone field is required." }}</span>
+        @enderror
       </div>
       <div class="mb-4">
       <div class="input-group">
@@ -27,7 +28,7 @@
                         <span class="input-group-text bg-white border border-0"><i class="fas fa-eye text-purple" id="eye" onclick="PwdView()" style="cursor: pointer;"></i></span>
       </div>
                     @error('password')
-                    <span class="text-danger d-block ps-3 pt-2">{{ $message }}</span>
+                    <span class="d-block ps-3 pt-2" style="color:rgb(255, 255, 255); text-shadow: 1px 2px 3px #ff0000;">*{{ $message }}</span>
                     @enderror
       </div>
 
@@ -41,7 +42,7 @@
 
       <div class="d-flex justify-content-center align-items-center">
         <button
-          type="button"
+          type="submit"
           name="signin_btn"
           class="btns w-75 mt-4"
         >

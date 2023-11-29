@@ -95,10 +95,13 @@
         <p class="ps-3">ဗားရှင်း - 1.0.0</p>
         </div>
       </a>
-      <div class="d-flex list-card">
+      <a href="" class="d-flex list-card text-decoration-none" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
         <i class="fa-solid fa-right-from-bracket fs-3 ms-2"></i>
         <p class="ps-3">ထွက်မည်</p>
-      </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
+      </a>
       </div>
 
     </div>
@@ -112,14 +115,14 @@
   $('#first-block').click(function () {
     $('#first-block').addClass('click');
     $('#second-block').removeClass('click1');
-    
+
     $('.first-block').removeClass('d-none');
     $('.second-block').addClass('d-none');
   });
   $('#second-block').click(function () {
     $('#second-block').addClass('click1');
     $('#first-block').removeClass('click');
-   
+
 
     $('.first-block').addClass('d-none');
     $('.second-block').removeClass('d-none');
