@@ -168,7 +168,7 @@ class WelcomeController extends Controller
 
     public function threedBet()
     {
-        return view('frontend.threed-bet');
+        return view('frontend.threeDBet');
     }
 
     public function threedNum()
