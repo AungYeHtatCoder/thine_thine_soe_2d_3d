@@ -162,7 +162,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-btn">
-          <a href="./2d-play.html" class="text-decoration-none btn">09:30 AM</a>
+          <a href="{{ url('/2dPlay') }}" class="text-decoration-none btn">09:30 AM</a>
         </div>
         <div class="modal-btn mt-2">
           <a href="#" class="text-decoration-none btn">12:01 PM</a>

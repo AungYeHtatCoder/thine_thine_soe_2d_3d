@@ -91,7 +91,7 @@
             </div>
             <div>
               <div class="buttons">
-                <a href="./3d.html" class="text-decoration-none">3D</a>
+                <a href="{{ url('/3d') }}" class="text-decoration-none">3D</a>
               </div>
               
             </div>

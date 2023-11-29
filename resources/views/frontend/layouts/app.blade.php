@@ -31,7 +31,7 @@
        <!-- nav section -->
         <div class="row">
             <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 navs fixed-top">
-            <div class="px-1 py-2" style="height: 60px;">
+            <div class="px-1 py-2" style="height: 70px;">
                 
 
                 @include('frontend.layouts.navbar')

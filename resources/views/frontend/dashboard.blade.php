@@ -5,7 +5,7 @@
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-4 headers"
       style="padding-bottom:100px"
     >
-      <div class="dashboard-lists pt-2 ps-2 mt-2">
+      <div class="dashboard-lists pt-2 ps-2 mt-3">
         <a href="#" class="text-decoration-none">
           <div class="d-flex list-card">
           <i class="fa-regular fa-circle-user fs-3 ms-2"></i>
