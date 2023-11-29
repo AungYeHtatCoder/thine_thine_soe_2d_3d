@@ -232,7 +232,7 @@ class WelcomeController extends Controller
 
     public function twoDQuick()
     {
-        return view('frontend.twod-quick');
+        return view('frontend.twoD-quick-play');
     }
 
     public function threeD()
