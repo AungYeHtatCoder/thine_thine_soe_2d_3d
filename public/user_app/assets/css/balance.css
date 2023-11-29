@@ -106,7 +106,7 @@ img {
 }
 
 .text-center.digit:hover {
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
 }
 
 .text-center.digit.disabled {
@@ -153,9 +153,11 @@ img {
   background-color: #130a2b;
 }
 .digit.selected {
-  background-color: #007bff;
-  color: white;
-  background-image: linear-gradient(310deg, #cb0c9f 0%, darkorchid 100%);
+  background-color: #f5bd02;
+  /* border: 2px solid #c50408; */
+
+  color: #ffffff;
+  /* background-image: linear-gradient(310deg, #cb0c9f 0%, darkorchid 100%); */
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -252,9 +254,9 @@ img {
 }
 /* form */
 .dream-form {
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
 }
 .btn-delete {
   background-color: #e74c3c;
