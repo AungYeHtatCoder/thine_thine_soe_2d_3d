@@ -140,12 +140,15 @@
       
     </div>
 </div>
-<div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
-          
-  <div class="d-flex justify-content-around mt-2" >
-    <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
-    <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
-  </div> 
+<div class="row">
+
+  <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
+            
+    <div class="d-flex justify-content-around mt-2" >
+      <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
+      <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+    </div> 
+  </div>
 </div>
 <div class="modal fade" id="quick_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
