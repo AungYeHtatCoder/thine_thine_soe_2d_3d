@@ -147,6 +147,7 @@
     <a href="{{ url('/user/two-d-play-12-1-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
   </div> 
 </div>
+
 <div class="modal fade" id="quick_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="background-color: #c50408;">
