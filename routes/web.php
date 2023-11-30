@@ -254,6 +254,7 @@ Route::get('/two-d-play-index-4pm', [App\Http\Controllers\User\PM4\TwodPlay4PMCo
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
 // Route::get('/2dPlay', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlay'])->name('twodPlay');
 // Route::get('/2dPlayConfirm', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlayConfirm'])->name('twoDPlayConfirm');
+Route::get('/2dPlayQuick', [App\Http\Controllers\User\WelcomeController::class, 'twoDQuick'])->name('twoDQuick');
 Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
 Route::get('/service', [App\Http\Controllers\User\WelcomeController::class, 'servicePage'])->name('service');
 Route::get('/topUp', [App\Http\Controllers\User\WelcomeController::class, 'topUp'])->name('topup');
