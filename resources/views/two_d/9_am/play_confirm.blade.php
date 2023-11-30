@@ -10,7 +10,7 @@
       style="padding-bottom:100px;"
     >
       
-    <div style="height: 100vh">
+    <div style="">
       <h6 class="m-3 text-center text-white">ထိုးမည့်ဂဏန်းများ</h6>
       <table class="table text-center table-dark">
        <tbody id="digit_data">

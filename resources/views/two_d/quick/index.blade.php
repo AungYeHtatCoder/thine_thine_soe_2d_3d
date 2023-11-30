@@ -6,7 +6,7 @@
 <div class="row">
     <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
-      style="padding-bottom:100px;"
+      style="padding-bottom:300px;"
     >
       
     <div class="flesh-card mt-4">
@@ -69,7 +69,7 @@
                 <div id="amountInputs" class="col-md-12 mb-3 d-none"></div>
 
                 <!-- Total Amount Input -->
-                <div class="col-md-12 mb-5">
+                <div class="col-md-12 mb-3">
                     <label for="totalAmount">Total Amount</label>
                     <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
                 </div>
@@ -125,289 +125,41 @@
       
     </div>
 </div>
-  <div class="dream-form">
-    <div class="row">
-       <div class="col-md-12">
-         <!-- brake -->
-      <div>
-        <p class="m-3 fw-bold">ဘရိတ်</p>
-        <div>
-          <div
-          id="buttonContainer1"
-          class="buttonContainer box-container"
-          style="height: auto"
-        >
-          <button class="fs-6 btn-quick" data-bs-target="#round_modal" data-bs-toggle="modal">ပတ်သီး</button>
-          <button
-            id="btn2"
-            class="btn-quick"
-            onclick="toggleCount('2', 'container1', 1)"
-          >
-            1/11
-          </button>
-          <button
-            id="btn3"
-            class="btn-quick"
-            onclick="toggleCount('3', 'container1', 1)"
-          >
-            2/12
-          </button>
-          <button
-            id="btn4"
-            class="btn-quick"
-            onclick="toggleCount('4', 'container1', 1)"
-          >
-            3/13
-          </button>
-          <button
-            id="btn5"
-            class="btn-quick"
-            onclick="toggleCount('5', 'container1', 1)"
-          >
-            4/14
-          </button>
-          <button
-            id="btn6"
-            class="btn-quick"
-            onclick="toggleCount('6', 'container1', 1)"
-          >
-            5/15
-          </button>
-          <button
-            id="btn7"
-            class="btn-quick"
-            onclick="toggleCount('7', 'container1', 1)"
-          >
-            6/16
-          </button>
-          <button
-            id="btn8"
-            class="btn-quick"
-            onclick="toggleCount('8', 'container1', 1)"
-          >
-            7/17
-          </button>
-          <button
-            id="btn9"
-            class="btn-quick"
-            onclick="toggleCount('9', 'container1', 1)"
-          >
-            8/18
-          </button>
-          <button
-            id="btn10"
-            class="btn-quick"
-            onclick="toggleCount('10', 'container1', 1)"
-          >
-            9/19
-          </button>
-          </div>
-        </div>
-      </div>
+<div class="">
+  <div>
+    <div
+    id="buttonContainer1"
+    class="buttonContainer"
+  >
+  <div class="">
+    <button class="fs-6 btn-quick ms-2" data-bs-target="#singledouble_modal" data-bs-toggle="modal">Single & Double Size</button>
 
-      <!-- single & double size -->
-      <div>
-        <p class="m-3 fw-bold">Signle & Double Size</p>
-        <div>
-          <div
-          style="height: auto"
-        >
-          <button
-            class="btn-quick"
-          >
-            ညီအကို
-          </button>
-          <button
-            class="btn-quick"
-          >
-            ကြီး
-          </button>
-          <button
-            class="btn-quick"
-          >
-            ငယ်
-          </button>
-          <button
-            class="btn-quick"
-          >
-            မ
-          </button>
-          <button
-            class="btn-quick"
-          >
-            စုံ
-          </button>
-          <button
-            class="btn-quick"
-          >
-          စုံစုံ
-          </button>
-          <button
-            class="btn-quick"
-          >
-          စုံမ
-          </button>
-          <button
-            class="btn-quick"
-          >
-            မစုံ
-          </button>
-          <button
-            class="btn-quick"
-          >
-            မမ
-          </button>
-          <button
-            class="btn-quick"
-          >
-            အပူး
-          </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- ပတ်သီး -->
-      
-      <!-- ထိပ် -->
-      <div>
-        <p class="m-3 fw-bold">ထိပ်</p>
-        <div>
-          <div
-          style="height: auto"
-        >
-          <button
-            class="btn-quick"
-          >
-            0
-          </button>
-          <button
-            class="btn-quick"
-          >
-            1
-          </button>
-          <button
-            class="btn-quick"
-          >
-            2
-          </button>
-          <button
-            class="btn-quick"
-          >
-            3
-          </button>
-          <button
-            class="btn-quick"
-          >
-            4
-          </button>
-          <button
-            class="btn-quick"
-          >
-          5
-          </button>
-          <button
-            class="btn-quick"
-          >
-          6
-          </button>
-          <button
-            class="btn-quick"
-          >
-            7
-          </button>
-          <button
-            class="btn-quick"
-          >
-            8
-          </button>
-          <button
-            class="btn-quick"
-          >
-            9
-          </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- နောက် -->
-      <div>
-        <p class="m-3 fw-bold">နောက်</p>
-        <div>
-          <div
-          style="height: auto"
-        >
-          <button
-            class="btn-quick"
-          >
-            0
-          </button>
-          <button
-            class="btn-quick"
-          >
-            1
-          </button>
-          <button
-            class="btn-quick"
-          >
-            2
-          </button>
-          <button
-            class="btn-quick"
-          >
-            3
-          </button>
-          <button
-            class="btn-quick"
-          >
-            4
-          </button>
-          <button
-            class="btn-quick"
-          >
-          5
-          </button>
-          <button
-            class="btn-quick"
-          >
-          6
-          </button>
-          <button
-            class="btn-quick"
-          >
-            7
-          </button>
-          <button
-            class="btn-quick"
-          >
-            8
-          </button>
-          <button
-            class="btn-quick"
-          >
-            9
-          </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- နက္ခတ် ပါ၀ါ -->
-      <button type="button" class="w-75 text-white mx-auto mt-5 mb-2 btn btn-outline-primary" style="border-color: #ebc03c;">မြန်မာနက္ခတ် 07,18,24,35,69</button>
-
-      <button type="button" class="w-75 text-white mx-auto my-1 btn btn-outline-primary" style="border-color: #ebc03c;">မြန်မာနက္ခတ် R 70,81,42,53,96</button>
-
-      <button type="button" class="w-75 text-white mx-auto my-1 btn btn-outline-primary" style="border-color: #ebc03c;">ပါ၀ါ 05,16,27,38,49</button>
-
-      <button type="button" class="w-75 text-white mx-auto my-1 btn btn-outline-primary" style="border-color: #ebc03c;">ပါ၀ါ R 50,61,72,83,94</button>
-
-      <button type="button" class="w-75 text-white mx-auto mt-2 mb-5 btn btn-outline-primary" style="border-color: #ebc03c;">ထိုင်းနက္ခတ် 07,19,23,48,56</button>
-
-        
-       </div>
-    </div>
-   
+    <button class="fs-6 btn-quick mx-auto" data-bs-target="#break_modal" data-bs-toggle="modal">ဘရိတ်</button>
+    <button class="fs-6 btn-quick" data-bs-target="#round_modal" data-bs-toggle="modal">ပတ်သီး</button>
   </div>
+  <div class="mt-2">
+
+    <button class="fs-6 btn-quick mx-2" data-bs-target="#top_modal" data-bs-toggle="modal">ထိပ်</button>
+    <button class="fs-6 btn-quick" data-bs-target="#back_modal" data-bs-toggle="modal">နောက်</button>
+    <button type="button" class="btn-quick text-white" style="border-color: #ebc03c;">မြန်မာနက္ခတ် 07,18,24,35,69</button>
+  </div>
+  <div class="mt-2">
+
+    <button type="" class="btn-quick text-white ms-2" style="border-color: #ebc03c;">ထိုင်းနက္ခတ် 07,19,23,48,56</button>
+    <button type="" class="btn text-white ms-2 px-4" style="border-color: #ebc03c;">ပါ၀ါ 05,16,27,38,49</button>
+  </div>
+  <div class="mt-2">
+
+    <button type="" class="btn text-white ms-2 px-4" style="border-color: #ebc03c;">ထိုင်းပါ၀ါ 09,13,26,47,58</button>
+  </div>
+    </div>
+    
+  </div>
+</div>
+
   
 </div>
+
 <div class="row">
 
   <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
@@ -421,43 +173,172 @@
 
 {{-- @include('frontend.layouts.footer') --}}
 
-<div class="modal fade" id="round_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+<!-- ပတ်သီး -->
+<div class="modal fade" id="round_modal" tabindex="-1" aria-labelledby="roundModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content" style="background-color: #c50408;">
-      <div class="modal-header">
-        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      
-      
-
-      <!-- ပတ်သီး -->
-     <div>
-        <p class="m-3 fw-bold">ပတ်သီး</p>
-        <div>
-          <div
-          style="height: auto"
-        >
-          <button type="button" id="zero" class="btn-quick">0</button>
-          <button type="button" id="one" class="btn-quick">1</button>
-          <button type="button" id="two" class="btn-quick">2</button>
-          <button type="button" id="three" class="btn-quick">3</button>
-          <button type="button" id="four" class="btn-quick">4</button>
-          <button type="button" id="five" class="btn-quick">5</button>
-          <button type="button" id="six" class="btn-quick">6</button>
-          <button type="button" id="seven" class="btn-quick">7</button>
-          <button type="button" id="eight" class="btn-quick">8</button>
-          <button type="button" id="nine" class="btn-quick">9</button>
+      <div class="modal-content" style="background-color: #c50408;">
+          <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </div>
+          <!-- ပတ်သီး -->
+          <div class="quickmodal mb-5">
+              <p class="m-3 fw-bold">ပတ်သီး</p>
+              <div class="d-flex justify-content-between">
+                  <button type="button" id="zero" >0</button>
+                  <button type="button" id="one" >1</button>
+                  <button type="button" id="two" >2</button>
+                  <button type="button" id="three" >3</button>
+                  <button type="button" id="four" >4</button>  
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                  <button type="button" id="five" >5</button>
+                  <button type="button" id="six">6</button>
+                  <button type="button" id="seven">7</button>
+                  <button type="button" id="eight">8</button>
+                  <button type="button" id="nine">9</button>
+              </div>
+          </div>   
       </div>
+  </div>
+  
+</div>
 
-
+{{-- ဘရိတ် --}}
+<div class="modal fade" id="break_modal" tabindex="-1" aria-labelledby="breakModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #c50408;">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
       
       
-    </div>
+
+          <!-- ဘရိတ် -->
+          <div class="quickmodal mb-5">
+              <p class="m-3 fw-bold">ဘရိတ်</p>
+              <div class="d-flex justify-content-between">
+              <button type="button" id="zero">0/10</button>
+              <button type="button" id="one">1/11</button>
+              <button type="button" id="two">2/12</button>
+              <button type="button" id="three">3/13</button>
+              <button type="button" id="four">4/14</button>
+              
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+              <button type="button" id="five" >5/15</button>
+              <button type="button" id="six">6/16</button>
+              <button type="button" id="seven">7/17</button>
+              <button type="button" id="eight">8/18</button>
+              <button type="button" id="nine">9/19</button>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
+
+{{-- ထိပ် --}}
+<div class="modal fade" id="top_modal" tabindex="-1" aria-labelledby="topModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #c50408;">
+          <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- ဘရိတ် -->
+          <div class="quickmodal mb-5">
+          <p class="m-3 fw-bold">ထိပ်</p>
+          <div class="d-flex justify-content-between">
+              <button type="button" id="zero">0/10</button>
+              <button type="button" id="one">1/11</button>
+              <button type="button" id="two">2/12</button>
+              <button type="button" id="three">3/13</button>
+              <button type="button" id="four">4/14</button>
+              
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+              <button type="button" id="five" >5/15</button>
+              <button type="button" id="six">6/16</button>
+              <button type="button" id="seven">7/17</button>
+              <button type="button" id="eight">8/18</button>
+              <button type="button" id="nine">9/19</button>
+          </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+{{-- နောက် --}}
+<div class="modal fade" id="back_modal" tabindex="-1" aria-labelledby="topModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #c50408;">
+          <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- ဘရိတ် -->
+          <div class="quickmodal mb-5">
+              <p class="m-3 fw-bold">နောက်</p>
+              <div class="d-flex justify-content-between">
+                  <button type="button" id="zero">0/10</button>
+                  <button type="button" id="one">1/11</button>
+                  <button type="button" id="two">2/12</button>
+                  <button type="button" id="three">3/13</button>
+                  <button type="button" id="four">4/14</button>
+                  
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                  <button type="button" id="five" >5/15</button>
+                  <button type="button" id="six">6/16</button>
+                  <button type="button" id="seven">7/17</button>
+                  <button type="button" id="eight">8/18</button>
+                  <button type="button" id="nine">9/19</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+{{-- single & double --}}
+<div class="modal fade" id="singledouble_modal" tabindex="-1" aria-labelledby="topModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background-color: #c50408;">
+          <div class="modal-header">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <!-- ဘရိတ် -->
+          <div class="quickmodal mb-5">
+              <p class="m-3 fw-bold">Single & Double</p>
+              <div class="d-flex justify-content-between">
+                  <button type="button" id="zero">ညီအကို</button>
+                  <button type="button" id="one">ကြီး</button>
+                  <button type="button" id="two">ငယ်</button>
+                  <button type="button" id="three">မ</button>
+                  <button type="button" id="four">စုံ</button>
+                  
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                  <button type="button" id="five" >စုံစုံ</button>
+                  <button type="button" id="six">စုံမ</button>
+                  <button type="button" id="seven">မစုံ</button>
+                  <button type="button" id="eight">မမ</button>
+                  <button type="button" id="nine">အပူး</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
 @endsection
 @section('script')
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
