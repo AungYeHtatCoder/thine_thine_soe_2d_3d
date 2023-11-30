@@ -252,19 +252,19 @@
           <div class="quickmodal mb-5">
           <p class="m-3 fw-bold">ထိပ်</p>
           <div class="d-flex justify-content-between">
-              <button type="button" id="zero">0/10</button>
-              <button type="button" id="one">1/11</button>
-              <button type="button" id="two">2/12</button>
-              <button type="button" id="three">3/13</button>
-              <button type="button" id="four">4/14</button>
+              <button type="button" id="zero">0</button>
+              <button type="button" id="one">1</button>
+              <button type="button" id="two">2</button>
+              <button type="button" id="three">3</button>
+              <button type="button" id="four">4</button>
               
           </div>
           <div class="d-flex justify-content-between mt-2">
-              <button type="button" id="five" >5/15</button>
-              <button type="button" id="six">6/16</button>
-              <button type="button" id="seven">7/17</button>
-              <button type="button" id="eight">8/18</button>
-              <button type="button" id="nine">9/19</button>
+              <button type="button" id="five" >5</button>
+              <button type="button" id="six">6</button>
+              <button type="button" id="seven">7</button>
+              <button type="button" id="eight">8</button>
+              <button type="button" id="nine">9</button>
           </div>
           </div>
       </div>
@@ -285,19 +285,19 @@
           <div class="quickmodal mb-5">
               <p class="m-3 fw-bold">နောက်</p>
               <div class="d-flex justify-content-between">
-                  <button type="button" id="zero">0/10</button>
-                  <button type="button" id="one">1/11</button>
-                  <button type="button" id="two">2/12</button>
-                  <button type="button" id="three">3/13</button>
-                  <button type="button" id="four">4/14</button>
+                  <button type="button" id="zero">0</button>
+                  <button type="button" id="one">1</button>
+                  <button type="button" id="two">2</button>
+                  <button type="button" id="three">3</button>
+                  <button type="button" id="four">4</button>
                   
               </div>
               <div class="d-flex justify-content-between mt-2">
-                  <button type="button" id="five" >5/15</button>
-                  <button type="button" id="six">6/16</button>
-                  <button type="button" id="seven">7/17</button>
-                  <button type="button" id="eight">8/18</button>
-                  <button type="button" id="nine">9/19</button>
+                  <button type="button" id="five" >5</button>
+                  <button type="button" id="six">6</button>
+                  <button type="button" id="seven">7</button>
+                  <button type="button" id="eight">8</button>
+                  <button type="button" id="nine">9</button>
               </div>
           </div>
       </div>

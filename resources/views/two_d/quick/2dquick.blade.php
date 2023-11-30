@@ -216,7 +216,7 @@
 
       <!-- single & double size -->
       <div>
-        <p class="m-3 fw-bold">Signle & Double Size</p>
+        <p class="m-3 fw-bold">Single & Double Size</p>
         <div>
           <div
           style="height: auto"
