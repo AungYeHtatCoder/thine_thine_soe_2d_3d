@@ -772,7 +772,24 @@ hr {
 }
 
 .btn-quick {
-  width: 100px;
+  /* width: 200px;
+  height: 40px; */
+  padding: 9px 10px;
+  /* margin: 3px 13px; */
+  /* background-color: #c50408; */
+  border: 1px solid #ebc03c;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #fff;
+}
+
+#quick_modal p {
+  color: #f5bd02;
+}
+
+.quickmodal button {
+  width: 70px;
   height: 40px;
   padding: 5px 10px;
   margin: 3px 13px;
@@ -781,8 +798,4 @@ hr {
   background-color: transparent;
   font-size: 12px;
   color: #fff;
-}
-
-#quick_modal p {
-  color: #f5bd02;
 }
