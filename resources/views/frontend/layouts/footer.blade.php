@@ -27,7 +27,7 @@
         </div>
         <div class="text-center">
           <a
-            href="{{ url('/dashboard') }}"
+            href="{{ url('/user/dashboard') }}"
             class="text-decoration-none"
           >
             <i class="fas fa-user"></i>

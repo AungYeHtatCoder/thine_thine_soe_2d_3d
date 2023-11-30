@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id'             => 2,
                 'name'           => 'Aung Myo Kyaw',
-                'phone'          => '0922345678',
+                'phone'          => 'user@gmai.com',
                 'password'       => '$2y$10$qyxYm.2dlaXROvs0OrGHseo4qbeissRMqNWdhlcr/vUqE62vN94Fi', // password
                 'remember_token' => null,
                 'created_at'     => '2023-08-14 14:00:26',

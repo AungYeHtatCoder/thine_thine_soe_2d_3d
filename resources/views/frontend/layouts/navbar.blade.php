@@ -10,7 +10,7 @@
           >
       </h5>
       <span>
-          <a class="material-icons text-decoration-none" href="index.html"
+          <a class="material-icons text-decoration-none" href="{{ url('/') }}"
             >refresh</a
           >
       </span>

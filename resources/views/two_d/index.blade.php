@@ -165,13 +165,13 @@
           <a href="{{ url('/user/two-d-play-index-9am') }}" class="text-decoration-none btn">09:30 AM</a>
         </div>
         <div class="modal-btn mt-2">
-          <a href="#" class="text-decoration-none btn">12:01 PM</a>
+          <a href="{{ url('/user/two-d-play-index-12pm') }}" class="text-decoration-none btn">12:01 PM</a>
         </div>
         <div class="modal-btn mt-2">
-          <a href="#" class="text-decoration-none btn">02:00 PM</a>
+          <a href="{{ url('/user/two-d-play-index-2pm') }}" class="text-decoration-none btn">02:00 PM</a>
         </div>
         <div class="modal-btn mt-2 mb-4">
-          <a href="#" class="text-decoration-none btn">04:00 PM</a>
+          <a href="{{ url('/user/two-d-play-index-4pm') }}" class="text-decoration-none btn">04:30 PM</a>
         </div>
       </div>
     </div>

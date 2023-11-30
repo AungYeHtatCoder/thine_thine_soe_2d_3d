@@ -43,7 +43,7 @@
         <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
         
       <select class="h-50 text-white" style="box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
-        <option value="1">9:30 AM</option>
+        <option value="1">2:00 AM</option>
         {{-- <option value="2">04:00 PM</option> --}}
       </select>
     </div>
@@ -144,7 +144,7 @@
           
   <div class="d-flex justify-content-around mt-2" >
     <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
-    <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+    <a href="{{ url('/user/two-d-play-2-early-evening-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
   </div> 
 </div>
 <div class="modal fade" id="quick_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
