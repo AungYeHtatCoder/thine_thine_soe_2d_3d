@@ -49,7 +49,7 @@
         </div>
 
         <div class="my-4">
-            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း 
+            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း
             <span>
                 <a href="{{ url('/user/two-d-play-index')}}" style="color: #49da06; text-decoration:none">
                         <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
@@ -169,7 +169,7 @@
             </div>
         </div>
 
-        
+
 
         <div class="eveningtwo d-none my-4">
             @if(isset($earlyeveningDigit['two_digits']) && count($eveningDigits['two_digits']) == 0)
@@ -206,7 +206,7 @@
                     <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
                 </p>
             </div>
-    
+
         </div>
 
         <div class="evening d-none my-4">
@@ -244,10 +244,99 @@
                     <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
                 </p>
             </div>
-    
-        </div>
-     
 
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="updateProfile">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-user me-2"></i>ဓာတ်ပုံတင်ရန်</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('user.editProfile', Auth::user()->id) }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="file" class="form-control" name="profile">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="updateInfo">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-info-circle me-2"></i>အချက်အလက်များပြင်ရန်</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('user.editInfo') }}" method="post">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Enter Name" value="{{ Auth::user()->name }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Enter Email" value="{{ Auth::user()->email }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" name="phone" placeholder="Enter Phone" value="{{ Auth::user()->phone }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" id="address" class="form-control" name="address" placeholder="Enter Address" value="{{ Auth::user()->address }}">
+                    </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="updatePassword">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-key me-2"></i>Password ပြင်ရန်</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('user.changePassword') }}" method="post">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="old_password" class="form-label">Old Password</label>
+                        <input type="password" id="old_password" class="form-control" name="old_password" placeholder="Enter Old Password" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter New Password" value="">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
