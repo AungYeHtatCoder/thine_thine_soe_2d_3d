@@ -86,7 +86,7 @@ class ProfileController extends Controller
 
     // Check if a new profile image has been uploaded
     $newImage = $request->file('profile');
-    
+
     if ($newImage) {
        // $main_folder = 'profile_images/';
         $main_folder = 'profile_image/' . Str::random();
@@ -94,8 +94,8 @@ class ProfileController extends Controller
 
         // Store the new image with specified visibility settings
         $path = Storage::putFileAs('public/'.
-            $main_folder, 
-            $newImage, 
+            $main_folder,
+            $newImage,
             $filename,
             [
                 'visibility' => 'public',
@@ -106,7 +106,7 @@ class ProfileController extends Controller
         $data['profile'] = URL::to(Storage::url($path));
         $data['profile_mime'] = $newImage->getClientMimeType();
         $data['profile_size'] = $newImage->getSize();
-        
+
         // If there is an old image, delete it
         if ($profile->profile) {
             $oldImagePath = str_replace(URL::to('/'), '', $profile->profile);
@@ -116,7 +116,7 @@ class ProfileController extends Controller
 
     $profile->update($data);
 
-    return redirect()->back()->with('toast_success', 'Profile updated successfully');
+    return redirect()->back()->with('success', 'Profile updated successfully');
 }
 // new password change function
     public function newPassword(Request $request)
@@ -136,6 +136,38 @@ class ProfileController extends Controller
         return redirect()->back()->with('toast_success', "Customer Password has been Updated.");
 
     }
+    public function editInfo(Request $request)
+    {
+        $request->validate([
+            "name" => "required",
+            "email" => "nullable",
+            "phone" => "nullable",
+            "address" => "nullable"
+        ]);
+
+        $user = User::find(Auth::id());
+
+        if ($request->email !== $user->email || $request->phone !== $user->phone) {
+            $existingEmail = User::where("email", $request->email)->first();
+            $existingPhone = User::where("phone", $request->phone)->first();
+
+            if ($existingEmail && $existingEmail->id !== $user->id) {
+                return redirect()->back()->with("error", "The email has already been taken.");
+            }
+            if ($existingPhone && $existingPhone->id !== $user->id) {
+                return redirect()->back()->with("error", "The phone has already been taken.");
+            }
+        }
+
+        $user->update([
+            "name" => $request->name,
+            "email" => $request->email ?? $user->email,
+            "phone" => $request->phone ?? $user->phone,
+            "address" => $request->address ?? $user->address
+        ]);
+
+        return redirect()->back()->with("success", "User info updated successfully.");
+    }
 
 
     // password change function
@@ -144,7 +176,7 @@ class ProfileController extends Controller
         //dd($request->all());
         $request->validate([
             'old_password' => 'required',
-            'password' => 'required|confirmed|min:8',
+            'password' => 'required|min:6',
 
         ]);
 
@@ -156,9 +188,9 @@ class ProfileController extends Controller
             ]);
 
             if (auth()->user()->hasRole('Admin')) {
-                return redirect()->back()->with('toast_success', "Admin Password has been  Updated.");
+                return redirect()->back()->with('success', "Admin Password has been  Updated.");
             } else {
-                return redirect()->back()->with('toast_success', "Customer Password has been Updated.");
+                return redirect()->back()->with('success', "Customer Password has been Updated.");
             }
         } else {
             return redirect()->back()->with('error', "Old password does not match!");
