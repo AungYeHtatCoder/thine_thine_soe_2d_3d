@@ -49,12 +49,17 @@
         </div>
 
         <div class="my-4">
-            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း</p>
+            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း 
+            <span>
+                <a href="{{ url('/user/two-d-play-index')}}" style="color: #49da06; text-decoration:none">
+                        <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+            </span>
+            </p>
             @if(isset($morningDigits['two_digits']) && count($morningDigits['two_digits']) == 0)
             <p class="text-center bg-success text-white px-3 py-2 mt-3">
                 ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
                 <span>
-                    <a href="{{ route('admin.GetTwoDigit')}}" style="color: #1706da; text-decoration:none">
+                    <a href="{{ url('/user/two-d-play-index')}}" style="color: #1706da; text-decoration:none">
                         <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
                 </span>
             </p>
@@ -173,7 +178,7 @@
                 <p class="text-center bg-success text-white px-3 py-2 mt-3">
                     ညနေပိုင်း ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
                     <span>
-                        <a href="{{ route('admin.GetTwoDigit')}}" style="color: #1706da; text-decoration:none">
+                        <a href="{{ url('/user/two-d-play-index')}}" style="color: #1706da; text-decoration:none">
                             <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
                     </span>
                 </p>
