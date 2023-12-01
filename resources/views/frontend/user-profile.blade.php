@@ -61,19 +61,19 @@
             @endif
 
             <div class="d-flex justify-content-between text-success">
-                <div id="morningnine" class="text-center w-100 shadow-sm rounded pt-3 border border-1 border-warning" style="cursor: pointer;">
+                <div id="morningnine" class="text-center w-100 shadow-sm rounded pt-3 border border-1 border-warning" style="background:#c50408;cursor: pointer;">
                     <i class="fas fa-list d-block fa-2x"></i>
                     <p style="color: #f5bd02">09:30 AM</p>
                 </div>
-                <div id="morning" class="text-center w-100 rounded pt-3" style="cursor: pointer;">
+                <div id="morning" class="text-center w-100 rounded pt-3" style="background:#c50408;cursor: pointer;">
                     <i class="fas fa-list d-block fa-2x"></i>
                     <p style="color: #f5bd02">12:00 PM</p>
                 </div>
-                <div id="eveningtwo" class="text-center w-100 rounded pt-3" style="cursor: pointer;">
+                <div id="eveningtwo" class="text-center w-100 rounded pt-3" style="background:#c50408;cursor: pointer;">
                     <i class="fas fa-list d-block fa-2x"></i>
                     <p style="color: #f5bd02">02:00 PM</p>
                 </div>
-                <div id="evening" class="text-center w-100 rounded pt-3" style="cursor: pointer;">
+                <div id="evening" class="text-center w-100 rounded pt-3" style="background:#c50408;cursor: pointer;">
                     <i class="fas fa-list d-block fa-2x"></i>
                     <p style="color: #f5bd02">04:30 PM</p>
                 </div>
