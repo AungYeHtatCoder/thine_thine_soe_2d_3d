@@ -263,6 +263,8 @@ Route::get('/user-profile', [App\Http\Controllers\User\WelcomeController::class,
 Route::get('/twoDWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'twoDWinnerHistory'])->name('twoDWinnerHistory');
 Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 'twoDPrize'])->name('twoDPrize');
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
+Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
+Route::get('/twod-holiday', [App\Http\Controllers\User\WelcomeController::class, 'twodHoliday']);
 Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'comment']);
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
