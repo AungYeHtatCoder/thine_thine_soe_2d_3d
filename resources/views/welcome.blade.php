@@ -10,7 +10,12 @@
         <div class="d-flex">
             <i class="fa-regular fa-circle-user fa-4x text-white"></i>
             <span class="mt-3 ms-2"><a href="{{ url('/login') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c;">အကောင့်အရင်ဝင်ပါ</a></span>
+
+            {{-- <i class="fa-regular fa-circle-user fa-4x text-white"></i> --}}
+            <span class="mt-3 ms-2"><a href="{{ url('/register') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c;">အကောင့်ဖွင့်ပါ</a></span>
         </div>
+        {{-- register --}}
+
         @endguest
         @auth
         <div class="d-flex">
@@ -34,7 +39,15 @@
         <p class="fw-bold pt-2 ps-2 text-white">ပင်မပိုက်ဆံအိတ်</p>
       </div>
       <div class="d-flex pt-2">
-        <p class="fw-bold fs-6 pe-2 text-white">0 ကျပ်</p>
+        <p class="fw-bold fs-6 pe-2 text-white">
+        @auth 
+        @if(Auth::user()->balance)
+        {{ Auth::user()->balance }} MMK
+        @else
+        0 MMK
+        @endif
+        @endauth
+        </p>
         <i class="material-icons">add_circle</i>
       </div>
     </div>
