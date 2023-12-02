@@ -9,10 +9,10 @@
         @guest
         <div class="d-flex">
             <i class="fa-regular fa-circle-user fa-4x text-white"></i>
-            <span class="mt-3 ms-2"><a href="{{ url('/login') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c;">အကောင့်အရင်ဝင်ပါ</a></span>
+            <span class="mt-3 ms-2"><a href="{{ url('/login') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c;">အကောင့်ဝင်ပါ</a></span>
 
             {{-- <i class="fa-regular fa-circle-user fa-4x text-white"></i> --}}
-            <span class="mt-3 ms-2"><a href="{{ url('/register') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c;">အကောင့်ဖွင့်ပါ</a></span>
+            <span class="mt-3 ms-2"><a href="{{ url('/register') }}" class="text-decoration-none ms-3 text-white" style="border:1px solid #ebc03c; font-size: 15px">အကောင့်ဖွင့်ပါ</a></span>
         </div>
         {{-- register --}}
 
