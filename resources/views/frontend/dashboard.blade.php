@@ -32,21 +32,21 @@
           <p class="ps-3">2D Live</p>
         </div>
       </a>
-      <a href="#" class="text-decoration-none">
+      <a href="{{ url('/twod-calendar') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
           <i class="fas fa-calendar fs-3 ms-2" aria-hidden="true"></i>
           <p class="ps-3">2D Calendar</p>
         </div>
       </a>
-      <a href="#" class="text-decoration-none">
+      <a href="{{ url('/twod-holiday') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
         <i class="fas fa-calendar-days fs-3 ms-2"></i>
         <p class="ps-3">2D Holiday</p>
         </div>
       </a>
-      <a href="#" class="text-decoration-none">
+      <a href="{{ url('/twod-live') }}" class="text-decoration-none">
 
         <div class="d-flex list-card">
           <i class="fas fa-tower-broadcast fs-3 ms-2" aria-hidden="true"></i>
