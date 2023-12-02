@@ -799,3 +799,19 @@ hr {
   font-size: 12px;
   color: #fff;
 }
+
+.holiday-card {
+  background: #c50408;
+  color: #f5bd02;
+  border: 1px solid #f5bd02;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.calendar-container {
+  margin-top: 20px;
+}
+.day-cell {
+  border: 1px solid #ddd;
+  height: 60px;
+}
