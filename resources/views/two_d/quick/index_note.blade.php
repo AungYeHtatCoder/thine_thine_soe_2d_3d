@@ -167,7 +167,7 @@
     <div class="d-flex justify-content-around mt-2" >
       <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
       {{-- <button type="submit" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</button> --}}
-      <a href="{{ url('/user/two-d-play-quick-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+      <a href="{{ url('/user/two-d-play-quick-confirm') }}" onclick="storeSelectionsInLocalStorage()" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
     </div> 
   </div>
 </div>

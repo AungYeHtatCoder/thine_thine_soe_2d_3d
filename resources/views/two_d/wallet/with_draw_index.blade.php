@@ -3,12 +3,12 @@
 <div class="row">
  <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
-      style="height:100vh"
+      style="padding-bottom:110px"
     >
     <h6 class="text-center mt-2 pb-2" style="color: #fff">ငွေထုတ်မည်</h6>
 
     <p style="color: #fff">မိမိ ငွေထုတ်ယူမည့်ဘဏ်တစ်ခုရွေးပါ</p>
-   <div class="d-flex justify-content-between">
+   <div class="top-up-card">
       <div class="banks blur-image">
         <img src="{{ asset('user_app/assets/images/bank/kpay.png') }}" onclick="showForm()" class="w-100" alt="" />
       </div>

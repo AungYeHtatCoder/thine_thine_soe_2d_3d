@@ -3,7 +3,7 @@
 <div class="row">
  <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
-      style="height:100vh"
+      style="padding-bottom:80px"
     >
  <p class="text-center mt-3" style="color: #fff">သင် ၏ အကောင့်မှ လက်ကျန်ငွေ <strong> {{ Auth::user()->balance }} </strong></p>
   <p class="text-center mt-3" style="color: #fff">ငွေထုတ်မည်</p>
@@ -14,7 +14,7 @@
    <div class="banks">
     <img src="{{ asset('user_app/assets/images/bank/aya_logo.png') }}" class="w-100" alt="" />
    </div>
-   <p class="mt-4">K Pay</p>
+   <p class="mt-4">AYA Pay</p>
    <hr class="vertical-line" style="border-left: 2px solid #000; height: 10vh" />
    <div class="mt-3 mx-5" style="color: #fff">
     <p>ငွေထုတ်ပမာဏ</p>
@@ -23,16 +23,16 @@
   </div>
   <form action="{{ route('user.StoreAYApayWithdrawMoney') }}" method="POST">
     @csrf
-  <div class="form-group">
-    <p style="color: #eedcdc;">ငွေလက်ခံမည့်ဖုန်းနံပါတ်</p>
+  <div class="form-group mt-2">
+    <p style="color: #fff;">ငွေလက်ခံမည့်ဖုန်းနံပါတ်</p>
     {{-- <input type="number" value="" class="form-control" name="" id="inputField"> --}}
     <input type="number" id="kpay_no" name="ayapay_no" class="form-control" value="{{ $user->ayapay_no }}">
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" onclick="copyToClipboard()">Copy</button>
         </div>
   </div>
-  <div class="form-group">
-    <p style="color: #c3baba;">သင်၏ AYA pay ဖုန်းနံပါတ်ထဲ့ပါ</p>
+  <div class="form-group mt-3">
+    <p style="color: #fff;">သင်၏ AYA pay ဖုန်းနံပါတ်ထဲ့ပါ</p>
     <input type="number" value="" class="form-control" name="user_ph_no">
   </div>
   {{-- <p class="mt-4" style="color: #fff; font-size: 14px">
@@ -41,7 +41,7 @@
   <div class="form-group">
    <input type="number" class="form-control" placeholder="ဂဏန်းခြောက်လုံး ဖြည့်ပါ" name="last_six_digit" id="" />
   </div> --}}
-  <div class="form-group">
+  <div class="form-group mt-3">
           <p style="color: #fff">ငွေထုတ်ယူမည့် ပမာဏ</p>
           <input type="number" value="" class="form-control" name="amount" id="inputField" />
         </div>
@@ -67,18 +67,18 @@
             500,000
           </div>
         </div>
-  <div class="form-group mt-4">
-   <button type="submit" class="top-up-btn btn">ငွေထုတ်ယူမည်</button>
+  <div class="form-group my-4">
+   <button type="submit" class="top-up-btn btn tex-whited">ငွေထုတ်ယူမည်</button>
   </div>
   </form>
-  <p style="color: #fff">
+  <p style="color: #fff; font-size:14px; font-weight:bold">
    ငွေထုတ်ရန်အဆင်မပြေမှုတစ်စုံတစ်ရာရှိပါက ဆက်သွယ်ရန်
   </p>
   <div class="service-card mt-4">
-   <p class="mt-3">ငွေဖြည့် / ငွေထုတ်</p>
+   <p class="mt-3 text-white fw-bold">ငွေဖြည့် / ငွေထုတ်</p>
    <div class="phone-icon">
-    <i class="fa-brands fa-telegram px-3"></i>
-    <i class="fa-brands fa-viber"></i>
+    <i class="fa-brands fa-telegram fa-2x px-3"></i>
+    <i class="fa-brands fa-viber fa-2x"></i>
    </div>
   </div>
  </div>

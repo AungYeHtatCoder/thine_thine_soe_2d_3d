@@ -6,7 +6,7 @@
 <div class="row">
     <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
-      style="padding-bottom:300px;"
+      style="padding-bottom:100px;"
     >
       
     <div class="flesh-card mt-4">
@@ -56,12 +56,14 @@
           <form action="" method="post" class="p-1">
 
           <div class="mb-3">
+            <label for="selected_digits" style="font-size: 14px; color: #f5bd02;">ရွှေးချယ်ထားသောဂဏန်းများ</label>
+
                     <input type="text" id="outputField" name="selected_digits" class="form-control" placeholder="Selected digits">
                 </div>
 
                 <div class="mb-3 mt-3">
                     
-                    <label for="permulated_digit">ပတ်လည် ဂဏန်းများ</label>
+                    <label for="permulated_digit" style="font-size: 14px; color: #f5bd02;">ပတ်လည် ဂဏန်းများ</label>
                     <input type="text" id="permulated_digit" class="form-control" readonly>
                 </div>
 
@@ -70,7 +72,7 @@
 
                 <!-- Total Amount Input -->
                 <div class="col-md-12 mb-3">
-                    <label for="totalAmount">Total Amount</label>
+                    <label for="totalAmount" style="font-size: 14px; color: #f5bd02;">စုစုပေါင်းထိုးကြေး</label>
                     <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
                 </div>
 
@@ -125,36 +127,16 @@
       
     </div>
 </div>
-<div class="">
-  <div>
-    <div
-    id="buttonContainer1"
-    class="buttonContainer"
-  >
-  <div class="">
-    <button class="fs-6 btn-quick ms-2" data-bs-target="#singledouble_modal" data-bs-toggle="modal">Single & Double Size</button>
-
-    <button class="fs-6 btn-quick mx-auto" data-bs-target="#break_modal" data-bs-toggle="modal">ဘရိတ်</button>
-    <button class="fs-6 btn-quick" data-bs-target="#round_modal" data-bs-toggle="modal">ပတ်သီး</button>
-  </div>
-  <div class="mt-2">
-
-    {{-- <button class="fs-6 btn-quick mx-2" data-bs-target="#top_modal" data-bs-toggle="modal">ထိပ်</button>
-    <button class="fs-6 btn-quick" data-bs-target="#back_modal" data-bs-toggle="modal">နောက်</button> --}}
-    <button type="button" id="myanmar_power" class="btn-quick text-white" style="border-color: #ebc03c;">ပါ၀ါတွဲ</button>
-  </div>
-  <div class="mt-2">
-
-    <button type="button" id="thai_power" class="btn-quick text-white ms-2" style="border-color: #ebc03c;">နက္ခတ်တွဲ</button>
-    {{-- <button type="" class="btn text-white ms-2 px-4" style="border-color: #ebc03c;">ပါ၀ါ 05,16,27,38,49</button> --}}
-  </div>
-  {{-- <div class="mt-2">
-
-    <button type="" class="btn text-white ms-2 px-4" style="border-color: #ebc03c;">ထိုင်းပါ၀ါ 09,13,26,47,58</button>
-  </div> --}}
+<div class="p-3 shadow" style="background-color: #c50408; border:1px solid #f5bd02; border-radius:10px">
+    <div class="d-flex justify-content-around">
+        <button class="fs-6 btn-quick" data-bs-target="#break_modal" data-bs-toggle="modal">ဘရိတ်</button>
+        <button class="fs-6 btn-quick" data-bs-target="#round_modal" data-bs-toggle="modal">ပတ်သီး</button>
+        <button type="button" id="myanmar_power" class="btn-quick text-white" style="border-color: #ebc03c;">ပါ၀ါတွဲ</button>
+        <button type="button" id="thai_power" class="btn-quick text-white ms-2" style="border-color: #ebc03c;">နက္ခတ်တွဲ</button>
     </div>
-    
-  </div>
+    <div class="d-flex mt-4 justify-content-around">
+        <button class="fs-6 btn-quick ms-2" data-bs-target="#singledouble_modal" data-bs-toggle="modal">Single & Double Size</button>
+    </div>
 </div>
 
   
@@ -167,7 +149,7 @@
     <div class="d-flex justify-content-around mt-2" >
       <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
       {{-- <button type="submit" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</button> --}}
-      <a href="{{ url('/user/two-d-play-quick-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+      <a href="{{ url('/user/two-d-play-quick-confirm') }}" onclick="storeSelectionsInLocalStorage()" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
     </div> 
   </div>
 </div>
