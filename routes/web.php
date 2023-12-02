@@ -287,19 +287,20 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
   // money transfer end
 
-
+  // two d winner history 
+  Route::get('/two-d-winners-history', [App\Http\Controllers\User\WinHistory\TwoDWinnerHistoryController::class, 'winnerHistory'])->name('winnerHistory');
 });
 
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
 // Route::get('/2dPlay', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlay'])->name('twodPlay');
 // Route::get('/2dPlayConfirm', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlayConfirm'])->name('twoDPlayConfirm');
 // Route::get('/2dPlayQuick', [App\Http\Controllers\User\WelcomeController::class, 'twoDQuick'])->name('twoDQuick');
-Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
+// Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
 Route::get('/service', [App\Http\Controllers\User\WelcomeController::class, 'servicePage'])->name('service');
-Route::get('/topUp', [App\Http\Controllers\User\WelcomeController::class, 'topUp'])->name('topup');
-Route::get('/withDraw', [App\Http\Controllers\User\WelcomeController::class, 'withDraw'])->name('withdraw');
-Route::get('/user-profile', [App\Http\Controllers\User\WelcomeController::class, 'userProfile'])->name('profile');
-Route::get('/twoDWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'twoDWinnerHistory'])->name('twoDWinnerHistory');
+// Route::get('/topUp', [App\Http\Controllers\User\WelcomeController::class, 'topUp'])->name('topup');
+// Route::get('/withDraw', [App\Http\Controllers\User\WelcomeController::class, 'withDraw'])->name('withdraw');
+// Route::get('/user-profile', [App\Http\Controllers\User\WelcomeController::class, 'userProfile'])->name('profile');
+// Route::get('/twoDWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'twoDWinnerHistory'])->name('twoDWinnerHistory');
 Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 'twoDPrize'])->name('twoDPrize');
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
 Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
