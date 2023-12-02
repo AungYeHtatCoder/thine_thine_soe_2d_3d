@@ -19,13 +19,13 @@ class WithDrawController extends Controller
     {
         // user id 1 is admin rethrive from database where kpay_no is not null
         $user = User::where('id', 1)->whereNotNull('kpay_no')->first();
-        return view('two_d.k_pay_withdraw', compact('user'));
+        return view('two_d.kpay.balance_with_draw', compact('user'));
     }
     public function UserCBPayWithdrawMoney()
     {
         // user id 1 is admin rethrive from database where kpay_no is not null
         $user = User::where('id', 1)->whereNotNull('cbpay_no')->first();
-        return view('two_d.cb_pay_withdraw', compact('user'));
+        return view('two_d.cbpay.balance_with_draw', compact('user'));
         
         
     }
@@ -34,7 +34,7 @@ class WithDrawController extends Controller
     {
         // user id 1 is admin rethrive from database where kpay_no is not null
         $user = User::where('id', 1)->whereNotNull('wavepay_no')->first();
-        return view('two_d.wave_pay_withdraw', compact('user'));
+        return view('two_d.wavepay.balance_with_draw', compact('user'));
         
         
     }
@@ -42,7 +42,7 @@ class WithDrawController extends Controller
     {
         // user id 1 is admin rethrive from database where kpay_no is not null
         $user = User::where('id', 1)->whereNotNull('ayapay_no')->first();
-        return view('two_d.aya_pay_withdraw', compact('user'));
+        return view('two_d.ayapay.balance_with_draw', compact('user'));
         
         
     }

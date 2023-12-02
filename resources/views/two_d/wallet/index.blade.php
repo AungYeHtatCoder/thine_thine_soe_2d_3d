@@ -33,7 +33,7 @@
         </div>
         <div class="col">
           <a
-            href="{{ url('/withDraw') }}"
+            href="{{ url('/user/withdraw-money') }}"
             style="color: black; text-decoration: none"
           >
             <i class="fa-solid fa-money-bill-transfer"></i>
