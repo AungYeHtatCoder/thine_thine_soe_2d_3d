@@ -46,24 +46,24 @@
     </div>
 
     <div class="text-center mt-3">
-      <p style="color: #fff">လက်ကျန်ငွေ: {{ Auth::user()->balance }} ကျပ်</p>
+      <p style="color: #fff; font-weight:bold;">လက်ကျန်ငွေ: {{ Auth::user()->balance }} ကျပ်</p>
     </div>
-    <hr class="my-custom-line" />
+    <hr style="color:#fff;"/>
 
     <div class="row">
       <div class="container" id="top-up-form" style="display: none">
        <form action="">
         <div class="form-group mt-2">
-          <a href="{{ url('/user/kpay-fill-balance-top-up-submit') }}" class="btn top-up-btn">Kpay - ဆက်လုပ်ရန်</a>
+          <a href="{{ url('/user/kpay-fill-balance-top-up-submit') }}" class="btn top-up-btn text-white">Kpay - ဆက်လုပ်ရန်</a>
         </div>
         <div class="form-group mt-2">
-          <a href="{{ url('/user/cb-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn">CBpay - ဆက်လုပ်ရန်</a>
+          <a href="{{ url('/user/cb-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn text-white">CBpay - ဆက်လုပ်ရန်</a>
         </div>
         <div class="form-group mt-2">
-          <a href="{{ url('/user/wave-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn">Wave pay - ဆက်လုပ်ရန်</a>
+          <a href="{{ url('/user/wave-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn text-white">Wave pay - ဆက်လုပ်ရန်</a>
         </div>
         <div class="form-group mt-2">
-          <a href="{{ url('/user/aya-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn">AYA pay - ဆက်လုပ်ရန်</a>
+          <a href="{{ url('/user/aya-pay-fill-balance-top-up-submit') }}" class="btn top-up-btn text-white">AYA pay - ဆက်လုပ်ရန်</a>
         </div>
         </form>
       </div>
@@ -101,21 +101,7 @@
     let inputField = document.getElementById('inputField');
     inputField.value = value;
   }
-//   $('.ck').click(function () {
-//       $('.banks-section').addClass('d-none');
-//       $('.fill-money').removeClass('d-none');
-//   });
-//   $('#previous-btn').click(function () {
-//       $('.banks-section').removeClass('d-none');
-//       $('.fill-money').addClass('d-none');
-//   });
-// </script>
-//  <script>
-//     function fillInputBox(element) {
-//       let value = element.getAttribute('data-value');
-//       console.log(value);
-//       let inputField = document.getElementById('inputField');
-//       inputField.value = value;
-//     }
-  </script>
+
+</script>
+
 @endsection
