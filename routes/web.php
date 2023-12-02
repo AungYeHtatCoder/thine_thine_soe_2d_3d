@@ -7,20 +7,20 @@ use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\User\WalletController;
 use App\Http\Controllers\User\WelcomeController;
 use App\Http\Controllers\Admin\ProfileController;
-use App\Http\Controllers\User\WithDrawController;
 use App\Http\Controllers\Admin\PlayTwoDController;
 use App\Http\Controllers\Admin\TwoDigitController;
 use App\Http\Controllers\User\UserWalletController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\TwoDWinnerController;
-use App\Http\Controllers\Admin\FillBalanceController;
 use App\Http\Controllers\Admin\TwoDLotteryController;
 use App\Http\Controllers\Admin\ThreedHistoryController;
 use App\Http\Controllers\User\ChangePasswordController;
 use App\Http\Controllers\Admin\ThreedMatchTimeController;
 use App\Http\Controllers\Admin\FillBalanceReplyController;
+use App\Http\Controllers\User\WithDraw\WithDrawController;
 use App\Http\Controllers\Admin\TwoDEveningWinnerController;
 use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
+use App\Http\Controllers\User\FillBalance\FillBalanceController;
 
 // Route::get('/', function () {
 //     return view('two_d.api_test');
@@ -253,6 +253,39 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
     Route::get('/two-d-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'play_confirm'])->name('twod-play-confirm-quick');
     // store
     Route::post('/twod-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'store'])->name('twod-play-quickly-confirm.store');
+    // money transfer 
+    Route::get('/wallet-deposite', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'index'])->name('deposite-wallet');
+  Route::get('/fill-balance', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'topUpWallet'])->name('topUpWallet');
+
+  Route::get('/kpay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'topUpSubmit'])->name('topUpSubmit');
+
+  Route::get('/cb-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'CBPaytopUpSubmit'])->name('CBPaytopUpSubmit');
+
+  Route::get('/wave-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'WavePaytopUpSubmit'])->name('WavePaytopUpSubmit');
+
+  Route::get('/aya-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'AYAPaytopUpSubmit'])->name('AYAPaytopUpSubmit');
+
+  Route::post('/user-kpay-fill-money', [FillBalanceController::class, 'StoreKpayFillMoney'])->name('StoreKpayFillMoney');
+
+  Route::post('/user-cb-pay-fill-money', [FillBalanceController::class, 'StoreCBpayFillMoney'])->name('StoreCBpayFillMoney');
+
+  Route::post('/user-wave-pay-fill-money', [FillBalanceController::class, 'StoreWavepayFillMoney'])->name('StoreWavepayFillMoney');
+
+  Route::post('/user-aya-pay-fill-money', [FillBalanceController::class, 'StoreAYApayFillMoney'])->name('StoreAYApayFillMoney');
+  //withdraw
+  Route::get('/withdraw-money', [App\Http\Controllers\User\WithDraw\WithDrawController::class, 'GetWithdraw'])->name('money-withdraw');
+  Route::get('k-pay-withdraw-money', [WithDrawController::class, 'UserKpayWithdrawMoney'])->name('UserKpayWithdrawMoney');
+  Route::post('k-pay-with-draw-money', [WithDrawController::class, 'StoreKpayWithdrawMoney'])->name('StoreKpayWithdrawMoney');
+
+  Route::get('cb-pay-withdraw-money', [WithDrawController::class, 'UserCBPayWithdrawMoney'])->name('UserCBPayWithdrawMoney');
+  Route::post('cb-pay-with-draw-money', [WithDrawController::class, 'StoreCBpayWithdrawMoney'])->name('StoreCBpayWithdrawMoney');
+
+  Route::get('wave-pay-withdraw-money', [WithDrawController::class, 'UserWavePayWithdrawMoney'])->name('UserWavePayWithdrawMoney');
+  Route::post('wave-pay-with-draw-money', [WithDrawController::class, 'StoreWavepayWithdrawMoney'])->name('StoreWavepayWithdrawMoney');
+  Route::get('aya-pay-withdraw-money', [WithDrawController::class, 'UserAYAPayWithdrawMoney'])->name('UserAYAPayWithdrawMoney');
+  Route::post('aya-pay-with-draw-money', [WithDrawController::class, 'StoreAYApayWithdrawMoney'])->name('StoreAYApayWithdrawMoney');
+
+  // money transfer end
 
 
 });
