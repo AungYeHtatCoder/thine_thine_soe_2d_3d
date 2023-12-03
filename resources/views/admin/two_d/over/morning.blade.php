@@ -21,14 +21,12 @@
                 <div class="card-header pb-0">
                     <div class="d-lg-flex">
                         <div>
-                            <h5 class="mb-0">2D Morning Session Dashboards</h5>
+                            <h5 class="mb-0">2D - 12:1 Morning Session Over Amount Limit Dashboards</h5>
 
                         </div>
                         <div class="ms-auto my-auto mt-lg-0 mt-4">
                             <div class="ms-auto my-auto">
-                                {{-- <a href="{{ route('admin.users.create') }}"
-                                    class="btn bg-gradient-primary btn-sm mb-0">+&nbsp; Create New
-                                    User</a> --}}
+                         
                                 <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" data-type="csv"
                                     type="button" name="button">Export</button>
                             </div>
@@ -42,11 +40,7 @@
                                 <th>Lottery ID</th>
                                 <th>PlayerName</th>
                                 <th>Two Digits</th>
-                                {{-- <th>Pay Amount</th> --}}
-                                {{-- <th>Total Amount</th> --}}
-                                {{-- <th>6AM-12PM Prize No</th> --}}
                                 <th>Result</th>
-                                {{-- <th>12PM-6PM Prize No</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -58,16 +52,16 @@
                                     <!-- Assuming there's a relation from Lottery to User -->
                                     <td>
                                         <ul>
-                                            @foreach ($lottery->twoDigits as $twoDigit)
+                                            @foreach ($lottery->twoDigitLimits as $twoDigit)
                                                 <li>
-                                                    {{-- {{ $twoDigit->two_digit }} Amount: {{ $twoDigit->pivot->sub_amount }} - --}}
-                                                    <span class="badge bg-secondary">
+                                                 <span class="badge bg-secondary">
                                                    {{ $twoDigit->two_digit }}
                                                  </span>
                                                     Amount:
                                                     <span class="badge bg-secondary">
                                                         {{ $twoDigit->pivot->sub_amount }}
-                                                    </span> - 
+                                                    </span>
+                                                     -
                                                     {{ $twoDigit->pivot->created_at->format('d M Y (l) (h:i a)') }}
                                                 </li>
                                             @endforeach
@@ -75,7 +69,7 @@
                                     </td>
                                     <td>
                                         <ul>
-                                            @foreach ($lottery->twoDigitsMorning as $twoDigit)
+                                            @foreach ($lottery->twoDigitsOverAmountEarlyMorning as $twoDigit)
                                                 <li>
 
                                                     <!-- Check if it's a winner -->

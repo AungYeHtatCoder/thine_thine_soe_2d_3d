@@ -74,41 +74,69 @@
             </div>
           </div>
           {{-- second row start --}}
-          {{-- <div class="row mt-5">
+          <div class="row mt-5">
+            {{-- session two reset start 1 --}}
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card  mb-2">
-                <div class="card-header p-3 pt-2">
-                  <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons opacity-10">weekend</i>
-                  </div>
-                  <div class="text-end pt-1">
-                    <p class="text-sm mb-0 text-capitalize">Bookings</p>
-                    <h4 class="mb-0">281</h4>
-                  </div>
-                </div>
+                <div class="d-flex mt-n2">
+                            <div class="avatar avatar-xl bg-gradient-dark border-radius-xl p-2 mt-n4">
+                                <img src="{{ asset('admin_app/assets/img/small-logos/logo-slack.svg') }}" alt="slack_logo">
+                            </div>
+                            <div class="ms-3 my-auto">
+                                <h6 class="mb-0"> 2D Session Reset</h6>
+                                <div class="avatar-group">
+                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                                        data-original-title="Jessica Rowland">
+                                        <img alt="Image placeholder" src="{{ asset('admin_app/assets/img/team-3.jpg') }}"
+                                            class="">
+                                    </a>
+                                    <form action="{{ route('admin.SessionReset') }}" method="POST">
+                                      @csrf
+                                      <button class="btn btn-primary" type="submit">Reset</button>
+                                  </form>
+                                </div>
+                            </div>
+
+                        </div>
+
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
+                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">ပွဲချိန်ပြီး တခုပြီးတိုင်း  </span>၁၅ မိနစ်အတွင်း လုပ်ပေးရပါမည်။</p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 mt-sm-0 mt-4">
+            {{-- session reset 1 end --}}
+            {{-- session reset 2 start --}}
+            <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card  mb-2">
-                <div class="card-header p-3 pt-2">
-                  <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary shadow text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons opacity-10">leaderboard</i>
-                  </div>
-                  <div class="text-end pt-1">
-                    <p class="text-sm mb-0 text-capitalize">Today's Users</p>
-                    <h4 class="mb-0">2,300</h4>
-                  </div>
-                </div>
+                <div class="d-flex mt-n2">
+                            <div class="avatar avatar-xl bg-gradient-dark border-radius-xl p-2 mt-n4">
+                                <img src="{{ asset('admin_app/assets/img/small-logos/logo-slack.svg') }}" alt="slack_logo">
+                            </div>
+                            <div class="ms-3 my-auto">
+                                <h6 class="mb-0"> 2D Over Amount Limit Reset</h6>
+                                <div class="avatar-group">
+                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                                        data-original-title="Jessica Rowland">
+                                        <img alt="Image placeholder" src="{{ asset('admin_app/assets/img/team-3.jpg') }}"
+                                            class="">
+                                    </a>
+        <form action="{{ route('admin.OverAmountLimitSessionReset') }}" method="POST">
+                                      @csrf
+                                      <button class="btn btn-primary" type="submit">OverAmountLimitReset</button>
+                                  </form>
+                                </div>
+                            </div>
+
+                        </div>
+
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
+                  <p class="mb-0"><span class="text-success text-sm font-weight-bolder">ပွဲချိန်ပြီး တခုပြီးတိုင်း  </span>၁၅ မိနစ်အတွင်း လုပ်ပေးရပါမည်။</p>
                 </div>
               </div>
             </div>
+            {{-- session reset 2 --}}
             <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
               <div class="card  mb-2">
                 <div class="card-header p-3 pt-2 bg-transparent">
@@ -143,15 +171,15 @@
                 </div>
               </div>
             </div>
-          </div> --}}
+          </div>
           {{-- second row end --}}
           {{-- pie chart start --}}
           <div class="row mt-3">
         <div class="col-md-6">
-          <h5 class="mb-0">Pie Charts</h5>
+          {{-- <h5 class="mb-0">Pie Charts</h5>
           <p class="text-sm mb-0">
             Charts on this page use Chart.js - Simple yet flexible JavaScript charting for designers & developers.
-          </p>
+          </p> --}}
         </div>
       </div>
       <div class="row mt-4">
@@ -159,7 +187,7 @@
           <div class="card h-100">
             <div class="card-header pb-0 p-3">
               <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Channels</h6>
+                <h6 class="mb-0">2D 3D</h6>
                 <button type="button" class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="See traffic channels">
                   <i class="material-icons text-sm">priority_high</i>
                 </button>
@@ -194,12 +222,12 @@
             </div>
             <div class="card-footer pt-0 pb-0 p-3 d-flex align-items-center">
               <div class="w-60">
-                <p class="text-sm">
+                {{-- <p class="text-sm">
                   More than <b>1,200,000</b> sales are made using referral marketing, and <b>700,000</b> are from social media.
-                </p>
+                </p> --}}
               </div>
               <div class="w-40 text-end">
-                <a class="btn bg-light mb-0 text-end" href="javascript:;">Read more</a>
+                {{-- <a class="btn bg-light mb-0 text-end" href="javascript:;">Read more</a> --}}
               </div>
             </div>
           </div>
@@ -208,7 +236,7 @@
           <div class="card">
             <div class="card-header pb-0 p-3">
               <div class="d-flex justify-content-between">
-                <h6 class="mb-0">Revenue</h6>
+                <h6 class="mb-0">2D 3D</h6>
                 <button type="button" class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="See which ads perform better">
                   <i class="material-icons text-sm">priority_high</i>
                 </button>
@@ -216,11 +244,11 @@
               <div class="d-flex align-items-center">
                 <span class="badge badge-md badge-dot me-4">
                   <i class="bg-primary"></i>
-                  <span class="text-dark text-xs">Facebook Ads</span>
+                  {{-- <span class="text-dark text-xs">Facebook Ads</span> --}}
                 </span>
                 <span class="badge badge-md badge-dot me-4">
                   <i class="bg-dark"></i>
-                  <span class="text-dark text-xs">Google Ads</span>
+                  {{-- <span class="text-dark text-xs">Google Ads</span> --}}
                 </span>
               </div>
             </div>
@@ -240,9 +268,9 @@
           <div class="row mt-5">
         <div class="col-md-6">
           <h5 class="mb-0">Charts</h5>
-          <p class="text-sm mb-0">
+          {{-- <p class="text-sm mb-0">
             Charts on this page use Chart.js - Simple yet flexible JavaScript charting for designers & developers.
-          </p>
+          </p> --}}
         </div>
       </div>
            <div class="row mb-4 mt-5">
@@ -257,11 +285,11 @@
                 </div>
                 <div class="card-body">
                   <h6 class="mb-0 ">DailyIncome</h6>
-                  <p class="text-sm ">Last Campaign Performance</p>
+                  {{-- <p class="text-sm ">Last Campaign Performance</p> --}}
                   <hr class="dark horizontal">
                   <div class="d-flex ">
                     <i class="material-icons text-sm my-auto me-1">schedule</i>
-                    <p class="mb-0 text-sm"> campaign sent 2 days ago </p>
+                    {{-- <p class="mb-0 text-sm"> campaign sent 2 days ago </p> --}}
                   </div>
                 </div>
               </div>
@@ -276,6 +304,98 @@
 
 <script src="{{ asset('admin_app/assets/js/plugins/chartjs.min.js')}}"></script>
 {{-- pie chart --}}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+<script>
+
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    @if(session('SuccessRequest'))
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: '{{ session("SuccessRequest") }}',
+      timer: 3000,
+      showConfirmButton: false
+    });
+    @endif
+
+    // If you want to show an error or other types of alerts, you can add more conditions here
+    @if(session('error'))
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: '{{ session("error") }}'
+    });
+    @endif
+});
+
+// For the reset confirmation, you can replace the native confirm with SweetAlert
+$('form').on('submit', function(e) {
+    e.preventDefault(); // prevent the form from submitting immediately
+    var form = this;
+    Swal.fire({
+        title: 'Are you sure you want to reset?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, reset it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            form.submit(); // submit the form if confirmed
+        }
+    });
+});
+
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    @if(session('SuccessRequest'))
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: '{{ session("SuccessRequest") }}',
+      timer: 3000,
+      showConfirmButton: false
+    });
+    @endif
+
+    // If you want to show an error or other types of alerts, you can add more conditions here
+    @if(session('error'))
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: '{{ session("error") }}'
+    });
+    @endif
+});
+
+// For the reset confirmation, you can replace the native confirm with SweetAlert
+$('form').on('submit', function(e) {
+    e.preventDefault(); // prevent the form from submitting immediately
+    var form = this;
+    Swal.fire({
+        title: 'Are you sure you want to reset?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, reset it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            form.submit(); // submit the form if confirmed
+        }
+    });
+});
+
+</script>
+
+
 <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
     var ctx2 = document.getElementById("chart-pie").getContext("2d");
@@ -402,7 +522,7 @@ renderMonthlyChart();
         new Chart(ctx2, {
             type: "pie",
             data: {
-                labels: ['DailyIncome', 'WeeklyIncome', 'MonthlyIncome', 'YEarlyIncome'],
+                labels: ['DailyIncome', 'WeeklyIncome', 'MonthlyIncome', 'YearlyIncome'],
                 datasets: [{
                     label: "Income",
                     backgroundColor: ['#17c1e8', '#e91e63', '#3A416F', '#a8b8d8'],

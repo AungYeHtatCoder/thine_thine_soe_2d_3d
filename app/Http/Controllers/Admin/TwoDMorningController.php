@@ -36,6 +36,28 @@ class TwoDMorningController extends Controller
     ]);
 }
 
+// over amount limit 9:30 am
+public function GetDigitEarlyMorningOverAmountLimitindex()
+{
+    // Retrieve lotteries where the associated LotteryMatch may be active or inactive
+    $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsOverAmountEarlyMorning')->get();
+
+    $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(6), Carbon::now()->startOfDay()->addHours(10)])
+                                  ->orderBy('id', 'desc')
+                                  ->first();
+
+    $prize_no = TwodWiner::whereDate('created_at', Carbon::today())->orderBy('id', 'desc')->first();
+
+    // Pass the retrieved data to the view
+    return view('admin.two_d.over.early_morning', [
+        'lotteries' => $lotteries,
+        'prize_no' => $prize_no,
+        'prize_no_morning' => $prize_no_morning
+    ]);
+}
+
+
     // for 12:1
     public function index()
 {
@@ -43,7 +65,7 @@ class TwoDMorningController extends Controller
     $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsMorning')->get();
 
     $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
-                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(6), Carbon::now()->startOfDay()->addHours(10)])
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(10), Carbon::now()->startOfDay()->addHours(12)])
                                   ->orderBy('id', 'desc')
                                   ->first();
 
@@ -57,13 +79,81 @@ class TwoDMorningController extends Controller
     ]);
 }
 
+// over amount limit 12:1
+public function GetDigitMorningOverAmountLimitindex()
+{
+    // Retrieve lotteries where the associated LotteryMatch may be active or inactive
+    $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsMorningOverLimit')->get();
+
+    $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(10), Carbon::now()->startOfDay()->addHours(12)])
+                                  ->orderBy('id', 'desc')
+                                  ->first();
+
+    $prize_no = TwodWiner::whereDate('created_at', Carbon::today())->orderBy('id', 'desc')->first();
+
+    // Pass the retrieved data to the view
+    return view('admin.two_d.over.morning', [
+        'lotteries' => $lotteries,
+        'prize_no' => $prize_no,
+        'prize_no_morning' => $prize_no_morning
+    ]);
+}
+
+// for 2: pm
+public function GetDigitEarlyEveningOverAmountLimitindex()
+{
+    // Retrieve lotteries where the associated LotteryMatch may be active or inactive
+    $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsEarlyEvenOverLimit')->get();
+
+    $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(12), Carbon::now()->startOfDay()->addHours(14)])
+                                  ->orderBy('id', 'desc')
+                                  ->first();
+
+    $prize_no = TwodWiner::whereDate('created_at', Carbon::today())->orderBy('id', 'desc')->first();
+
+    // Pass the retrieved data to the view
+    return view('admin.two_d.over.early_evening', [
+        'lotteries' => $lotteries,
+        'prize_no' => $prize_no,
+        'prize_no_morning' => $prize_no_morning
+    ]);
+}
+
+
+public function GetDigitEveningOverAmountLimitindex()
+{
+    // Retrieve lotteries where the associated LotteryMatch may be active or inactive
+   $playDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+    if (!in_array(strtolower(date('l')), $playDays)) {
+        // Return an error or a message that today is not a playing day
+        return redirect()->back()->with('error', 'Today is not a playing day.');
+    }
+    $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsEveningOverLimit')->get();
+
+    $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(14), Carbon::now()->startOfDay()->addHours(24)])
+                                  ->orderBy('id', 'desc')
+                                  ->first();
+
+    $prize_no = TwodWiner::whereDate('created_at', Carbon::today())->orderBy('id', 'desc')->first();
+
+    // Pass the retrieved data to the view
+    return view('admin.two_d.over.evening', [
+        'lotteries' => $lotteries,
+        'prize_no' => $prize_no,
+        'prize_no_morning' => $prize_no_morning
+    ]);
+}
+
 public function GetDigitEarlyEveningindex()
 {
     // Retrieve lotteries where the associated LotteryMatch may be active or inactive
     $lotteries = Lottery::whereHas('lotteryMatch')->whereHas('twoDigitsEarlyEvening')->get();
 
     $prize_no_morning = TwodWiner::whereDate('created_at', Carbon::today())
-                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(16), Carbon::now()->startOfDay()->addHours(18)])
+                                  ->whereBetween('created_at', [Carbon::now()->startOfDay()->addHours(12), Carbon::now()->startOfDay()->addHours(14)])
                                   ->orderBy('id', 'desc')
                                   ->first();
 

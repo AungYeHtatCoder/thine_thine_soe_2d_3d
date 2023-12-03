@@ -100,6 +100,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   // two d get early morning number
   Route::get('/get-two-d-early-morning-number', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlMorningindex'])->name('earlymorningNumber');
   Route::get('/get-two-d-early-evening-number', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyEveningindex'])->name('earlyeveningNumber');
+
+  // two d get early morning number over amount limit
+  Route::get('/get-two-d-early-morning-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyMorningOverAmountLimitindex'])->name('earlymorningNumberOverAmountLimit');
+  // two d get 12:1 morning number over amount limit
+  Route::get('/get-two-d-morning-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitMorningOverAmountLimitindex'])->name('morningNumberOverAmountLimit');
+  // two d get 2 early evening number over amount limit
+  Route::get('/get-two-d-early-evening-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyEveningOverAmountLimitindex'])->name('earlyeveningNumberOverAmountLimit');
+  // two d get 4:30 evening number over amount limit
+  Route::get('/get-two-d-evening-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEveningOverAmountLimitindex'])->name('eveningNumberOverAmountLimit');
+  
   // early morning winner
   Route::get('/two-d-early-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDEarlyMorningWinner'])->name('earlymorningWinner');
   Route::get('/two-d-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDMorningWinner'])->name('morningWinner');
@@ -175,6 +185,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
     Route::get('/get-two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'index'])->name('SessionResetIndex');
     Route::post('/two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'SessionReset'])->name('SessionReset');
+
+    Route::post('/two-d-session-over-amount-limit-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'OverAmountLimitSessionReset'])->name('OverAmountLimitSessionReset');
+
     Route::get('/close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'index'])->name('CloseTwoD');
     Route::put('/update-open-close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'update'])->name('OpenCloseTwoD');
     Route::resource('twod-records', TwoDLotteryController::class);
@@ -292,15 +305,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 });
 
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
-// Route::get('/2dPlay', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlay'])->name('twodPlay');
-// Route::get('/2dPlayConfirm', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlayConfirm'])->name('twoDPlayConfirm');
-// Route::get('/2dPlayQuick', [App\Http\Controllers\User\WelcomeController::class, 'twoDQuick'])->name('twoDQuick');
-// Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
 Route::get('/service', [App\Http\Controllers\User\WelcomeController::class, 'servicePage'])->name('service');
-// Route::get('/topUp', [App\Http\Controllers\User\WelcomeController::class, 'topUp'])->name('topup');
-// Route::get('/withDraw', [App\Http\Controllers\User\WelcomeController::class, 'withDraw'])->name('withdraw');
-// Route::get('/user-profile', [App\Http\Controllers\User\WelcomeController::class, 'userProfile'])->name('profile');
-// Route::get('/twoDWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'twoDWinnerHistory'])->name('twoDWinnerHistory');
 Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 'twoDPrize'])->name('twoDPrize');
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
 Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
