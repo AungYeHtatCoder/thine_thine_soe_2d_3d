@@ -28,9 +28,9 @@
         </div>
         @endauth
 
-        <div class="mt-3 me-2">
+        {{-- <div class="mt-3 me-2">
             <i class="fa-solid fa-bell fa-2xl text-white"></i>
-        </div>
+        </div> --}}
     </div>
 
     <div class="d-flex justify-content-between">
