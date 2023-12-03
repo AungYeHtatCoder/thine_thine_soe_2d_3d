@@ -94,4 +94,13 @@
       }).showToast();
   </script>
 @endif
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function refreshPage() {
+    location.reload();
+  }
+</script>
 </html>

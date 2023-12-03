@@ -35,13 +35,13 @@
                 </a>
               </div>
               <div>
-                <a href="#" class="text-decoration-none">
+                <a href="{{ url('user/two-d-winners-history') }}" class="text-decoration-none">
                   <span class="material-icons">stars</span>
                   <p>ကံထူးရှင်များ</p>
                 </a>
               </div>
               <div>
-                <a href="#" class="text-decoration-none">
+                <a href="{{ url('/twod-holiday') }}" class="text-decoration-none">
                   <span class="material-icons">event_note</span>
                   <p>ပိတ်ရက်</p>
                 </a>

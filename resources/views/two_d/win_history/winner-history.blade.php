@@ -3,7 +3,7 @@
 <div class="row">
     <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-4 headers"
-      style="padding-bottom:200px"
+      style="height:100vh"
     >
       
     <div class="winner-card mt-5 p-1">
@@ -21,7 +21,7 @@
       </span></p>
       <div>
 
-       <span class="font-weight-bold" style="font-size: 30px;color: #e0cbcb;">{{ $winners->count() }}
+       <span class="font-weight-bold" style="font-size: 30px;color: #fff">{{ $winners->count() }}
           @if($winners->count() > 1)
           ကံထူးရှင်များ
           @else
@@ -33,7 +33,7 @@
 
     <div class="p-1 mt-3" style="border-bottom: 200px;">
       @if($winners->isEmpty())
-      <p>No winners found for the past month.</p>
+      <p style="color: #f5bd02">No winners found for the past month.</p>
       @else
       <table class="winner-table table table-striped">
         @foreach($winners as $index => $winner)

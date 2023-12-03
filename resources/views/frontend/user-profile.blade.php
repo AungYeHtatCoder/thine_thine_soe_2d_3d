@@ -44,7 +44,7 @@
 
         <hr>
         <div class="d-flex justify-content-around">
-            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn btn-success" style="text-decoration: none;">ငွေသွင်းမည်</a>
+            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေသွင်းမည်</a>
             <a href="{{ url('/user/withdraw-money')}}" type="button" class="btn btn-danger" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေထုတ်မည်</a>
         </div>
 
@@ -52,14 +52,15 @@
             <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း
             <span>
                 <a href="{{ url('/user/two-d-play-index')}}" style="color: #49da06; text-decoration:none">
-                        <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+                        {{-- <strong>ထီထိုးရန် နိုပ်ပါ</strong> --}}
+                    </a>
             </span>
             </p>
             @if(isset($morningDigits['two_digits']) && count($morningDigits['two_digits']) == 0)
-            <p class="text-center bg-success text-white px-3 py-2 mt-3">
+            <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
                 ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
                 <span>
-                    <a href="{{ url('/user/two-d-play-index')}}" style="color: #1706da; text-decoration:none">
+                    <a href="{{ url('/user/two-d-play-index')}}" style="color:#f5bd02; text-decoration:none">
                         <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
                 </span>
             </p>
@@ -103,8 +104,8 @@
             {{-- 9:30 AM Start --}}
             <div class="morningnine my-4">
                 @if ($earlymorningDigits)
-                <div class="mb-3 d-flex justify-content-around  text-white shadow p-2 rounded" style="background: #c50408;">
-                    <table class="table">
+                <div class="mb-3 d-flex justify-content-around  text-white shadow p-2 rounded">
+                    <table class="table table-dark">
                         <thead>
                             <tr>
                                 <th>စဉ်</th>
@@ -141,8 +142,8 @@
             @if ($morningDigits)
                 
 
-                    <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                        <table class="table">
+                    <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                        <table class="table table-dark">
                         <thead>
                             <tr>
                                 <th>စဉ်</th>
@@ -184,8 +185,8 @@
                     </span>
                 </p>
             @endif
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                    <table class="table">
+                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                    <table class="table table-dark">
                         <thead>
                             <tr>
                                 <th>စဉ်</th>
@@ -228,8 +229,8 @@
                 </p>
             @endif
             
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                    <table class="table">
+                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                    <table class="table table-dark">
                         <thead>
                             <tr>
                                 <th>စဉ်</th>

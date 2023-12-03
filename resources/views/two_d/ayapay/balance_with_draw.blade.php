@@ -27,11 +27,11 @@
     <p style="color: #fff;">ငွေလက်ခံမည့်ဖုန်းနံပါတ်</p>
     {{-- <input type="number" value="" class="form-control" name="" id="inputField"> --}}
     <input type="number" id="kpay_no" name="ayapay_no" class="form-control" value="{{ $user->ayapay_no }}">
-        <div class="input-group-append">
+        <div class="input-group-append float-end">
             <button class="btn btn-outline-secondary" type="button" onclick="copyToClipboard()">Copy</button>
         </div>
   </div>
-  <div class="form-group mt-3">
+  <div class="form-group mt-5">
     <p style="color: #fff;">သင်၏ AYA pay ဖုန်းနံပါတ်ထဲ့ပါ</p>
     <input type="number" value="" class="form-control" name="user_ph_no">
   </div>
