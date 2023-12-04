@@ -6,7 +6,7 @@
       
       <h5 class="d-inline-block">
           <a href="{{ url('/') }}" class="text-decoration-none"
-          >TTT9 2D | 3D</a
+          >TTT 2D | 3D</a
           >
       </h5>
       <span>
