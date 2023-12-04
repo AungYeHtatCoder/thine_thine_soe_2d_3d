@@ -129,7 +129,7 @@
               </div>
           </div>
           @else
-          <div class="col-2 text-center digit disabled" style="background-color: {{ 'javascript:getRandomColor();' }}" onclick="showLimitFullAlert()">
+          <div class="col-2 text-center digit disabled" style="background-color: {{ 'javascript:getRandomColor();' }}" style="width:100%" onclick="showLimitFullAlert()">
             {{ $digit->two_digit }}
           </div>
           @endif

@@ -77,13 +77,13 @@ body {
   left: 0;
   bottom: 0;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.9;
   overflow: hidden;
 }
 
 .marquee-text {
   white-space: nowrap;
-  color: #ebc03c;
+  color: #f5bd02;
   font-weight: bold;
   animation: marquee-scroll 10s linear infinite;
 }
