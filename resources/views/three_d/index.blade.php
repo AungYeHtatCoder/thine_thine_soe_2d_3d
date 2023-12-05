@@ -83,7 +83,7 @@
 <div class="row footer">
     <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 py-3">
      <div class="d-flex justify-content-center align-items-center">
-        <a href="{{ url('/user/three-d-choice-play-index') }}" type="button" class="px-3 py-2 rounded text-white outline outline-none text-decoration-none" style="border: 2px solid #cb9b51;background-image: url('./images/background.jpg');">ထိုးမည်</a>
+        <a href="{{ url('/user/three-d-choice-play-index') }}" type="button" class="px-3 py-2 rounded text-white outline outline-none text-decoration-none" style="border: 2px solid #cb9b51;background:#c50408;">ထိုးမည်</a>
      </div>
     </div>
 </div>
