@@ -366,13 +366,13 @@ hr {
   margin: 7px;
   /* box-shadow: 3px 2px 4px #f5bd02; */
   box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.2), 3px 5px 5px 0 rgba(0, 0, 0, 0.19);
-
   transition: all 0.5s;
 }
 
 .list-card:active {
   transform: translateY(4px);
 }
+
 /* .list-card:hover::before {
   transform: scale(9);
   box-shadow: 0 0 15px #ffee10;

@@ -327,3 +327,5 @@ Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBa
 
 // Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
+Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedHistory']);
+Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
