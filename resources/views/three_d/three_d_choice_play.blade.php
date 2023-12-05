@@ -7,12 +7,12 @@
 <div class="row">
     <div
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
-      style="height:100vh"
+      style="padding-bottom:100px"
     >
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center mt-2">
 
       <a href="./wallet.html" class="d-flex justify-content-start align-items-center text-decoration-none ">
-          <img src="{{ asset('user_app/assets/images/wallet.png') }}"  width="40px" height="40px" alt="">
+          <img src="{{ asset('user_app/assets/images/wallet.png') }}"  alt="" style="width: 40px; height:40px">
           {{-- <p class="fw-bold pt-2 ps-2 text-white">0 ကျပ်</p> --}}
           <p class="fw-bold pt-2 ps-2 text-white" id="userBalance" data-balance="{{ Auth::user()->balance }}">{{ Auth::user()->balance }} MMK</p>
       </a>
@@ -31,8 +31,8 @@
 
   <div class="d-flex justify-content-between mt-3 custom-btn">
     <button class="fs-6 px-3" id="permuteButton" onclick="permuteDigits()">ပတ်လည်</button>
-    <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black" autocomplete="off"/>
-    <input type="text" name="amount" id="input_new_digit" placeholder="Enter 3 Digit" class="form-control w-75 text-center border-black" autocomplete="off"/>
+    <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black ms-1" autocomplete="off"/>
+    <input type="text" name="amount" id="input_new_digit" placeholder="Enter 3 Digit" class="form-control w-75 ms-1 text-center border-black" autocomplete="off"/>
   </div>
 
     <div class="mx-auto ms-2">
@@ -41,7 +41,7 @@
     </div>
 
     <div class="ms-2 my-3">
-      <button type="button" class="py-2 px-3 rounded  bg-transparent border border-none text-white" onclick="showNumbers()">ရွေးမည်</button>
+      {{-- <button type="button" class="py-2 px-3 rounded  bg-transparent border border-none text-white" onclick="showNumbers()">ရွေးမည်</button> --}}
     </div>
 
     
@@ -139,14 +139,15 @@
       {{-- three d end --}}
     </div>
 </div>
-<div class="row footer">
-  <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 py-3">
-    <div class="d-flex justify-content-between align-items-center mt-5 ms-2">
-      {{-- <a type="button" class="btn remove-btn px-3 py-2 me-2 my-3 rounded text-white text-decoration-none" onclick="deleteNumbers()">ပယ်မည်</a>
-      <a href="./3d-confirm.html" type="button" class="btn play-btn px-3 py-2 me-2 my-3 rounded text-white outline outline-none text-decoration-none">ထိုးမည်</a> --}}
+
+<div class="row">
+
+  <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
+    <div class="d-flex justify-content-around mt-2" >
       <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
-      <a href="{{ url('/user/three-d-choice-play-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
-    </div>
+      <a href="{{ url('/user/three-d-choice-play-confirm') }}" onclick="storeSelectionsInLocalStorage()" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+    </div> 
+  
   </div>
 </div>
 
@@ -262,7 +263,7 @@ function selectDigit(num, element) {
         selectedInput.value = selectedDigits.join(',');
         //element.classList.add('selected');
         if (element) {
-              element.classList.remove('selected');
+              element.classList.add('selected');
             }
         const amountInput = document.createElement('input');
         amountInput.setAttribute('type', 'number');

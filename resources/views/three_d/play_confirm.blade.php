@@ -24,7 +24,7 @@
        </tbody>
       </table>
    <div class="col-md-12 mb-3">
-                <label for="totalAmount">Total Amount</label>
+                <label for="totalAmount" class="text-white">Total Amount</label>
                 <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
               </div>
 
@@ -48,7 +48,7 @@
   <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
             
     <div class="d-flex justify-content-around mt-2" >
-      <a href="{{ url('/user/two-d-play-index-9am') }}" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
+      <a href="#" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
       <button type="submit" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</button>
     </div> 
   </div>

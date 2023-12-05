@@ -262,7 +262,7 @@ class WelcomeController extends Controller
 
     public function threedWinner()
     {
-        return view('frontend.threed-winner');
+        return view('frontend.threed-winner-history');
     }
 
     public function threedHistory()
