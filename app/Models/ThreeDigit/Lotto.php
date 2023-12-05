@@ -14,7 +14,7 @@ class Lotto extends Model
      protected $fillable = [
         'total_amount',
         'user_id',
-        'session',
+        //'session',
         'lottery_match_id'
     ];
     protected $dates = ['created_at', 'updated_at'];

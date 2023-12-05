@@ -2,7 +2,7 @@
 @section('content')
 
 @if ($lottery_matches->is_active == 1)
-          <form action="{{ route('user.twod-play-index-9am.store') }}" method="POST" class="p-1">
+          <form action="{{ route('user.three-d-choice-play-store') }}" method="POST" class="p-1">
             @csrf
 <div class="row">
     <div

@@ -31,8 +31,10 @@
 
   <div class="d-flex justify-content-between mt-3 custom-btn">
     <button class="fs-6 px-3" id="permuteButton" onclick="permuteDigits()">ပတ်လည်</button>
+
     <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black ms-1" autocomplete="off"/>
     <input type="text" name="amount" id="input_new_digit" placeholder="Enter 3 Digit" class="form-control w-75 ms-1 text-center border-black" autocomplete="off"/>
+
   </div>
 
     <div class="mx-auto ms-2">
@@ -40,9 +42,11 @@
       {{-- <input type="number"  class="p-2 border border-none text-white bg-transparent" style="outline: none;" minlength="3" placeholder="၁၀၀ ကျပ်အထက်" required/> --}}
     </div>
 
-    <div class="ms-2 my-3">
-      {{-- <button type="button" class="py-2 px-3 rounded  bg-transparent border border-none text-white" onclick="showNumbers()">ရွေးမည်</button> --}}
-    </div>
+
+    {{-- <div class="ms-2 my-3">
+      <button type="button" class="py-2 px-3 rounded  bg-transparent border border-none text-white" onclick="showNumbers()">ရွေးမည်</button>
+    </div> --}}
+
 
     
 
