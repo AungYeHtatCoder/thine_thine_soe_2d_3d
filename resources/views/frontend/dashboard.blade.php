@@ -12,6 +12,12 @@
           <p class="ps-3">ကိုယ်ရေးအချက်လက်(Profile)</p>
           </div>
         </a>
+        <a href="{{ url('/user/three-d-display') }}" class="text-decoration-none">
+          <div class="d-flex list-card">
+          <i class="fa-regular fa-circle-user fs-3 ms-2"></i>
+          <p class="ps-3">3D ထိုးမှတ်တမ်း</p>
+          </div>
+        </a>
         <a href="{{ url('/user/two-d-winners-history') }}" class="text-decoration-none">
           <div class="d-flex list-card">
           <i class="fa-solid fa-language fs-3 ms-2"></i>

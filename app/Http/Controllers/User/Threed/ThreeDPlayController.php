@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User\Threed;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\ThreeDigit\Lotto;
 use App\Models\Admin\LotteryMatch;
@@ -55,6 +56,16 @@ class ThreeDPlayController extends Controller
 
     return view('three_d.play_confirm', compact('threeDigits', 'remainingAmounts', 'lottery_matches'));
         //return view('three_d.three_d_choice_play');
+    }
+
+    public function user_play()
+    {
+        $userId = auth()->id(); // Get logged in user's ID
+        
+        $displayThreeDigits = User::getUserThreeDigits($userId);
+        return view('three_d.three_d_display', [
+            'displayThreeDigits' => $displayThreeDigits,
+        ]);
     }
 
 
@@ -135,7 +146,7 @@ class ThreeDPlayController extends Controller
 
         DB::commit();
         session()->flash('SuccessRequest', 'Successfully placed bet.');
-        return redirect()->route('home')->with('message', 'Data stored successfully!');
+        return redirect()->route('user.display')->with('message', 'Data stored successfully!');
     } catch (\Exception $e) {
         DB::rollback();
         Log::error('Error in store method: ' . $e->getMessage());

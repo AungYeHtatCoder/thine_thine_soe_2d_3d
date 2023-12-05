@@ -10,6 +10,7 @@ use App\Models\Admin\Lottery;
 use App\Models\Admin\TwodWiner;
 use App\Models\Admin\BetLottery;
 use App\Models\Admin\Permission;
+use App\Models\ThreeDigit\Lotto;
 use App\Models\Admin\FillBalance;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Hash;
@@ -227,6 +228,23 @@ public static function getUserEveningTwoDigits($userId) {
 public function betLotteries()
 {
     return $this->hasMany(BetLottery::class);
+}
+
+
+public static function getUserThreeDigits($userId) {
+    $displayThreeDigits = Lotto::where('user_id', $userId)
+                               ->with('DisplayThreeDigits')
+                               ->get()
+                               ->pluck('DisplayThreeDigits')
+                               ->collapse(); 
+    $totalAmount = $displayThreeDigits->sum(function ($threeDigit) {
+        return $threeDigit->pivot->sub_amount;
+    });
+
+    return [
+        'threeDigit' => $displayThreeDigits,
+        'total_amount' => $totalAmount
+    ];
 }
 
 
