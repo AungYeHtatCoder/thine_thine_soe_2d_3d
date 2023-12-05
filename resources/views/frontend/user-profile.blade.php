@@ -44,8 +44,8 @@
 
         <hr>
         <div class="d-flex justify-content-around">
-            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေသွင်းမည်</a>
-            <a href="{{ url('/user/withdraw-money')}}" type="button" class="btn btn-danger" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေထုတ်မည်</a>
+            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn p-2" style="text-decoration: none; background-color: #c50408;color:#fff;border:2px solid #f5bd02">ငွေသွင်းမည်</a>
+            <a href="{{ url('/user/withdraw-money')}}" type="button" class="btn p-2" style="text-decoration: none; background-color: #c50408;color:#fff; border:2px solid #f5bd02">ငွေထုတ်မည်</a>
         </div>
 
         <div class="my-4">
