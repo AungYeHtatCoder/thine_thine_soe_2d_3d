@@ -88,8 +88,12 @@
             </div>
            </div>
             @else
-          <div class="text-center p-4">
-            <h3>Sorry, you can't play now. Please wait for the next round.</h3>
+          <div class="row">
+            <div class="col-md-12">
+            <div class="text-center p-4">
+            <h4 style="color: aliceblue" class="badge bg-primary">ယခု ပွဲချိန်မှာ ထိုး၍ မရတော့ပါ ! နောက်ပွဲစဉ်စောင့်ပေးပါ အားပေးမှုကို ကျေးဇူးတင်ပါသည်။ </h4>
+        </div>
+            </div>
           </div>
           @endif
 
@@ -143,13 +147,13 @@
     </div>
 </div>
 <div class="row">
-
   <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
-            
+   @if ($lottery_matches->is_active == 1)    
     <div class="d-flex justify-content-around mt-2" >
       <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
       <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
     </div> 
+  @endif
   </div>
 </div>
 

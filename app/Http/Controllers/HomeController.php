@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Admin\Lottery;
+use App\Models\Admin\LotteryMatch;
 
 class HomeController extends Controller
 {
@@ -42,6 +43,8 @@ class HomeController extends Controller
 
     // Yearly Total
     $yearlyTotal = Lottery::whereYear('created_at', '=', now()->year)->sum('total_amount');
+        $lottery_matches = LotteryMatch::where('id', 1)->whereNotNull('is_active')->first();
+        //session()->flash('SuccessRequest', 'Successfully 2D Close and Open Session');
 
     // Return the totals, you can adjust this part as per your needs
     return view('admin.dashboard', [
@@ -49,6 +52,7 @@ class HomeController extends Controller
         'weeklyTotal'  => $weeklyTotal,
         'monthlyTotal' => $monthlyTotal,
         'yearlyTotal'  => $yearlyTotal,
+        'lottery_matches' => $lottery_matches,
     ]);
     } else {
         $userId = auth()->id(); // Get logged in user's ID

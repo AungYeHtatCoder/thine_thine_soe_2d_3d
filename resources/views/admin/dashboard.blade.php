@@ -139,18 +139,40 @@
             {{-- session reset 2 --}}
             <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
               <div class="card  mb-2">
-                <div class="card-header p-3 pt-2 bg-transparent">
-                  <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                    <i class="material-icons opacity-10">store</i>
-                  </div>
-                  <div class="text-end pt-1">
-                    <p class="text-sm mb-0 text-capitalize ">Revenue</p>
-                    <h4 class="mb-0 ">34k</h4>
-                  </div>
-                </div>
+                <div class="d-flex mt-n2">
+                            <div class="avatar avatar-xl bg-gradient-dark border-radius-xl p-2 mt-n4">
+                                <img src="{{ asset('admin_app/assets/img/small-logos/logo-slack.svg') }}" alt="slack_logo">
+                            </div>
+                            <div class="ms-3 my-auto">
+                                <h6 class="mb-0">Morning Session</h6>
+                                <div class="avatar-group">
+                                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip"
+                                        data-original-title="Jessica Rowland">
+                                        <img alt="Image placeholder" src="{{ asset('admin_app/assets/img/team-3.jpg') }}"
+                                            class="">
+                                    </a>
+                                    
+                                        <form action="{{ route('admin.OpenCloseTwoD' , $lottery_matches->id) }}" method="post">
+                                            @csrf
+                                            @method('PUT')
+                                            <input type="hidden" name="is_active" value="{{ $lottery_matches->id }}">
+                                            <div class="form-check form-switch ps-0">
+                                                <input class="form-check-input ms-auto" type="checkbox"
+                                                    id="flexSwitchCheckDefault" name="flexSwitchCheckDefault"
+                                                    {{ $lottery_matches->is_active ? 'checked' : '' }}>
+                                                <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0"
+                                                    for="flexSwitchCheckDefault">Close For 2D Session</label>
+                                            </div>
+                                            <button class="btn btn-primary" type="submit">Open / Close</button>
+                                        </form>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
                 <hr class="horizontal my-0 dark">
                 <div class="card-footer p-3">
-                  <p class="mb-0 "><span class="text-success text-sm font-weight-bolder">+1% </span>than yesterday</p>
+                  <p class="mb-0 "><span class="text-success text-sm font-weight-bolder">2D Session </span>အဖွင့်အပိတ်ကို ဤနေရာမှ လုပ်ပေးရပါမည်။</p>
                 </div>
               </div>
             </div>
@@ -351,51 +373,6 @@ $('form').on('submit', function(e) {
 });
 
 </script>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    @if(session('SuccessRequest'))
-    Swal.fire({
-      icon: 'success',
-      title: 'Success!',
-      text: '{{ session("SuccessRequest") }}',
-      timer: 3000,
-      showConfirmButton: false
-    });
-    @endif
-
-    // If you want to show an error or other types of alerts, you can add more conditions here
-    @if(session('error'))
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: '{{ session("error") }}'
-    });
-    @endif
-});
-
-// For the reset confirmation, you can replace the native confirm with SweetAlert
-$('form').on('submit', function(e) {
-    e.preventDefault(); // prevent the form from submitting immediately
-    var form = this;
-    Swal.fire({
-        title: 'Are you sure you want to reset?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, reset it!'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            form.submit(); // submit the form if confirmed
-        }
-    });
-});
-
-</script>
-
-
 <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
     var ctx2 = document.getElementById("chart-pie").getContext("2d");
