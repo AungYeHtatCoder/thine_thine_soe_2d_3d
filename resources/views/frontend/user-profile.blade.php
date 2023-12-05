@@ -135,12 +135,12 @@
 
         </div>
         {{-- 9:30 End --}}
-            
+
             {{-- 12:00 PM Start --}}
 
         <div class="morning d-none my-4">
             @if ($morningDigits)
-                
+
 
                     <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
                         <table class="table table-dark">
@@ -205,7 +205,7 @@
                         </tbody>
                     </table>
                 </div>
-           
+
             <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background-color: #c50408">
                 <p class="text-right" style="color: #f5bd02">Total Amount for 02:00PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
                     <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
@@ -228,7 +228,7 @@
                     </span>
                 </p>
             @endif
-            
+
                 <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
                     <table class="table table-dark">
                         <thead>
@@ -249,14 +249,14 @@
                         </tbody>
                     </table>
                 </div>
-           
+
             <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background:#c50408;">
                 <p class="text-right" style="color: #f5bd02">Total Amount for 04:30PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
                     <strong>{{ $eveningDigits['total_amount'] }} MMK</strong>
                 </p>
             </div>
 
-        </div>
+            </div>
 
         {{-- 4:30 PM End --}}
 

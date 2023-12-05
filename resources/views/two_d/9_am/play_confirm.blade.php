@@ -9,7 +9,7 @@
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
       style="padding-bottom:300px;"
     >
-      
+
     <div style="">
       <h6 class="m-3 text-center text-white">ထိုးမည့်ဂဏန်းများ</h6>
       <table class="table text-center table-dark">
@@ -20,19 +20,14 @@
          <th>ငွေပမာဏ</th>
          <th>ပြင် / ဖျက်</th>
         </tr>
-        
+
        </tbody>
       </table>
    <div class="col-md-12 mb-3">
                 <label for="totalAmount">Total Amount</label>
                 <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
               </div>
-
               <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-      {{-- <div class="d-flex justify-content-around text-white">
-       <p>စုစုပေါင်းငွေပမာဏ</p>
-       <p>200 ကျပ်</p>
-      </div> --}}
       <hr />
       <div class="text-center text-white py-2" style="background: #c50408; border-radius: 5px">
        <p class="pt-2">လက်ကျန်ငွေ</p>
@@ -40,17 +35,17 @@
        </p>
       </div>
      </div>
-      
+
     </div>
 </div>
 <div class="row">
 
   <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
-            
+
     <div class="d-flex justify-content-around mt-2" >
-      <a href="{{ url('/user/two-d-play-index-9am') }}" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
+      <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
       <button type="submit" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</button>
-    </div> 
+    </div>
   </div>
 </div>
 </form>
@@ -66,7 +61,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editAmountModalLabel">Edit Amount</h5>
+        <h5 class="modal-title text-dark" id="editAmountModalLabel">Edit Amount</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -254,7 +249,7 @@ function updateTotalAmount() {
 function updateBalance(amount, operation) {
   const userBalanceSpan = document.getElementById('userBalance');
   let userBalance = Number(userBalanceSpan.getAttribute('data-balance'));
-  
+
   if (operation === 'add') {
     userBalance += amount;
   } else if (operation === 'subtract') {
@@ -268,7 +263,7 @@ function updateBalance(amount, operation) {
 function confirmPlay() {
   // Clear the local storage
   localStorage.removeItem('twoDigitSelections');
-  
+
   // You can call `updateTotalAmount` if needed or redirect the user after this
   // For example:
   //window.location.href = 'path_to_redirect_after_confirmation';
