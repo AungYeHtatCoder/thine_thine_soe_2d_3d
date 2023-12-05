@@ -6,12 +6,11 @@
       
       <h5 class="d-inline-block">
           <a href="{{ url('/') }}" class="text-decoration-none"
-          >TTT9 2D | 3D</a
+          >TTT 2D | 3D</a
           >
       </h5>
       <span>
-          <a class="material-icons text-decoration-none" href="{{ url('/') }}"
-            >refresh</a
-          >
+          <button class="material-icons text-decoration-none btn" style="color:#f5bd02; border:none" onclick="refreshPage()"
+            >refresh</button>   
       </span>
   </div>

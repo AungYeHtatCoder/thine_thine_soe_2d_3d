@@ -77,13 +77,13 @@ body {
   left: 0;
   bottom: 0;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.9;
   overflow: hidden;
 }
 
 .marquee-text {
   white-space: nowrap;
-  color: #ebc03c;
+  color: #f5bd02;
   font-weight: bold;
   animation: marquee-scroll 10s linear infinite;
 }
@@ -280,7 +280,7 @@ hr {
 .fill-box {
   border: 2px solid #f5bd02;
   background: #c50408;
-  color: #f5bd02;
+  color: #fff;
   border-radius: 5px;
   width: 100px;
   height: 40px;
@@ -366,13 +366,13 @@ hr {
   margin: 7px;
   /* box-shadow: 3px 2px 4px #f5bd02; */
   box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.2), 3px 5px 5px 0 rgba(0, 0, 0, 0.19);
-
   transition: all 0.5s;
 }
 
 .list-card:active {
   transform: translateY(4px);
 }
+
 /* .list-card:hover::before {
   transform: scale(9);
   box-shadow: 0 0 15px #ffee10;
@@ -798,4 +798,20 @@ hr {
   background-color: transparent;
   font-size: 12px;
   color: #fff;
+}
+
+.holiday-card {
+  background: #c50408;
+  color: #f5bd02;
+  border: 1px solid #f5bd02;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.calendar-container {
+  margin-top: 20px;
+}
+.day-cell {
+  border: 1px solid #ddd;
+  height: 60px;
 }

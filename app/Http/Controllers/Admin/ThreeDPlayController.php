@@ -26,7 +26,7 @@ class ThreeDPlayController extends Controller
 
     public function ThreeDigitPlay(){
         return view('frontend.threedigitplay');
-    }
+    }   
 
     public function ThreeDigitPlayConfirm(){
         

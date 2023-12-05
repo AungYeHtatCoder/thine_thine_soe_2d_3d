@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
+    <link rel="icon" href="{{ asset('user_app/assets/images/Logo RED PNG.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Inter&family=Poppins:wght@300;400;500&family=Rubik+Mono+One&display=swap" rel="stylesheet">
@@ -94,4 +94,13 @@
       }).showToast();
   </script>
 @endif
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function refreshPage() {
+    location.reload();
+  }
+</script>
 </html>

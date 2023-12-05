@@ -262,7 +262,7 @@ class WelcomeController extends Controller
 
     public function threedWinner()
     {
-        return view('frontend.threed-winner');
+        return view('frontend.threed-winner-history');
     }
 
     public function threedHistory()
@@ -321,9 +321,14 @@ class WelcomeController extends Controller
         return view('frontend.twod-history');
     }
 
+    public function twodHoliday()
+    {
+        return view('frontend.twoD-holidays');
+    }
+
     public function twodCalendar()
     {
-        return view('frontend.twod-calendar');
+        return view('frontend.twoD-calendar');
     }
 
     public function twodDreamBook()

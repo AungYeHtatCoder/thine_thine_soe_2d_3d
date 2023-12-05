@@ -54,7 +54,13 @@
                                         <ul>
                                             @foreach ($lottery->twoDigits as $twoDigit)
                                                 <li>
-                                                    {{ $twoDigit->two_digit }} Amount: {{ $twoDigit->pivot->sub_amount }} -
+                                                    <span class="badge bg-secondary">
+                                                   {{ $twoDigit->two_digit }}
+                                                 </span>
+                                                    Amount:
+                                                    <span class="badge bg-secondary">
+                                                        {{ $twoDigit->pivot->sub_amount }}
+                                                    </span> -
                                                     {{ $twoDigit->pivot->created_at->format('d M Y (l) (h:i a)') }}
                                                 </li>
                                             @endforeach

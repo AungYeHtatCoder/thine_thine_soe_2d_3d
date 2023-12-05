@@ -7,20 +7,21 @@ use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\User\WalletController;
 use App\Http\Controllers\User\WelcomeController;
 use App\Http\Controllers\Admin\ProfileController;
-use App\Http\Controllers\User\WithDrawController;
 use App\Http\Controllers\Admin\PlayTwoDController;
 use App\Http\Controllers\Admin\TwoDigitController;
 use App\Http\Controllers\User\UserWalletController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\TwoDWinnerController;
-use App\Http\Controllers\Admin\FillBalanceController;
 use App\Http\Controllers\Admin\TwoDLotteryController;
 use App\Http\Controllers\Admin\ThreedHistoryController;
 use App\Http\Controllers\User\ChangePasswordController;
 use App\Http\Controllers\Admin\ThreedMatchTimeController;
 use App\Http\Controllers\Admin\FillBalanceReplyController;
+use App\Http\Controllers\User\Threed\ThreeDPlayController;
+use App\Http\Controllers\User\WithDraw\WithDrawController;
 use App\Http\Controllers\Admin\TwoDEveningWinnerController;
 use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
+use App\Http\Controllers\User\FillBalance\FillBalanceController;
 
 // Route::get('/', function () {
 //     return view('two_d.api_test');
@@ -100,6 +101,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   // two d get early morning number
   Route::get('/get-two-d-early-morning-number', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlMorningindex'])->name('earlymorningNumber');
   Route::get('/get-two-d-early-evening-number', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyEveningindex'])->name('earlyeveningNumber');
+
+  // two d get early morning number over amount limit
+  Route::get('/get-two-d-early-morning-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyMorningOverAmountLimitindex'])->name('earlymorningNumberOverAmountLimit');
+  // two d get 12:1 morning number over amount limit
+  Route::get('/get-two-d-morning-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitMorningOverAmountLimitindex'])->name('morningNumberOverAmountLimit');
+  // two d get 2 early evening number over amount limit
+  Route::get('/get-two-d-early-evening-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEarlyEveningOverAmountLimitindex'])->name('earlyeveningNumberOverAmountLimit');
+  // two d get 4:30 evening number over amount limit
+  Route::get('/get-two-d-evening-number-over-amount-limit', [App\Http\Controllers\Admin\TwoDMorningController::class, 'GetDigitEveningOverAmountLimitindex'])->name('eveningNumberOverAmountLimit');
+  
   // early morning winner
   Route::get('/two-d-early-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDEarlyMorningWinner'])->name('earlymorningWinner');
   Route::get('/two-d-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDMorningWinner'])->name('morningWinner');
@@ -175,6 +186,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
     Route::get('/get-two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'index'])->name('SessionResetIndex');
     Route::post('/two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'SessionReset'])->name('SessionReset');
+
+    Route::post('/two-d-session-over-amount-limit-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'OverAmountLimitSessionReset'])->name('OverAmountLimitSessionReset');
+
     Route::get('/close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'index'])->name('CloseTwoD');
     Route::put('/update-open-close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'update'])->name('OpenCloseTwoD');
     Route::resource('twod-records', TwoDLotteryController::class);
@@ -253,26 +267,67 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
     Route::get('/two-d-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'play_confirm'])->name('twod-play-confirm-quick');
     // store
     Route::post('/twod-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'store'])->name('twod-play-quickly-confirm.store');
+    // money transfer 
+    Route::get('/wallet-deposite', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'index'])->name('deposite-wallet');
+  Route::get('/fill-balance', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'topUpWallet'])->name('topUpWallet');
 
+  Route::get('/kpay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'topUpSubmit'])->name('topUpSubmit');
 
+  Route::get('/cb-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'CBPaytopUpSubmit'])->name('CBPaytopUpSubmit');
+
+  Route::get('/wave-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'WavePaytopUpSubmit'])->name('WavePaytopUpSubmit');
+
+  Route::get('/aya-pay-fill-balance-top-up-submit', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'AYAPaytopUpSubmit'])->name('AYAPaytopUpSubmit');
+
+  Route::post('/user-kpay-fill-money', [FillBalanceController::class, 'StoreKpayFillMoney'])->name('StoreKpayFillMoney');
+
+  Route::post('/user-cb-pay-fill-money', [FillBalanceController::class, 'StoreCBpayFillMoney'])->name('StoreCBpayFillMoney');
+
+  Route::post('/user-wave-pay-fill-money', [FillBalanceController::class, 'StoreWavepayFillMoney'])->name('StoreWavepayFillMoney');
+
+  Route::post('/user-aya-pay-fill-money', [FillBalanceController::class, 'StoreAYApayFillMoney'])->name('StoreAYApayFillMoney');
+  //withdraw
+  Route::get('/withdraw-money', [App\Http\Controllers\User\WithDraw\WithDrawController::class, 'GetWithdraw'])->name('money-withdraw');
+  Route::get('k-pay-withdraw-money', [WithDrawController::class, 'UserKpayWithdrawMoney'])->name('UserKpayWithdrawMoney');
+  Route::post('k-pay-with-draw-money', [WithDrawController::class, 'StoreKpayWithdrawMoney'])->name('StoreKpayWithdrawMoney');
+
+  Route::get('cb-pay-withdraw-money', [WithDrawController::class, 'UserCBPayWithdrawMoney'])->name('UserCBPayWithdrawMoney');
+  Route::post('cb-pay-with-draw-money', [WithDrawController::class, 'StoreCBpayWithdrawMoney'])->name('StoreCBpayWithdrawMoney');
+
+  Route::get('wave-pay-withdraw-money', [WithDrawController::class, 'UserWavePayWithdrawMoney'])->name('UserWavePayWithdrawMoney');
+  Route::post('wave-pay-with-draw-money', [WithDrawController::class, 'StoreWavepayWithdrawMoney'])->name('StoreWavepayWithdrawMoney');
+  Route::get('aya-pay-withdraw-money', [WithDrawController::class, 'UserAYAPayWithdrawMoney'])->name('UserAYAPayWithdrawMoney');
+  Route::post('aya-pay-with-draw-money', [WithDrawController::class, 'StoreAYApayWithdrawMoney'])->name('StoreAYApayWithdrawMoney');
+
+  // money transfer end
+
+  // two d winner history 
+  Route::get('/two-d-winners-history', [App\Http\Controllers\User\WinHistory\TwoDWinnerHistoryController::class, 'winnerHistory'])->name('winnerHistory');
+
+  // three d 
+  Route::get('/three-d-play-index', [ThreeDPlayController::class, 'index'])->name('three-d-play-index');
+  // three d choice play
+  Route::get('/three-d-choice-play-index', [ThreeDPlayController::class, 'choiceplay'])->name('three-d-choice-play');
+  // three d choice play confirm
+  Route::get('/three-d-choice-play-confirm', [ThreeDPlayController::class, 'confirm_play'])->name('three-d-choice-play-confirm');
+  // three d choice play store
+  Route::post('/three-d-choice-play-store', [ThreeDPlayController::class, 'store'])->name('three-d-choice-play-store');
+  // display three d play
+  Route::get('/three-d-display', [ThreeDPlayController::class, 'user_play'])->name('display');
 });
 
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
-// Route::get('/2dPlay', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlay'])->name('twodPlay');
-// Route::get('/2dPlayConfirm', [App\Http\Controllers\User\WelcomeController::class, 'twoDPlayConfirm'])->name('twoDPlayConfirm');
-// Route::get('/2dPlayQuick', [App\Http\Controllers\User\WelcomeController::class, 'twoDQuick'])->name('twoDQuick');
-Route::get('/wallet', [App\Http\Controllers\User\WelcomeController::class, 'wallet'])->name('wallet');
 Route::get('/service', [App\Http\Controllers\User\WelcomeController::class, 'servicePage'])->name('service');
-Route::get('/topUp', [App\Http\Controllers\User\WelcomeController::class, 'topUp'])->name('topup');
-Route::get('/withDraw', [App\Http\Controllers\User\WelcomeController::class, 'withDraw'])->name('withdraw');
-Route::get('/user-profile', [App\Http\Controllers\User\WelcomeController::class, 'userProfile'])->name('profile');
-Route::get('/twoDWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'twoDWinnerHistory'])->name('twoDWinnerHistory');
 Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 'twoDPrize'])->name('twoDPrize');
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
+Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
+Route::get('/twod-holiday', [App\Http\Controllers\User\WelcomeController::class, 'twodHoliday']);
 Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'comment']);
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
 Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBank']);
 
-Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
+// Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
+Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedHistory']);
+Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);

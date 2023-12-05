@@ -35,7 +35,7 @@ img {
 
 .digit-box .digit {
   width: 100%;
-  /* padding: 10px 5px; */
+  padding: 10px 5px;
   /* margin: 0 20px 10px 0; */
   color: #dfd7d7;
   background: #5d0606a8;
@@ -206,6 +206,9 @@ img {
 
 .disabled {
   cursor: not-allowed;
+  width: inherit;
+  height: 77px;
+  color: #fff;
   /* Indicates non-clickable */
 }
 

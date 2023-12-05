@@ -5,7 +5,7 @@
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers"
       style="height:100vh;"
     >
-    <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-4" alt="" />
+    {{-- <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-4" alt="" /> --}}
     <form class="mt-5" action="{{ route('login') }}" method="POST">
         @csrf
       <div class="mb-4">

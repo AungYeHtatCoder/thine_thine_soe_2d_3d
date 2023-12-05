@@ -44,7 +44,7 @@
 
         <hr>
         <div class="d-flex justify-content-around">
-            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn btn-success" style="text-decoration: none;">ငွေသွင်းမည်</a>
+            <a href="{{ url('/user/fill-balance') }}" type="button" class="btn" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေသွင်းမည်</a>
             <a href="{{ url('/user/withdraw-money')}}" type="button" class="btn btn-danger" style="text-decoration: none; background-color: #c50408;color:#fff">ငွေထုတ်မည်</a>
         </div>
 
@@ -52,14 +52,15 @@
             <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်နေ့တာ 2D ထိုး မှတ်တမ်း
             <span>
                 <a href="{{ url('/user/two-d-play-index')}}" style="color: #49da06; text-decoration:none">
-                        <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+                        {{-- <strong>ထီထိုးရန် နိုပ်ပါ</strong> --}}
+                    </a>
             </span>
             </p>
             @if(isset($morningDigits['two_digits']) && count($morningDigits['two_digits']) == 0)
-            <p class="text-center bg-success text-white px-3 py-2 mt-3">
+            <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
                 ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
                 <span>
-                    <a href="{{ url('/user/two-d-play-index')}}" style="color: #1706da; text-decoration:none">
+                    <a href="{{ url('/user/two-d-play-index')}}" style="color:#f5bd02; text-decoration:none">
                         <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
                 </span>
             </p>
@@ -100,142 +101,164 @@
                 </div>
             </div>
 
-
+            {{-- 9:30 AM Start --}}
             <div class="morningnine my-4">
                 @if ($earlymorningDigits)
-                    @foreach ($earlymorningDigits['two_digits'] as $index => $digit)
-                    <div class="mb-3 d-flex justify-content-around  text-white shadow p-2 rounded" style="background: #c50408;">
-                        <div>
-                            <span class="d-block">Session</span>
-                            <span class="d-block">Morning</span>
-                        </div>
-                        <div>
-                            <span class="d-block">2D</span>
-                            <span class="d-block">{{ $digit->two_digit }}</span>
-                        </div>
-                        <div>
-                            <span class="d-block">ထိုးကြေး</span>
-                            <span class="d-block">{{ $digit->pivot->sub_amount }}</span>
-                        </div>
+                <div class="mb-3 d-flex justify-content-around  text-white shadow p-2 rounded">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>စဉ်</th>
+                                <th>ဂဏန်း</th>
+                                <th>ထိုးကြေး</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($earlymorningDigits['two_digits'] as $index => $digit)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{ $digit->two_digit }}</td>
+                                <td>{{ $digit->pivot->sub_amount }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+            </div>
+            @endif
+
+            <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
+                <p class="text-right pt-1" style="color: #f5bd02">Total Amount for 09:30AM: ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
+                    <strong>{{ $earlymorningDigits['total_amount'] }} MMK</strong>
+                </p>
+            </div>
+
+        </div>
+        {{-- 9:30 End --}}
+
+            {{-- 12:00 PM Start --}}
+
+        <div class="morning d-none my-4">
+            @if ($morningDigits)
+
+
+                    <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                        <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>စဉ်</th>
+                                <th>ဂဏန်း</th>
+                                <th>ထိုးကြေး</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($morningDigits['two_digits'] as $index => $digit)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{ $digit->two_digit }}</td>
+                                <td>{{ $digit->pivot->sub_amount }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
                     </div>
-                    @endforeach
-                @endif
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                    <p class="text-right pt-1" style="color: #f5bd02">Total Amount for 09:30AM: ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
-                        <strong>{{ $earlymorningDigits['total_amount'] }} MMK</strong>
+            @endif
+
+            <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408">
+                    <p class="text-right pt-1" style="color: #f5bd02">Total Amount for 12:00PM: ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
+                        <strong>{{ $morningDigits['total_amount'] }} MMK</strong>
                     </p>
-                </div>
             </div>
+        </div>
 
-            <div class="morning d-none my-4">
-                @if ($morningDigits)
-                    @foreach ($morningDigits['two_digits'] as $index => $digit)
+        {{-- 12:00 PM End --}}
 
-                        <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                            <div>
-                                <span class="d-block">Session</span>
-                                <span class="d-block">Morning</span>
-                            </div>
-                            {{-- <div>
-                                    <span class="d-block">Date</span>
-                                    <span class="d-block">{{ $digit->pivot->created_at->format('d M Y (l) (h:i a)') }}</span>
-                            </div> --}}
-                            <div>
-                                <span class="d-block">2D</span>
-                                <span class="d-block">{{ $digit->two_digit }}</span>
-                            </div>
-                            <div>
-                                <span class="d-block">ထိုးကြေး</span>
-                                <span class="d-block">{{ $digit->pivot->sub_amount }}</span>
-                            </div>
-
-                        </div>
-                    @endforeach
-
-                @endif
-
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408">
-                        <p class="text-right pt-1" style="color: #f5bd02">Total Amount for 12:00PM: ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
-                            <strong>{{ $morningDigits['total_amount'] }} MMK</strong>
-                        </p>
-                </div>
-            </div>
-
-            <div class="eveningtwo d-none my-4">
-                @if(isset($earlyeveningDigit['two_digits']) && count($eveningDigits['two_digits']) == 0)
-                    <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
-                        ညနေပိုင်း ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
-                        <span>
-                            <a href="{{ route('admin.GetTwoDigit')}}" style="color: #f5bd02; text-decoration:none">
-                                <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
-                        </span>
-                    </p>
-                @endif
-                @foreach ($earlyeveningDigit['two_digits'] as $index => $digit)
-                    <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                        <div>
-                            <span class="d-block">Session</span>
-                            <span class="d-block">Evening</span>
-                        </div>
-                        {{-- <div>
-                                <span class="d-block">Date</span>
-                                <span class="d-block">{{ $digit->pivot->created_at->format('d M Y (l) (h:i a)') }}</span>
-                        </div> --}}
-                        <div>
-                            <span class="d-block">2D</span>
-                            <span class="d-block">{{ $digit->two_digit }}</span>
-                        </div>
-                        <div>
-                            <span class="d-block">ထိုးကြေး</span>
-                            <span class="d-block">{{ $digit->pivot->sub_amount }}</span>
-                        </div>
-                    </div>
-                @endforeach
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background-color: #c50408">
-                    <p class="text-right" style="color: #f5bd02">Total Amount for 02:00PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
-                        <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
-                    </p>
+        {{-- 2:00 PM Start --}}
+        <div class="eveningtwo d-none my-4">
+            @if(isset($earlyeveningDigit['two_digits']) && count($earlyeveningDigit['two_digits']) == 0)
+                <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
+                    ညနေပိုင်း ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
+                    <span>
+                        <a href="{{ route('admin.GetTwoDigit')}}" style="color: #f5bd02; text-decoration:none">
+                            <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+                    </span>
+                </p>
+            @endif
+                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>စဉ်</th>
+                                <th>ဂဏန်း</th>
+                                <th>ထိုးကြေး</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($earlyeveningDigit['two_digits'] as $index => $digit)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{ $digit->two_digit }}</td>
+                                <td>{{ $digit->pivot->sub_amount }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
 
+            <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background-color: #c50408">
+                <p class="text-right" style="color: #f5bd02">Total Amount for 02:00PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
+                    <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
+                </p>
             </div>
 
-            <div class="evening d-none my-4">
-                @if(isset($earlyeveningDigit['two_digits']) && count($eveningDigits['two_digits']) == 0)
-                    <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
-                        ညနေပိုင်း ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
-                        <span>
-                            <a href="{{ route('admin.GetTwoDigit')}}" style="color: #f5bd02; text-decoration:none">
-                                <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
-                        </span>
-                    </p>
-                @endif
-                @foreach ($earlyeveningDigit['two_digits'] as $index => $digit)
-                    <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background: #c50408;">
-                        <div>
-                            <span class="d-block">Session</span>
-                            <span class="d-block">Evening</span>
-                        </div>
-                        {{-- <div>
-                                <span class="d-block">Date</span>
-                                <span class="d-block">{{ $digit->pivot->created_at->format('d M Y (l) (h:i a)') }}</span>
-                        </div> --}}
-                        <div>
-                            <span class="d-block">2D</span>
-                            <span class="d-block">{{ $digit->two_digit }}</span>
-                        </div>
-                        <div>
-                            <span class="d-block">ထိုးကြေး</span>
-                            <span class="d-block">{{ $digit->pivot->sub_amount }}</span>
-                        </div>
-                    </div>
-                @endforeach
-                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background:#c50408;">
-                    <p class="text-right" style="color: #f5bd02">Total Amount for 04:30PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
-                        <strong>{{ $earlyeveningDigit['total_amount'] }} MMK</strong>
-                    </p>
+        </div>
+
+        {{-- 2:00 PM End --}}
+
+        {{-- 4:30 PM Start --}}
+
+        <div class="evening d-none my-4">
+            @if(isset($eveningDigits['two_digits']) && count($eveningDigits['two_digits']) == 0)
+                <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
+                    ညနေပိုင်း ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
+                    <span>
+                        <a href="{{ route('admin.GetTwoDigit')}}" style="color: #f5bd02; text-decoration:none">
+                            <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+                    </span>
+                </p>
+            @endif
+
+                <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>စဉ်</th>
+                                <th>ဂဏန်း</th>
+                                <th>ထိုးကြေး</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($eveningDigits['two_digits'] as $index => $digit)
+                            <tr>
+                                <td>{{ $index + 1 }}</td>
+                                <td>{{ $digit->two_digit }}</td>
+                                <td>{{ $digit->pivot->sub_amount }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
 
+            <div class="mb-3 d-flex justify-content-around text-white p-2 rounded shadow" style="background:#c50408;">
+                <p class="text-right" style="color: #f5bd02">Total Amount for 04:30PM : ||&nbsp; &nbsp; စုစုပေါင်းထိုးကြေး
+                    <strong>{{ $eveningDigits['total_amount'] }} MMK</strong>
+                </p>
             </div>
+
+            </div>
+
+        {{-- 4:30 PM End --}}
 
 
     </div>

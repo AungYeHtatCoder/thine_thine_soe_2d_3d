@@ -39,9 +39,9 @@
   <div>
     <div class="d-flex justify-content-between custom-btn">
       <a href="{{ url('/user/two-d-quick-play-index') }}" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
-        <span class="material-icons text-white icons">menu_book</span>  အမြန်ရွေး</a>
-      <a href="dream-book.html" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
-        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
+        အမြန်ရွေး</a>
+      {{-- <a href="dream-book.html" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
+        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a> --}}
         
       <select class="h-50 text-white" style="box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
         <option value="1">12:00 PM</option>
@@ -52,7 +52,7 @@
 
   <div class="d-flex justify-content-between mt-3 custom-btn">
     <button class="fs-6 px-3" id="permuteButton" onclick="permuteDigits()">ပတ်လည်</button>
-    <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black"/>
+    <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black" autocomplete="off"/>
   </div>
 
 
@@ -87,8 +87,15 @@
             </div>
            </div>
             @else
-          <div class="text-center p-4">
+          {{-- <div class="text-center p-4">
             <h3>Sorry, you can't play now. Please wait for the next round.</h3>
+          </div> --}}
+          <div class="row">
+            <div class="col-md-12">
+            <div class="text-center p-4">
+            <h4 style="color: aliceblue" class="badge bg-primary">ယခု ပွဲချိန်မှာ ထိုး၍ မရတော့ပါ ! နောက်ပွဲစဉ်စောင့်ပေးပါ အားပေးမှုကို ကျေးဇူးတင်ပါသည်။ </h4>
+        </div>
+            </div>
           </div>
           @endif
 
@@ -141,14 +148,18 @@
       
     </div>
 </div>
-<div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
-          
-  <div class="d-flex justify-content-around mt-2" >
-    <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
-    <a href="{{ url('/user/two-d-play-12-1-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
-  </div> 
-</div>
+<div class="row">
 
+  <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
+       @if ($lottery_matches->is_active == 1)      
+    <div class="d-flex justify-content-around mt-2" >
+      <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
+      <a href="{{ url('/user/two-d-play-12-1-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+    </div> 
+    @endif
+
+  </div>
+</div>
 <div class="modal fade" id="quick_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="background-color: #c50408;">
