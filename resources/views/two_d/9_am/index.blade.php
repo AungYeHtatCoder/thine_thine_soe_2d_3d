@@ -9,7 +9,7 @@
       class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-4 headers"
       style="padding-bottom:100px;"
     >
-      
+
     <div class="flesh-card mt-4">
       <div class="d-flex justify-content-between">
           <div class="d-flex justify-content-between">
@@ -33,7 +33,7 @@
           <span id="sessionInfo" style="font-size: 15px"></span>
           </p>
       </div>
-      
+
   </div>
 
   <div>
@@ -43,7 +43,7 @@
         <span class="material-icons text-white icons">menu_book</span>  အမြန်ရွေး</a>
       <a href="dream-book.html" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
         <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
-        
+
       <select class="h-50 text-white" style="box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
         <option value="1">9:30 AM</option>
         {{-- <option value="2">04:00 PM</option> --}}
@@ -60,8 +60,8 @@
   <div class="dream-form mt-3">
     <div class="row">
        <div class="col-md-12">
-        
-        
+
+
        </div>
     </div>
     <div class="">
@@ -96,9 +96,9 @@
         </div>
     </div>
   </div>
-  
+
     <div class="box-container mt-3" id="boxContainer">
-       
+
         <div class="main-row">
           @foreach ($twoDigits as $digit)
           <div class="column">
@@ -109,7 +109,7 @@
             ->sum('sub_amount');
             @endphp
 
-            @if ($totalBetAmountForTwoDigit < 50000) 
+            @if ($totalBetAmountForTwoDigit < 50000)
             <div class="text-center fs-6 digit" style="background-color: {{ 'javascript:getRandomColor();' }};" onclick="selectDigit('{{ $digit->two_digit }}', this)">
              <p style="font-size: 20px">
                {{ $digit->two_digit }}
@@ -136,20 +136,18 @@
 
         </div>
         @endforeach
-      
+
     </div>
     </div>
-      
+
     </div>
 </div>
 <div class="row">
 
   <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 py-3 submitbtns footers" style="background-color: #000;">
-            
     <div class="d-flex justify-content-around mt-2" >
-      <a href="" class="btn remove-btn me-2" style="font-size: 14px;">ဖျက်မည်</a>
-      <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()"" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
-    </div> 
+      <a href="{{ url('/user/two-d-play-9-30-early-morning-confirm') }}" onclick="storeSelectionsInLocalStorage()" class="btn play-btn me-1" style="font-size: 14px;">ထိုးမည်</a>
+    </div>
   </div>
 </div>
 
@@ -212,149 +210,149 @@
     });
   }
 
-function selectDigit(num, element) {
-    const selectedInput = document.getElementById('selected_digits');
-    const amountInputsDiv = document.getElementById('amountInputs');
+    function selectDigit(num, element) {
+        const selectedInput = document.getElementById('selected_digits');
+        const amountInputsDiv = document.getElementById('amountInputs');
 
-    // Ensure that the digits are handled as strings
-    let selectedDigits = selectedInput.value ? selectedInput.value.split(",") : [];
-    num = num.toString(); // Convert num to a string to ensure "00" is not treated as 0
+        // Ensure that the digits are handled as strings
+        let selectedDigits = selectedInput.value ? selectedInput.value.split(",") : [];
+        num = num.toString(); // Convert num to a string to ensure "00" is not treated as 0
 
-    // Check if the digit is already selected
-    if (selectedDigits.includes(num)) {
-        // If it is, remove the digit, its style, and its input field
-        selectedInput.value = selectedDigits.filter(digit => digit !== num).join(',');
-        element.classList.remove('selected');
-        const inputToRemove = document.getElementById('amount_' + num);
-        if (inputToRemove) {
-            amountInputsDiv.removeChild(inputToRemove);
+        // Check if the digit is already selected
+        if (selectedDigits.includes(num)) {
+            // If it is, remove the digit, its style, and its input field
+            selectedInput.value = selectedDigits.filter(digit => digit !== num).join(',');
+            element.classList.remove('selected');
+            const inputToRemove = document.getElementById('amount_' + num);
+            if (inputToRemove) {
+                amountInputsDiv.removeChild(inputToRemove);
+            }
+        } else {
+            // Otherwise, add the digit, its style, and its input field
+            selectedDigits.push(num);
+            selectedInput.value = selectedDigits.join(',');
+            element.classList.add('selected');
+            // const amountLabel = document.createElement('label');
+            // amountLabel.textContent = 'ထိုးကြေးသတ်မှတ်ပါ ' + num;
+            const amountInput = document.createElement('input');
+            amountInput.setAttribute('type', 'number');
+            amountInput.setAttribute('name', 'amounts[' + num + ']');
+            amountInput.setAttribute('id', 'amount_' + num);
+            amountInput.setAttribute('placeholder', 'Amount for ' + num);
+            amountInput.setAttribute('min', '100');
+            amountInput.setAttribute('max', '50000');
+            amountInput.setAttribute('class', 'form-control mt-2');
+            // amountInputsDiv.appendChild(amountLabel);
+            amountInputsDiv.appendChild(amountInput);
         }
-    } else {
-        // Otherwise, add the digit, its style, and its input field
-        selectedDigits.push(num);
-        selectedInput.value = selectedDigits.join(',');
-        element.classList.add('selected');
-        // const amountLabel = document.createElement('label');
-        // amountLabel.textContent = 'ထိုးကြေးသတ်မှတ်ပါ ' + num;
+
+        // Store the current selections to local storage
+        storeSelectionsInLocalStorage();
+    }
+
+    function storeSelectionsInLocalStorage() {
+        let selections = {};
+        document.querySelectorAll('input[name^="amounts["]').forEach(input => {
+            let digit = input.name.match(/\[(.*?)\]/)[1];
+            let amount = input.value;
+            if (amount) { // only add to selections if an amount is entered
+                selections[digit] = amount;
+            }
+        });
+        localStorage.setItem('twoDigitSelections', JSON.stringify(selections));
+        //window.location.href = "{{ url('/user/two-d-play-9-30-early-morning-confirm') }}";
+    }
+
+
+    function permuteDigits() {
+        const outputField = document.getElementById('selected_digits');
+        const permulatedField = document.getElementById('permulated_digit');
+
+        if (!outputField || !permulatedField) {
+        console.error('Required field not found');
+        return;
+        }
+
+        let selectedDigits = outputField.value.split(",").map(s => s.trim());
+
+        // Permute the digits only if they are two digits long
+        const permutedDigits = selectedDigits.map(num => {
+        return (num.length === 2) ? num[1] + num[0] : num;
+        });
+
+        // Update the outputField with both selected and permuted digits
+        outputField.value = `${selectedDigits.join(", ")}`;
+
+        // Update the permulatedField with the permuted digits only
+        permulatedField.value = permutedDigits.join(",");
+
+        // Combine selectedDigits and permutedDigits while removing duplicates
+        const allUniqueDigits = Array.from(new Set([...selectedDigits, ...permutedDigits]));
+
+        // Recreate the amount inputs for all unique digits
+        createAmountInputs(allUniqueDigits);
+    }
+
+    function createAmountInputs(digits) {
+        const amountInputsDiv = document.getElementById('amountInputs');
+        amountInputsDiv.innerHTML = ''; // Clear existing amount inputs
+
+        // Create a new input field for each unique digit
+        digits.forEach(digit => {
         const amountInput = document.createElement('input');
-        amountInput.setAttribute('type', 'number');
-        amountInput.setAttribute('name', 'amounts[' + num + ']');
-        amountInput.setAttribute('id', 'amount_' + num);
-        amountInput.setAttribute('placeholder', 'Amount for ' + num);
-        amountInput.setAttribute('min', '100');
-        amountInput.setAttribute('max', '50000');
-        amountInput.setAttribute('class', 'form-control mt-2');
-        // amountInputsDiv.appendChild(amountLabel);
+        amountInput.type = 'number';
+        amountInput.name = `amounts[${digit}]`;
+        amountInput.id = `amount_${digit}`;
+        amountInput.placeholder = `Amount for ${digit}`;
+        amountInput.value = '100'; // Set a default value or retrieve the existing value
+        amountInput.classList.add('form-control', 'mt-2');
+        amountInput.onchange = updateTotalAmount;
         amountInputsDiv.appendChild(amountInput);
+        });
+
+        updateTotalAmount(); // Update the total amount to reflect changes
     }
 
-    // Store the current selections to local storage
-    storeSelectionsInLocalStorage();
-}
 
-function storeSelectionsInLocalStorage() {
-    let selections = {};
-    document.querySelectorAll('input[name^="amounts["]').forEach(input => {
-        let digit = input.name.match(/\[(.*?)\]/)[1];
-        let amount = input.value;
-        if (amount) { // only add to selections if an amount is entered
-            selections[digit] = amount;
+    function checkBetAmount(inputElement, num) {
+        // Replace the problematic line with the following code
+        const digits = document.querySelectorAll('.digit');
+        let digitElement = null;
+
+        for (let i = 0; i < digits.length; i++) {
+        if (digits[i].textContent.includes(num)) {
+            digitElement = digits[i];
+            break;
         }
-    });
-    localStorage.setItem('twoDigitSelections', JSON.stringify(selections));
-    //window.location.href = "{{ url('/user/two-d-play-9-30-early-morning-confirm') }}";
-}
+        }
 
-  
-  function permuteDigits() {
-    const outputField = document.getElementById('selected_digits');
-    const permulatedField = document.getElementById('permulated_digit');
+        // Ensure that the digitElement was found before proceeding
+        if (!digitElement) {
+        console.error('Could not find the digit element for', num);
+        return;
+        }
 
-    if (!outputField || !permulatedField) {
-      console.error('Required field not found');
-      return;
+        // Continue with the rest of your function as before
+        const remainingAmount = Number(digitElement.querySelector('small').innerText.split(' ')[1]);
+
+        // Check if the entered bet amount exceeds the remaining amount
+        if (Number(inputElement.value) > remainingAmount) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Bet Limit Exceeded',
+            text: `You can only bet up to ${remainingAmount} for the digit ${num}.`
+        });
+        inputElement.value = ""; // Reset the input value
+        }
     }
 
-    let selectedDigits = outputField.value.split(",").map(s => s.trim());
-
-    // Permute the digits only if they are two digits long
-    const permutedDigits = selectedDigits.map(num => {
-      return (num.length === 2) ? num[1] + num[0] : num;
-    });
-
-    // Update the outputField with both selected and permuted digits
-    outputField.value = `${selectedDigits.join(", ")}`;
-
-    // Update the permulatedField with the permuted digits only
-    permulatedField.value = permutedDigits.join(",");
-
-    // Combine selectedDigits and permutedDigits while removing duplicates
-    const allUniqueDigits = Array.from(new Set([...selectedDigits, ...permutedDigits]));
-
-    // Recreate the amount inputs for all unique digits
-    createAmountInputs(allUniqueDigits);
-  }
-
-  function createAmountInputs(digits) {
-    const amountInputsDiv = document.getElementById('amountInputs');
-    amountInputsDiv.innerHTML = ''; // Clear existing amount inputs
-
-    // Create a new input field for each unique digit
-    digits.forEach(digit => {
-      const amountInput = document.createElement('input');
-      amountInput.type = 'number';
-      amountInput.name = `amounts[${digit}]`;
-      amountInput.id = `amount_${digit}`;
-      amountInput.placeholder = `Amount for ${digit}`;
-      amountInput.value = '100'; // Set a default value or retrieve the existing value
-      amountInput.classList.add('form-control', 'mt-2');
-      amountInput.onchange = updateTotalAmount;
-      amountInputsDiv.appendChild(amountInput);
-    });
-
-    updateTotalAmount(); // Update the total amount to reflect changes
-  }
-
-
-  function checkBetAmount(inputElement, num) {
-    // Replace the problematic line with the following code
-    const digits = document.querySelectorAll('.digit');
-    let digitElement = null;
-
-    for (let i = 0; i < digits.length; i++) {
-      if (digits[i].textContent.includes(num)) {
-        digitElement = digits[i];
-        break;
-      }
+    function setAmountForAllDigits(amount) {
+        const inputs = document.querySelectorAll('input[name^="amounts["]');
+        inputs.forEach(input => {
+        input.value = amount;
+        });
+        updateTotalAmount(); // Update the total amount after setting the new amounts
     }
-
-    // Ensure that the digitElement was found before proceeding
-    if (!digitElement) {
-      console.error('Could not find the digit element for', num);
-      return;
-    }
-
-    // Continue with the rest of your function as before
-    const remainingAmount = Number(digitElement.querySelector('small').innerText.split(' ')[1]);
-
-    // Check if the entered bet amount exceeds the remaining amount
-    if (Number(inputElement.value) > remainingAmount) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Bet Limit Exceeded',
-        text: `You can only bet up to ${remainingAmount} for the digit ${num}.`
-      });
-      inputElement.value = ""; // Reset the input value
-    }
-  }
-
-  function setAmountForAllDigits(amount) {
-    const inputs = document.querySelectorAll('input[name^="amounts["]');
-    inputs.forEach(input => {
-      input.value = amount;
-    });
-    updateTotalAmount(); // Update the total amount after setting the new amounts
-  }
 
   // Event listener for the amount input field
   document.getElementById('all_amount').addEventListener('input', function() {
@@ -394,7 +392,7 @@ function storeSelectionsInLocalStorage() {
 
     document.getElementById('totalAmount').value = total;
   }
-  
+
 </script>
 <script>
   function getRandomColor() {
