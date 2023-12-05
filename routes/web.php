@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\ThreedHistoryController;
 use App\Http\Controllers\User\ChangePasswordController;
 use App\Http\Controllers\Admin\ThreedMatchTimeController;
 use App\Http\Controllers\Admin\FillBalanceReplyController;
+use App\Http\Controllers\User\Threed\ThreeDPlayController;
 use App\Http\Controllers\User\WithDraw\WithDrawController;
 use App\Http\Controllers\Admin\TwoDEveningWinnerController;
 use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
@@ -302,6 +303,15 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
   // two d winner history 
   Route::get('/two-d-winners-history', [App\Http\Controllers\User\WinHistory\TwoDWinnerHistoryController::class, 'winnerHistory'])->name('winnerHistory');
+
+  // three d 
+  Route::get('/three-d-play-index', [ThreeDPlayController::class, 'index'])->name('three-d-play-index');
+  // three d choice play
+  Route::get('/three-d-choice-play-index', [ThreeDPlayController::class, 'choiceplay'])->name('three-d-choice-play');
+  // three d choice play confirm
+  Route::get('/three-d-choice-play-confirm', [ThreeDPlayController::class, 'confirm_play'])->name('three-d-choice-play-confirm');
+  // three d choice play store
+  Route::post('/three-d-choice-play-store', [ThreeDPlayController::class, 'store'])->name('three-d-choice-play-store');
 });
 
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
@@ -315,5 +325,5 @@ Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, '
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
 Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBank']);
 
-Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
+// Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);

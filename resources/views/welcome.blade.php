@@ -117,7 +117,7 @@
             </div>
             <div>
               <div class="buttons">
-                <a href="{{ url('/3d') }}" class="text-decoration-none">3D</a>
+                <a href="{{ url('/user/three-d-play-index') }}" class="text-decoration-none">3D</a>
               </div>
 
             </div>

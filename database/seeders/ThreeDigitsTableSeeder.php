@@ -23,7 +23,7 @@ class ThreeDigitsTableSeeder extends Seeder
             $number = str_pad($i, 3, '0', STR_PAD_LEFT);
 
             $digits[] = [
-                'digit' => $number,
+                'three_digit' => $number,
                 'created_at' => now(),
                 'updated_at' => now(),
             ];
