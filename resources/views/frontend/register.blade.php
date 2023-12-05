@@ -2,10 +2,10 @@
 @section('content')
 <div class="row">
     <div
-      class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers"
+      class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 pt-5 headers"
       style="height: 100vh;"
     >
-    <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-2" alt="">
+    {{-- <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-2" alt=""> --}}
     <form action="{{ route('register') }}" method="POST">
         @csrf
         <div class=" w-100 px-3 my-4 mx-auto">

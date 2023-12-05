@@ -33,9 +33,9 @@
 
   <div>
     <div class="d-flex justify-content-between custom-btn">
-      <a href="#" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">ပုံမှန်ရွေးရန်</a>
-      <a href="#" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
-        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
+      <button class="btn h-50 text-white p-2" onclick="goBack()" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">ပုံမှန်ရွေးရန်</button>
+      {{-- <a href="#" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
+        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a> --}}
         
       <select class="h-50 text-white" style="box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
         <option value="1">12:00 AM</option>
