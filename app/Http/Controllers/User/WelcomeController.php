@@ -121,7 +121,7 @@ class WelcomeController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['nullable', 'string', 'max:15', 'unique:users'],
+            'phone' => ['nullable', 'string', 'max:11', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
 
