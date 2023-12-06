@@ -141,7 +141,7 @@ class ProfileController extends Controller
         $request->validate([
             "name" => "required",
             "email" => "nullable",
-            "phone" => "nullable",
+            "phone" => ['nullable', 'string', 'min:11'],
             "address" => "nullable"
         ]);
 
