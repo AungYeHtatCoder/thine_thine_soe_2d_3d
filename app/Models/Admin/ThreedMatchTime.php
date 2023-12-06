@@ -18,4 +18,5 @@ class ThreedMatchTime extends Model
     return $this->belongsToMany(ThreedLottery::class, 'lottery_match_pivot', 'threed_match_time_id', 'threed_lottery_id');
 }
 
+
 }

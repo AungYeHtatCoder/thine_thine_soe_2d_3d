@@ -501,7 +501,7 @@
       <div class="collapse " id="productsExample">
        <ul class="nav nav-sm flex-column">
         <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/threed-lotteries-history')}}">
+         <a class="nav-link text-white " href="{{ url('admin/three-d-history')}}">
           <span class="sidenav-mini-icon"> 3D H </span>
           <span class="sidenav-normal  ms-2  ps-1"> 3D History </span>
          </a>
@@ -513,9 +513,9 @@
          </a>
         </li>
         <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/products/product-page.html">
-          <span class="sidenav-mini-icon"> P </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Product Page </span>
+         <a class="nav-link text-white " href="{{ url('/admin/three-d-prize-number-create') }}">
+          <span class="sidenav-mini-icon"> 3D </span>
+          <span class="sidenav-normal  ms-2  ps-1"> PrizeNoCreate </span>
          </a>
         </li>
         <li class="nav-item">

@@ -138,8 +138,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/yearly-income-json', [App\Http\Controllers\Admin\DailyTwodIncomeOutComeController::class, 'getTotalAmountsYearly'])->name('getTotalAmountsYearly');
 
   // 3d lottery routes
-  Route::get('/threed-lotteries-history', [ThreedHistoryController::class, 'index']);
   Route::get('/threed-lotteries-match-time', [ThreedMatchTimeController::class, 'index']);
+  // 3d prize number create
+  Route::get('/three-d-prize-number-create', [App\Http\Controllers\Admin\ThreeD\ThreeDPrizeNumberCreateController::class, 'index'])->name('three-d-prize-number-create');
+  Route::post('/three-d-prize-number-create', [App\Http\Controllers\Admin\ThreeD\ThreeDPrizeNumberCreateController::class, 'store'])->name('three-d-prize-number-create.store');
+
+  // 3d history
+  Route::get('/three-d-history', [App\Http\Controllers\Admin\ThreeD\ThreeDRecordHistoryController::class, 'index'])->name('three-d-history');
+  // 3d history show
+  Route::get('/three-d-history-show/{id}', [App\Http\Controllers\Admin\ThreeD\ThreeDRecordHistoryController::class, 'show'])->name('three-d-history-show');
 
     // Permissions
     Route::delete('permissions/destroy', [PermissionController::class, 'massDestroy'])->name('permissions.massDestroy');
@@ -191,10 +198,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
     Route::get('/close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'index'])->name('CloseTwoD');
     Route::put('/update-open-close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'update'])->name('OpenCloseTwoD');
-    Route::resource('twod-records', TwoDLotteryController::class);
-    Route::resource('tow-d-win-number', TwoDWinnerController::class);
-    Route::resource('tow-d-morning-number', TwoDMorningController::class);
-    Route::get('/two-d-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDMorningWinner'])->name('morningWinner');
+    // Route::resource('twod-records', TwoDLotteryController::class);
+    // Route::resource('tow-d-win-number', TwoDWinnerController::class);
+    // Route::resource('tow-d-morning-number', TwoDMorningController::class);
+    // Route::get('/two-d-morning-winner', [App\Http\Controllers\Admin\TwoDMorningWinnerController::class, 'TwoDMorningWinner'])->name('morningWinner');
     Route::get('/two-d-evening-number', [App\Http\Controllers\Admin\TwoDMorningController::class, 'EveningTwoD'])->name('eveningNumber');
     Route::get('/two-d-evening-winner', [App\Http\Controllers\Admin\TwoDMorningController::class, 'TwoDEveningWinner'])->name('eveningWinner');
     Route::get('/two-d-evening-winner', [App\Http\Controllers\Admin\TwoDEveningWinnerController::class, 'TwoDEveningWinner'])->name('eveningWinner');
@@ -314,6 +321,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   Route::post('/three-d-choice-play-store', [ThreeDPlayController::class, 'store'])->name('three-d-choice-play-store');
   // display three d play
   Route::get('/three-d-display', [ThreeDPlayController::class, 'user_play'])->name('display');
+  
 });
 
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');

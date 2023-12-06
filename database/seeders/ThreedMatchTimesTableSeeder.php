@@ -73,14 +73,14 @@ class ThreedMatchTimesTableSeeder extends Seeder
 
     // Insert the match dates into the database
      foreach ($months as $month => $days) {
-        DB::table('matchings')->insert([
+        DB::table('threed_match_times')->insert([
             'open_time' => $openTimes[0], // Assuming "1: Time" for the 1st of each month
             'match_time' => Carbon::createFromFormat('F Y', "{$month} {$year}")->startOfMonth()->toDateString(),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
-        DB::table('matchings')->insert([
+        DB::table('threed_match_times')->insert([
             'open_time' => $openTimes[15], // Assuming "16: Time" for the 16th of each month
             'match_time' => Carbon::createFromFormat('F Y', "{$month} {$year}")->startOfMonth()->addDays(15)->toDateString(),
             'created_at' => now(),
