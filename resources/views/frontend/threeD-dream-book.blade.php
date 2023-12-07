@@ -148,20 +148,26 @@
   { title: "မြေခွေး", imgSrc: "user_app/assets/images/3ddreambook/3ddream82.png", btn1: "081", btn2: "594" },
   { title: "စာကလေး", imgSrc: "user_app/assets/images/3ddreambook/3ddream83.png", btn1: "082", btn2: "560" },
   { title: "ယုန်", imgSrc: "user_app/assets/images/3ddreambook/3ddream84.png", btn1: "083", btn2: "586" },
-  { title: "စားပွဲထိုး", imgSrc: "user_app/assets/images/3ddreambook/3ddream85.png", btn1: "080", btn2: "47" },
-  { title: "အင်္ကျီ", imgSrc: "user_app/assets/images/3ddreambook/3ddream86.png", btn1: "080", btn2: "42" },
-  { title: "ခရီးသွား", imgSrc: "user_app/assets/images/3ddreambook/3ddream87.png", btn1: "080", btn2: "31" },
-  { title: "သစ်သီးခြင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream88.png", btn1: "080", btn2: "74" },
-  { title: "ဒရမ်", imgSrc: "user_app/assets/images/3ddreambook/3ddream89.png", btn1: "080", btn2: "55" },
-  { title: "ပုစွန်ခြောက်", imgSrc: "user_app/assets/images/3ddreambook/3ddream90.png", btn1: "95", btn2: "83" },
-  { title: "ဖရုံသီး", imgSrc: "user_app/assets/images/3ddreambook/3ddream91.png", btn1: "96", btn2: "34" },
-  { title: "အရှုံးပေး", imgSrc: "user_app/assets/images/3ddreambook/3ddream92.png", btn1: "97", btn2: "21" },
-  { title: "ဆေးပုလင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream93.png", btn1: "98", btn2: "64" },
-  { title: "လူသေကောင်", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "99", btn2: "66" },
+  { title: "စာရိုက်ကွက်", imgSrc: "user_app/assets/images/3ddreambook/3ddream85.png", btn1: "084", btn2: "573" },
+  { title: "ကြွက်", imgSrc: "user_app/assets/images/3ddreambook/3ddream86.png", btn1: "085", btn2: "575" },
+  { title: "ကင်းခြေများ", imgSrc: "user_app/assets/images/3ddreambook/3ddream87.png", btn1: "086", btn2: "583" },
+  { title: "လက်ဆက်သူ", imgSrc: "user_app/assets/images/3ddreambook/3ddream88.png", btn1: "087", btn2: "559" },
+  { title: "လက်ပိုက်သူ", imgSrc: "user_app/assets/images/3ddreambook/3ddream89.png", btn1: "088", btn2: "567" },
+  { title: "မိကျောင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream90.png", btn1: "089", btn2: "555" },
+  { title: "ပုစဥ်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream91.png", btn1: "090", btn2: "576" },
+  { title: "ငါးမန်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream92.png", btn1: "091", btn2: "556" },
+  { title: "မြို့အုပ်", imgSrc: "user_app/assets/images/3ddreambook/3ddream93.png", btn1: "092", btn2: "597" },
+  { title: "သာမိုမီတာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "093", btn2: "571" },
+  { title: "နယ်စား", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "094", btn2: "581" },
+  { title: "ပေရွက်ကိုင်", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "095", btn2: "551" },
+  { title: "ဂဏန်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "096", btn2: "551" },
+  { title: "လိပ်ပြာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "097", btn2: "551" },
+  { title: "ခမောက်ဆောင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "098", btn2: "551" },
 
 ];
 
 const dreamContainer = document.getElementById("dreamContainer");
+
 const dreamRow = document.getElementById("dreamRow");
 
 dreams.forEach((dream) => {
