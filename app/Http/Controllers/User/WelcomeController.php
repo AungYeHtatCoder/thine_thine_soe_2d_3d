@@ -333,7 +333,12 @@ class WelcomeController extends Controller
 
     public function twodDreamBook()
     {
-        return view('frontend.dream-book');
+        return view('frontend.twoD-dream-book');
+    }
+
+    public function threedDreamBook()
+    {
+        return view('frontend.threeD-dream-book');
     }
 
     public function threedResult()

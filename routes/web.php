@@ -322,6 +322,7 @@ Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 't
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
 Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
 Route::get('/twod-holiday', [App\Http\Controllers\User\WelcomeController::class, 'twodHoliday']);
+Route::get('/twod-dream-book', [App\Http\Controllers\User\WelcomeController::class, 'twodDreamBook']);
 Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'comment']);
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
@@ -331,3 +332,4 @@ Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBa
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
 Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedHistory']);
 Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
+Route::get('/threed-dream-book', [App\Http\Controllers\User\WelcomeController::class, 'threedDreamBook']);
