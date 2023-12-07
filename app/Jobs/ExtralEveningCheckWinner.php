@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use Log;
 use Carbon\Carbon;
 use App\Models\Admin\Lottery;
 use Illuminate\Bus\Queueable;
@@ -13,16 +12,14 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 
-class CheckForMorningWinners implements ShouldQueue
+class ExtralEveningCheckWinner implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
      * Create a new job instance.
      */
-     //use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
-    protected $twodWiner;
+     protected $twodWiner;
 
     public function __construct($twodWiner)
     {
@@ -32,10 +29,10 @@ class CheckForMorningWinners implements ShouldQueue
     public function handle()
     {
         $today = Carbon::today();
-        $MorningSession = 'morning';
+        $eveningSession = 'evening';
 
         // Ensure this is for the evening session
-        if ($this->twodWiner->session !== $MorningSession) {
+        if ($this->twodWiner->session !== $eveningSession) {
             return;
         }
 

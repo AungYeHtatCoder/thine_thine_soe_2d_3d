@@ -3,6 +3,8 @@
 namespace App\Models\ThreeDigit;
 
 use App\Models\User;
+use App\Jobs\CheckForThreeDWinners;
+use App\Jobs\ThreeDUpdatePrizeSent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -15,4 +17,16 @@ class ThreeWinner extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    protected static function booted()
+{
+    static::created(function ($threedWinner) {
+        //if ($threedWinner->prize_no) {
+            CheckForThreeDWinners::dispatch($threedWinner);
+            ThreeDUpdatePrizeSent::dispatch($threedWinner);
+        //} 
+        
+    });
+}
+
 }

@@ -114,7 +114,7 @@
                      class="badge bg-gradient-info">{{ $lottery->created_at->format('d-m-Y (l) (h:i a)') }}</span>
              </td>
              <td class="text-sm font-weight-normal">
-                 <a href="{{ route('admin.three-d-history-show', $lottery->id )}}" class="btn btn-warning btn-sm">Show</a>
+                 <a href="{{ route('admin.three-d-list-show', $lottery->id )}}" class="btn btn-warning btn-sm">Show</a>
              </td>
          </tr>
      @endforeach

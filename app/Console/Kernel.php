@@ -21,6 +21,7 @@ class Kernel extends ConsoleKernel
     $schedule->job(new CheckForMorningWinners)->dailyAt('12:00');
     $schedule->job(new CheckForEarlyEveningWinners)->dailyAt('2:30');
     $schedule->job(new CheckForEveningWinners)->dailyAt('16:30');
+    
 
 
 }

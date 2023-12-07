@@ -36,9 +36,10 @@ class CheckForEarlyMonringWinners implements ShouldQueue
     }
 
     // Find all winning entries using raw SQL
-    $winningEntries = DB::table('lottery_two_digit_copy')
+   $winningEntries = DB::table('lottery_two_digit_copy')
         ->join('lotteries', 'lottery_two_digit_copy.lottery_id', '=', 'lotteries.id')
-        ->whereRaw('lottery_two_digit_copy.two_digit_id = ?', [$this->twodWiner->prize_no])
+        ->join('two_digits', 'lottery_two_digit_copy.two_digit_id', '=', 'two_digits.id')
+        ->whereRaw('two_digits.two_digit = ?', [$this->twodWiner->prize_no])
         ->whereRaw('lottery_two_digit_copy.prize_sent = 0')
         ->whereRaw('DATE(lottery_two_digit_copy.created_at) = ?', [$today])
         ->select('lottery_two_digit_copy.*') // Select all columns from pivot table

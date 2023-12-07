@@ -49,14 +49,17 @@
         </div>
 
         <div class="my-4">
-            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်ပါတ်အတွင်း 3D ထိုး မှတ်တမ်း
+            <p class="text-center text-white px-3 py-2 shadow" style="background-color: #c50408;color:#f5bd02;border:1px solid #ebc03c">တစ်ပါတ်အတွင်း 3D ထိုး မှတ်တမ်း <span>
+                    <a href="{{ url('/user/three-d-choice-play-index')}}" style="color:#f5bd02; text-decoration:none">
+                        <strong>ထီးထိုးရန် နိုပ်ပါ</strong></a>
+                </span>
             <span>
                 <a href="{{ url('/user/two-d-play-index')}}" style="color: #49da06; text-decoration:none">
                         {{-- <strong>ထီထိုးရန် နိုပ်ပါ</strong> --}}
                     </a>
             </span>
             </p>
-            @if(isset($eveningDigits['three_digits']) && count($eveningDigits['two_digits']) == 0)
+            @if(isset($displayThreeDigits['three_digits']) && count($displayThreeDigits['three_digits']) == 0)
             <p class="text-center text-white px-3 py-2 mt-3" style="background-color: #c50408">
                 ကံစမ်းထားသော ထီဂဏန်းများ မရှိသေးပါ
                 <span>

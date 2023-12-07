@@ -22,6 +22,7 @@ use App\Http\Controllers\User\WithDraw\WithDrawController;
 use App\Http\Controllers\Admin\TwoDEveningWinnerController;
 use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
 use App\Http\Controllers\User\FillBalance\FillBalanceController;
+use App\Http\Controllers\Admin\ThreeD\DailyThreeDIncomeOutComeController;
 
 // Route::get('/', function () {
 //     return view('two_d.api_test');
@@ -138,6 +139,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/yearly-income-json', [App\Http\Controllers\Admin\DailyTwodIncomeOutComeController::class, 'getTotalAmountsYearly'])->name('getTotalAmountsYearly');
 
   // 3d lottery routes
+  // 3d daily income 
+  Route::get('/threed-lotteries-daily-income', [DailyThreeDIncomeOutComeController::class, 'getTotalAmountsDaily']);
+  // 3d daily income weekly
+  Route::get('/threed-lotteries-daily-income-money', [DailyThreeDIncomeOutComeController::class, 'getTotalAmounts']);
+
+  // 3d daily income monthly
+  Route::get('/threed-lotteries-daily-income-monthly', [DailyThreeDIncomeOutComeController::class, 'getTotalAmountsMonthly']);
+
   Route::get('/threed-lotteries-match-time', [ThreedMatchTimeController::class, 'index']);
   // 3d prize number create
   Route::get('/three-d-prize-number-create', [App\Http\Controllers\Admin\ThreeD\ThreeDPrizeNumberCreateController::class, 'index'])->name('three-d-prize-number-create');
@@ -147,6 +156,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/three-d-history', [App\Http\Controllers\Admin\ThreeD\ThreeDRecordHistoryController::class, 'index'])->name('three-d-history');
   // 3d history show
   Route::get('/three-d-history-show/{id}', [App\Http\Controllers\Admin\ThreeD\ThreeDRecordHistoryController::class, 'show'])->name('three-d-history-show');
+  // three d list index
+  Route::get('/three-d-list-index', [App\Http\Controllers\Admin\ThreeD\ThreeDListController::class, 'index'])->name('three-d-list-index');
+  // three d list show
+  Route::get('/three-d-list-show/{id}', [App\Http\Controllers\Admin\ThreeD\ThreeDListController::class, 'show'])->name('three-d-list-show');
+  // 3d winner list 
+  Route::get('/three-d-winner', [App\Http\Controllers\Admin\ThreeD\ThreeDWinnerController::class, 'index'])->name('three-d-winner');
 
     // Permissions
     Route::delete('permissions/destroy', [PermissionController::class, 'massDestroy'])->name('permissions.massDestroy');
@@ -195,6 +210,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
     Route::post('/two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'SessionReset'])->name('SessionReset');
 
     Route::post('/two-d-session-over-amount-limit-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'OverAmountLimitSessionReset'])->name('OverAmountLimitSessionReset');
+    // three d reset 
+    Route::post('/three-d-reset', [App\Http\Controllers\Admin\ThreeD\ThreeDResetController::class, 'ThreeDReset'])->name('ThreeDReset');
 
     Route::get('/close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'index'])->name('CloseTwoD');
     Route::put('/update-open-close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'update'])->name('OpenCloseTwoD');

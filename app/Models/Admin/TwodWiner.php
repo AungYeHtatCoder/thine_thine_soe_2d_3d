@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Jobs\UpdatePrizeSent;
 use App\Jobs\CheckForEveningWinners;
 use App\Jobs\CheckForMorningWinners;
+use App\Jobs\ExtralEveningCheckWinner;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -28,7 +29,8 @@ protected static function booted()
             CheckForMorningWinners::dispatch($twodWiner);
             UpdatePrizeSent::dispatch($twodWiner);
         } elseif ($twodWiner->session == 'evening') {
-            CheckForEveningWinners::dispatch($twodWiner);
+            //CheckForEveningWinners::dispatch($twodWiner);
+            ExtralEveningCheckWinner::dispatch($twodWiner);
             UpdatePrizeSent::dispatch($twodWiner);
         }
     });

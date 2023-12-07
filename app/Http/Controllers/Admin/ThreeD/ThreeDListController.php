@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Admin\ThreeD;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Models\ThreeDigit\Lotto;
+use App\Models\Lotto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use App\Models\ThreeDigit\ThreeWinner;
 
-class ThreeDRecordHistoryController extends Controller
+class ThreeDListController extends Controller
 {
     public function index()
     {
@@ -33,7 +33,7 @@ class ThreeDRecordHistoryController extends Controller
         $lotteries = Lotto::with(['threedDigits', 'lotteryMatch.threedMatchTime'])->orderBy('id', 'desc')->get();
         $prize_no = ThreeWinner::whereDate('created_at', Carbon::today())->orderBy('id', 'desc')->first();
     
-        return view('admin.three_d.v_1_three_d_history', compact('lotteries', 'prize_no', 'matchTime'));
+        return view('admin.three_d.three_d_list_index', compact('lotteries', 'prize_no', 'matchTime'));
     }
     
     public function show(string $id)
@@ -56,7 +56,7 @@ class ThreeDRecordHistoryController extends Controller
             ->whereYear('match_time', '=', $today->year)
             ->whereDay('match_time', '=', $targetDay)
             ->first();
-        return view('admin.three_d.three_d_history_show', compact('lottery', 'prize_no', 'matchTime'));
+        return view('admin.three_d.three_d_list_show', compact('lottery', 'prize_no', 'matchTime'));
     }
 
 }

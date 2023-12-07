@@ -519,9 +519,15 @@
          </a>
         </li>
         <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/products/products-list.html">
-          <span class="sidenav-mini-icon"> P </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Products List </span>
+         <a class="nav-link text-white " href="{{ url('/admin/three-d-list-index') }}">
+          <span class="sidenav-mini-icon"> 3D </span>
+          <span class="sidenav-normal  ms-2  ps-1">  List </span>
+         </a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link text-white " href="{{ url('/admin/three-d-winner') }}">
+          <span class="sidenav-mini-icon"> 3D </span>
+          <span class="sidenav-normal  ms-2  ps-1">  WinnerList </span>
          </a>
         </li>
        </ul>
