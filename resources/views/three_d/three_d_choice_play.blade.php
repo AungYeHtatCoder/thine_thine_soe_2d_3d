@@ -31,6 +31,10 @@
 
   <div class="d-flex justify-content-between mt-3 custom-btn">
     <button class="fs-6 px-3" id="permuteButton" onclick="permuteDigits()">ပတ်လည်</button>
+    -
+    <a href="{{ url('/user/three-d-dream-book') }}" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
+        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
+    
 
     <input type="text" name="amount" id="all_amount" placeholder="ငွေပမာဏ" class="form-control w-75 text-center border-black ms-1" autocomplete="off"/>
     <input type="text" name="amount" id="input_new_digit" placeholder="Enter 3 Digit" class="form-control w-75 ms-1 text-center border-black" autocomplete="off"/>
@@ -44,7 +48,7 @@
 
 
     {{-- <div class="ms-2 my-3">
-      <button type="button" class="py-2 px-3 rounded  bg-transparent border border-none text-white" onclick="showNumbers()">ရွေးမည်</button>
+      <a href="" class="py-2 px-3 rounded  bg-transparent border border-none text-white">အိမ်မက်</a>
     </div> --}}
 
 

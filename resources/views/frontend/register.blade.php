@@ -15,12 +15,12 @@
             @enderror
         </div>
 
-        <div class=" w-100 px-3 my-4 mx-auto">
+        {{-- <div class=" w-100 px-3 my-4 mx-auto">
             <input type="email" name="email" class="form-control"  placeholder="အီးမေးလ်ထည့်ပါ" />
             @error('email')
             <span class="d-block text-white" style="text-shadow: 1px 2px 2px red;">{{ $message }}</span>
             @enderror
-        </div>
+        </div> --}}
 
         <div class=" w-100 px-3 my-4 mx-auto">
             <input type="text" name="phone" class="form-control"  placeholder="ဖုန်းနံပတ်ဖြည့်ပါ" />

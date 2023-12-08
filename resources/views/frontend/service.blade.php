@@ -21,7 +21,7 @@
     <!-- second block -->
     <div class="second-block">
        <div class="container mt-3 text-center">
-          <p class="text-white">အောက်ပါဖုန်းနံပါတ်သည် Sein Lucky ကုမ္ပဏီ၏ ဝန်ဆောင်မှုဖုန်းနံပါတ်ဖြစ်သည်</p>
+          <p class="text-white">အောက်ပါဖုန်းနံပါတ်သည် Delight Myanmar ကုမ္ပဏီ၏ ဝန်ဆောင်မှုဖုန်းနံပါတ်ဖြစ်သည်</p>
           <p class="text-white">နေ့စဉ်(၂၄) နာရီ ၊ ပိတ်ရက်မရှိ ဝန်ဆောင်ပေးနေပါသည်။</p>
        </div>
       <div class="second-card">

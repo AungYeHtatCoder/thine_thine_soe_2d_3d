@@ -34,7 +34,7 @@
      <div class="d-flex justify-content-around align-items-center">
         <div class="d-flex list-card w-25 justify-content-center align-items-center">
             <!-- <i class="fa-regular fa-newspaper fa-xl "></i> -->
-            <a href="./3d-history.html" class="text-decoration-none text-white">
+            <a href="{{ url('/user/three-d-display')}}" class="text-decoration-none text-white">
                 <p class="pt-2 text-white">မှတ်တမ်း</p>
             </a>
         </div>

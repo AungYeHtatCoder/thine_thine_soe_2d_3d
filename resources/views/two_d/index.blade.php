@@ -19,7 +19,7 @@
           <p class="fw-bold pt-2 ps-2 text-white">ပင်မပိုက်ဆံအိတ်</p>
         </div>
         <div class="d-flex pt-2">
-          <p class="fw-bold fs-6 pe-2 text-white">0 ကျပ်</p>
+          <p class="fw-bold fs-6 pe-2 text-white">{{ Auth::user()->balance }}ကျပ်</p>
           <i class="material-icons">add_circle</i>
         </div>                  
       </div>
@@ -29,7 +29,7 @@
           <div class="card-body">
             <div class="d-flex p-1 justify-content-around">
               <div class="cards">
-                <a href="#" class="text-decoration-none">
+                <a href="{{ route('home') }}" class="text-decoration-none">
                   <span class="material-icons">manage_search</span>
                   <p>မှတ်တမ်း</p>
                 </a>

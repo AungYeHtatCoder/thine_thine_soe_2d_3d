@@ -40,8 +40,8 @@
     <div class="d-flex justify-content-between custom-btn">
       <a href="{{ url('/user/two-d-quick-play-index') }}" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
       အမြန်ရွေး</a>
-      {{-- <a href="dream-book.html" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
-        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a> --}}
+      <a href="{{ url('/user/two-d-dream-book') }}" class="btn h-50 text-white p-2" style="background-color: #c50408; border: 2px solid #ebc03c; box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
+        <span class="material-icons text-white icons">menu_book</span>  အိမ်မက်</a>
         
       <select class="h-50 text-white" style="box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.2), 3px 5px 10px 0 rgba(0, 0, 0, 0.19)">
         <option value="1">2:00 AM</option>

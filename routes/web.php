@@ -328,6 +328,9 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   // two d winner history 
   Route::get('/two-d-winners-history', [App\Http\Controllers\User\WinHistory\TwoDWinnerHistoryController::class, 'winnerHistory'])->name('winnerHistory');
 
+  // twod-dream-book
+  Route::get('/two-d-dream-book', [App\Http\Controllers\User\Dream\TwodDreamBookController::class, 'index'])->name('two-d-dream-book-index');
+
   // three d 
   Route::get('/three-d-play-index', [ThreeDPlayController::class, 'index'])->name('three-d-play-index');
   // three d choice play
@@ -338,6 +341,8 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   Route::post('/three-d-choice-play-store', [ThreeDPlayController::class, 'store'])->name('three-d-choice-play-store');
   // display three d play
   Route::get('/three-d-display', [ThreeDPlayController::class, 'user_play'])->name('display');
+  // three d dream book
+  Route::get('/three-d-dream-book', [App\Http\Controllers\User\Threed\ThreeDreamBookController::class, 'index'])->name('three-d-dream-book-index');
   
 });
 
@@ -347,7 +352,6 @@ Route::get('/twoDPrize', [App\Http\Controllers\User\WelcomeController::class, 't
 Route::get('/twod-live', [App\Http\Controllers\User\WelcomeController::class, 'twodLive']);
 Route::get('/twod-calendar', [App\Http\Controllers\User\WelcomeController::class, 'twodCalendar']);
 Route::get('/twod-holiday', [App\Http\Controllers\User\WelcomeController::class, 'twodHoliday']);
-Route::get('/twod-dream-book', [App\Http\Controllers\User\WelcomeController::class, 'twodDreamBook']);
 Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'comment']);
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
@@ -357,4 +361,3 @@ Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBa
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
 Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedHistory']);
 Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
-Route::get('/threed-dream-book', [App\Http\Controllers\User\WelcomeController::class, 'threedDreamBook']);
