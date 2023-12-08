@@ -356,6 +356,8 @@ Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'com
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
 Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBank']);
+Route::get('/promotion', [App\Http\Controllers\User\WelcomeController::class, 'promo']);
+Route::get('/promotion-detail', [App\Http\Controllers\User\WelcomeController::class, 'promoDetail']);
 
 // Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
 Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);

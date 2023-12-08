@@ -14,7 +14,7 @@
           </a>
         </div>
         <div class="text-center">
-          <a href="#" class="text-decoration-none">
+          <a href="{{ url('/promotion') }}" class="text-decoration-none">
             <i class="fas fa-gift"></i>
             <span class="d-block">ပရိုမိုရှင်း</span>
           </a>
