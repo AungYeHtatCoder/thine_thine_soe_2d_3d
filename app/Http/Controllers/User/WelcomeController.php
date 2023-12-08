@@ -174,7 +174,7 @@ class WelcomeController extends Controller
 
     public function promoDetail()
     {
-        return view('frontend.promoDetail');
+        return view('frontend.promotion-detail');
     }
 
     public function servicePage()

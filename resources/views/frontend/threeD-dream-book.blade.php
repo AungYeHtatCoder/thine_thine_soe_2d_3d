@@ -160,9 +160,15 @@
   { title: "သာမိုမီတာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "093", btn2: "571" },
   { title: "နယ်စား", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "094", btn2: "581" },
   { title: "ပေရွက်ကိုင်", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "095", btn2: "551" },
-  { title: "ဂဏန်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "096", btn2: "551" },
-  { title: "လိပ်ပြာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "097", btn2: "551" },
-  { title: "ခမောက်ဆောင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "098", btn2: "551" },
+  { title: "ဂဏန်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "096", btn2: "564" },
+  { title: "လိပ်ပြာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "097", btn2: "592" },
+  { title: "ခမောက်ဆောင်း", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "098", btn2: "600" },
+  { title: "လေထိုးတံ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "099", btn2: "580" },
+  { title: "ကြေငြာသူ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "100", btn2: "598" },
+  { title: "ကောင်းကင်", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "101", btn2: "645" },
+  { title: "ကမ္ဘာ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "102", btn2: "603" },
+  { title: "နေလုံး", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "103", btn2: "602" },
+  { title: "လ", imgSrc: "user_app/assets/images/3ddreambook/3ddream94.png", btn1: "104", btn2: "639" },
 
 ];
 
