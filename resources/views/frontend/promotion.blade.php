@@ -29,7 +29,7 @@
                 <a
                   class="material-icons text-white"
                   style="text-decoration: none"
-                  href="3d.html"
+                  href="{{ url('/promotion-detail') }}"
                   >chevron_right</a
                 >
               </span>
