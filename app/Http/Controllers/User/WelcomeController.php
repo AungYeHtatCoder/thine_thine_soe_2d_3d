@@ -167,12 +167,13 @@ class WelcomeController extends Controller
         return view('frontend.withdraw');
     }
 
-    public function promo()
+    public function promotion()
     {
         return view('frontend.promotion');
     }
 
-    public function promoDetail()
+    //promotionDetail
+    public function promotionDetail()
     {
         return view('frontend.promotion-detail');
     }

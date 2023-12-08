@@ -343,8 +343,6 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   Route::get('/three-d-display', [ThreeDPlayController::class, 'user_play'])->name('display');
   // three d dream book
   Route::get('/three-d-dream-book', [App\Http\Controllers\User\Threed\ThreeDreamBookController::class, 'index'])->name('three-d-dream-book-index');
-  // three d winner history
-  Route::get('/three-d-winners-history', [App\Http\Controllers\User\Threed\ThreedWinnerHistoryController::class, 'index'])->name('three-d-winners-history');
   
 });
 
@@ -357,18 +355,11 @@ Route::get('/twod-holiday', [App\Http\Controllers\User\WelcomeController::class,
 Route::get('/comment', [App\Http\Controllers\User\WelcomeController::class, 'comment']);
 Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, 'inviteCode']);
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
-// promotion route
-Route::get('/promotion', [App\Http\Controllers\User\WelcomeController::class, 'promotion']);
-// promotion detail 
-Route::get('/promotion-detail', [App\Http\Controllers\User\WelcomeController::class, 'promotionDetail'])->name('promotionDetail');
-// Route::get('/promotion-detail/{id}', [App\Http\Controllers\User\WelcomeController::class, 'promotionDetail'])->name('promotionDetail');
-
-
-
-// Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBank']);
+Route::get('/myBank', [App\Http\Controllers\User\WelcomeController::class, 'myBank']);
+Route::get('/promotion', [App\Http\Controllers\User\WelcomeController::class, 'promo']);
+Route::get('/promotion-detail', [App\Http\Controllers\User\WelcomeController::class, 'promoDetail']);
 
 // Route::get('/3d', [App\Http\Controllers\User\WelcomeController::class, 'threeD']);
-// Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
+Route::get('/3dBet', [App\Http\Controllers\User\WelcomeController::class, 'threedBet']);
 Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedHistory']);
-
-//Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
+Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
