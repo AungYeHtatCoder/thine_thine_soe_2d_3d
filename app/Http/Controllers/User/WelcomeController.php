@@ -74,9 +74,6 @@ class WelcomeController extends Controller
         }
 
         return view('welcome', compact('data', 'banners'));
-
-
-
     }
 
     public function wallet()
@@ -86,9 +83,9 @@ class WelcomeController extends Controller
 
     public function userLogin()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return redirect()->back()->with('error', "Already Logged In.");
-        }else{
+        } else {
             return view('frontend.login');
         }
     }
@@ -144,9 +141,9 @@ class WelcomeController extends Controller
 
     public function userRegister()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             return redirect()->back()->with('error', "Already Logged In.");
-        }else{
+        } else {
             return view('frontend.register');
         }
     }
@@ -345,6 +342,26 @@ class WelcomeController extends Controller
     public function threedResult()
     {
         return view('frontend.threed-result');
+    }
+
+    public function footballIndex()
+    {
+        return view('football.index');
+    }
+
+    public function footballMaung()
+    {
+        return view('football.maung');
+    }
+
+    public function footballGoal()
+    {
+        return view('football.goal');
+    }
+
+    public function goalResult()
+    {
+        return view('football.goal-result');
     }
 
 
