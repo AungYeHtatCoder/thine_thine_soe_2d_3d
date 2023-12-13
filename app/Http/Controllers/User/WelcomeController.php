@@ -363,6 +363,10 @@ class WelcomeController extends Controller
     {
         return view('football.goal-result');
     }
+    public function moneyChange()
+    {
+        return view('football.money-change');
+    }
 
 
     /**

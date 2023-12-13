@@ -43,7 +43,7 @@
     <img src="{{ asset('user_app/assets/images/football/pitch.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>3D/4D</p>
    </a>
-   <a href="#" class="card w-100 text-decoration-none">
+   <a href="{{ url('/money-change') }}" class="card w-100 text-decoration-none">
     <img src="{{ asset('user_app/assets/images/football/cash-flow.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>ငွေ/အကြောင်းကြား</p>
    </a>
