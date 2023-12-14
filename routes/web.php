@@ -437,3 +437,5 @@ Route::get('/index', [App\Http\Controllers\User\WelcomeController::class, 'footb
 Route::get('/maung', [App\Http\Controllers\User\WelcomeController::class, 'footballMaung']);
 Route::get('/goal', [App\Http\Controllers\User\WelcomeController::class, 'footballGoal']);
 Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
+Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
+Route::get('/money-change', [App\Http\Controllers\User\WelcomeController::class, 'moneyChange']);
