@@ -7,14 +7,12 @@
       </a>
       <div class="collapse" id="ProfileNav">
         <ul class="nav ">
-          @can('user_access')
           <li class="nav-item">
             <a class="nav-link text-white" href="{{ route('admin.profiles.index') }}">
               <span class="sidenav-mini-icon"> MP </span>
               <span class="sidenav-normal  ms-3  ps-1"> My Profile </span>
             </a>
           </li>
-          @endcan
           {{-- <li class="nav-item">
             <a class="nav-link text-white " href="../../pages/pages/profile/teams.html">
               <span class="sidenav-mini-icon"> T </span>
@@ -43,14 +41,25 @@
       </a>
       <div class="collapse " id="dashboardsExamples">
         <ul class="nav ">
-          @can('user_access')
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="{{ route('home') }}">
+              <span class="sidenav-mini-icon"> D </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Dashboard </span>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.banners.index') }}">
               <span class="sidenav-mini-icon"> B </span>
               <span class="sidenav-normal  ms-2  ps-1"> Banner </span>
             </a>
           </li>
-          @endcan
+          
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="{{ route('admin.promotions.index') }}">
+              <span class="sidenav-mini-icon"> P </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Promotions </span>
+            </a>
+          </li>
           {{-- <li class="nav-item ">
             <a class="nav-link text-white " href="../../pages/dashboards/discover.html">
               <span class="sidenav-mini-icon"> D </span>
@@ -78,9 +87,12 @@
         </ul>
       </div>
     </li>
+    @can('admin_access')
     <li class="nav-item mt-3">
       <h6 class="ps-4  ms-2 text-uppercase text-xs font-weight-bolder text-white">UserManagement</h6>
     </li>
+    @endcan
+    @can('admin_access')
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link text-white active" aria-controls="pagesExamples" role="button" aria-expanded="false">
         <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">manage_accounts</i>
@@ -89,13 +101,15 @@
       <div class="collapse  show " id="pagesExamples">
         <ul class="nav ">
           <li class="nav-item ">
+            
             <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#profileExample">
               <span class="sidenav-mini-icon"> UM </span>
               <span class="sidenav-normal  ms-2  ps-1"> UserManagement <b class="caret"></b></span>
             </a>
+            
             <div class="collapse " id="profileExample">
               <ul class="nav nav-sm flex-column">
-                @can('user_access')
+                @can('admin_access')
                 <li class="nav-item">
                   <a class="nav-link text-white " href="{{ route('admin.permissions.index')}}">
                     <span class="sidenav-mini-icon"> P </span>
@@ -103,7 +117,7 @@
                   </a>
                 </li>
                 @endcan
-                @can('user_access')
+                @can('admin_access')
                 <li class="nav-item">
                   <a class="nav-link text-white " href="{{ route('admin.roles.index') }}">
                     <span class="sidenav-mini-icon"> U R </span>
@@ -111,7 +125,7 @@
                   </a>
                 </li>
                 @endcan
-                @can('user_access')
+                @can('admin_access')
                 <li class="nav-item">
                   <a class="nav-link text-white " href="{{ route('admin.users.index')}}">
                     <span class="sidenav-mini-icon"> U </span>
@@ -267,7 +281,10 @@
         </ul>
       </div>
     </li>
+    @endcan
     {{-- lottery --}}
+    {{-- lottery --}}
+    @can('admin_access')
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#applicationsExamples" class="nav-link text-white " aria-controls="applicationsExamples" role="button" aria-expanded="false">
         <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">apps</i>
@@ -275,7 +292,7 @@
       </a>
       <div class="collapse " id="applicationsExamples">
         <ul class="nav ">
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.two-d-users-index')}}">
               <span class="sidenav-mini-icon"> 2D | U </span>
@@ -283,7 +300,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.twod-records.index')}}">
               <span class="sidenav-mini-icon"> 2D | H </span>
@@ -291,7 +308,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.tow-d-win-number.index') }}">
               <span class="sidenav-mini-icon"> K </span>
@@ -299,7 +316,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-morning-number') }}">
               <span class="sidenav-mini-icon"> MS </span>
@@ -307,7 +324,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.tow-d-morning-number.index') }}">
               <span class="sidenav-mini-icon"> MS </span>
@@ -315,7 +332,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ url('admin/two-d-early-morning-winner') }}">
               <span class="sidenav-mini-icon"> EMW </span>
@@ -323,7 +340,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.morningWinner') }}">
               <span class="sidenav-mini-icon"> MW </span>
@@ -331,7 +348,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-evening-number') }}">
               <span class="sidenav-mini-icon"> ES </span>
@@ -339,7 +356,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.eveningNumber') }}">
               <span class="sidenav-mini-icon"> ES </span>
@@ -347,7 +364,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ url('admin/two-d-early-evening-winner') }}">
               <span class="sidenav-mini-icon"> EW </span>
@@ -355,7 +372,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.eveningWinner') }}">
               <span class="sidenav-mini-icon"> EW </span>
@@ -363,15 +380,15 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.fill-balance-replies.index') }}">
               <span class="sidenav-mini-icon"> V </span>
               <span class="sidenav-normal  ms-2  ps-1"> Balance Accept </span>
             </a>
-          </li> 
+          </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.withdrawViewGet') }}">
               <span class="sidenav-mini-icon"> BW </span>
@@ -379,7 +396,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
            <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.CloseTwoD') }}">
               <span class="sidenav-mini-icon"> C </span>
@@ -387,7 +404,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.SessionResetIndex') }}">
               <span class="sidenav-mini-icon"> S </span>
@@ -395,7 +412,7 @@
             </a>
           </li>
           @endcan
-          @can('user_access')
+          @can('admin_access')
           <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.two-d-play-noti') }}">
               <span class="sidenav-mini-icon"> N </span>
@@ -404,12 +421,14 @@
           </li>
           @endcan
         </ul>
-      </div> 
+      </div>
     </li>
+    @endcan
+    {{-- end lottery --}}
     {{-- end lottery --}}
 
     {{-- 2d over amount limit --}}
-
+@can('admin_access')
 <li class="nav-item">
    <a data-bs-toggle="collapse" href="#ecommerceExamplesOver" class="nav-link text-white " aria-controls="ecommerceExamplesOver"
     role="button" aria-expanded="false">
@@ -483,8 +502,9 @@
     </ul>
    </div>
   </li>
+@endcan
     {{-- 2d over amount limit --}}
-    
+@can('admin_access')
   <li class="nav-item">
    <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples"
     role="button" aria-expanded="false">
@@ -564,6 +584,7 @@
     </ul>
    </div>
   </li>
+@endcan
 
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#authExamples" class="nav-link text-white " aria-controls="authExamples" role="button" aria-expanded="false">
@@ -579,7 +600,7 @@
             </a>
             <div class="collapse " id="signinExample">
               <ul class="nav nav-sm flex-column">
-                
+
                 <li class="nav-item">
                   <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link text-white">
                     <span class="sidenav-mini-icon"> L </span>
@@ -588,13 +609,13 @@
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                   </form>
-                  
+
                 </li>
-                
-                
+
+
               </ul>
             </div>
           </li>
-          
+
         </ul>
       </div>

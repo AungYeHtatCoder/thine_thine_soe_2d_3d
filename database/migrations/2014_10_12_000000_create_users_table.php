@@ -21,15 +21,16 @@ return new class extends Migration
             $table->string('profile', 2000)->nullable();
             $table->string('profile_mime')->nullable();
             $table->integer('profile_size')->nullable();
-
             $table->string('address')->nullable();
             $table->string('kpay_no')->nullable()->default('N/A');
             $table->string('cbpay_no')->nullable()->default('N/A');
             $table->string('wavepay_no')->nullable()->default('N/A');
             $table->string('ayapay_no')->nullable()->default('N/A');
             $table->integer('balance')->default(500000);
+            $table->unsignedBigInteger('agent_id')->default(1);
             $table->rememberToken();
             $table->timestamps();
+             $table->foreign('agent_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

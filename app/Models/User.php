@@ -44,6 +44,7 @@ class User extends Authenticatable
         'wavepay_no',
         'ayapay_no',
         'balance',
+        'agent_id',
         
     ];
     protected $dates = ['created_at', 'updated_at'];
@@ -113,13 +114,23 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Permission::class);
     }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
-    public function event()
+    // Other users that this user (a master) has created (agents)
+    // User.php model
+    public function createdAgents()
     {
-        return $this->hasOne(Event::class);
+        return $this->hasMany(User::class, 'agent_id');
     }
 
 
+    // The master that created this user (an agent)
+    public function createdByMaster()
+    {
+        return $this->belongsTo(User::class, 'agent_id');
+    }
     public function hasRole($role)
     {
         return $this->roles->contains('title', $role);

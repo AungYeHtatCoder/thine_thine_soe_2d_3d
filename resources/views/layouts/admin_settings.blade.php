@@ -65,6 +65,7 @@
         </div>
         <hr class="horizontal dark my-sm-4">
         {{-- <a class="btn bg-gradient-primary w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Buy now</a>
+        75iyW6mDI7yB4b9NkPTIXK5QfjKPoqA1TzEIMAWSiVHgYyUYWxYjB23O1iAg
         <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard">Free demo</a>
         <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
         <div class="w-100 text-center">
