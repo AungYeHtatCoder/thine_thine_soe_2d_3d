@@ -377,6 +377,7 @@ Route::get('/maung', [App\Http\Controllers\User\WelcomeController::class, 'footb
 Route::get('/goal', [App\Http\Controllers\User\WelcomeController::class, 'footballGoal']);
 Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
 Route::get('/money-change', [App\Http\Controllers\User\WelcomeController::class, 'moneyChange']);
+Route::get('/f-history', [FootballController::class, 'FHistory']);
 
 
 //football
@@ -385,7 +386,6 @@ Route::get('/getodds','FootballController@GetOdds');
 Route::get('/pre-match','FootballController@PreMatch');
 Route::get('/mm-odds','FootballController@MMOdds');
 Route::get('/mix-parlay','FootballController@MixParlay');
-Route::get('/f-history','FootballController@FHistory');
 
 Route::get('/mp-history','FootballController@FMixDetailedById')->name('mixparlay.Detail');
 Route::get('/mm-history','FootballController@FMixDetailedById')->name('mm.Detail');
