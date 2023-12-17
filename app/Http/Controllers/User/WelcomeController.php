@@ -351,12 +351,15 @@ class WelcomeController extends Controller
 
     public function footballMaung()
     {
-        return view('football.maung');
+        $oddData = DB::table('odds')->where('status',1)->where('money_line_h','>',0)->where('money_line_a','>',0)->where('spreads_h','>',0)->where('spreads_a','>',0)->where('totals_point','>',0)->orderBy('starts')->orderBy('league_name')->get();
+
+        return view('football.maung')->with(['oddData' => $oddData]);
     }
 
     public function footballGoal()
     {
-        return view('football.goal');
+        $oddData = DB::table('odds')->where('status',1)->where('money_line_h','>',0)->where('money_line_a','>',0)->where('spreads_h','>',0)->where('spreads_a','>',0)->where('totals_point','>',0)->orderBy('starts')->orderBy('league_name')->get();
+        return view('football.goal')->with(['oddData' => $oddData]);
     }
 
     public function goalResult()

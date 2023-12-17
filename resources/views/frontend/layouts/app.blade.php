@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TTT 2D 3D</title>
     <link rel="stylesheet" href="{{ asset('user_app/assets/css/style.css') }}" />
@@ -63,11 +66,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
-  <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
+  
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   @yield('script')
   @if (Session::has('error'))

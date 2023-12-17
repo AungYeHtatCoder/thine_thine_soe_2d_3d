@@ -188,5 +188,38 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
-
+    'pre'=>[
+        '1','dm'
+      ],
+      'AccountStatus' => [
+          '1' => 'Active',
+          '2' => 'Suspend',
+          '3' => 'De-Active',
+        ],
+        'PaymentMethod' => [
+          '1' => 'Wave Pay',
+          '2' => 'Kpay',
+          '3' => 'CB Pay',
+          '4' => 'Aya Account',
+          '5' => 'KBZ Account',
+          '6' => 'CB Account',
+        ],
+        'BetType' => [
+          'a' => 'Away',
+          'h' => 'Home',
+          'o' => 'Over',
+          'u' => 'Under',
+          
+        ],
+        'BetAsiaType' => [
+          'mh' => 'Money Line -Home',
+          'md' => 'Money Line -Draw',
+          'ma' => 'Money Line -Away',
+          'ah' => 'Asian Odds -Home',
+          'aa' => 'Asian Odds -Away',
+          'ao' => 'Asian Total -Over',
+          'au' => 'Asian Total -Under',
+  
+          
+        ],
 ];
