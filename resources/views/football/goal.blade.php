@@ -345,7 +345,7 @@
 
             function bet_Confirm(){
                $('#divBetPlace').empty();
-               if(parseInt($('#bet_amount').val())< 1){
+  if(parseInt($('#bet_amount').val())< 1){
       alert("လောင်းမည့်ငွေပမာဏထည့်ပါ");
       return;
 
@@ -409,6 +409,7 @@
             $("#btnBet").click(function(event) {
                event.preventDefault();
                mmOddBet.status = 1;
+               mmOddBet.amount = parseInt($('#bet_amount').val());
                $.ajax({
                   headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 

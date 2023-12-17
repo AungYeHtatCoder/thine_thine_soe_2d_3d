@@ -422,7 +422,7 @@
       return;
     }
     if(parseInt($('#bet_amount').val())< 1){
-      alert("လောင်းမည့်ငွေပမာဏထည့်ပါ");
+      alert("လောင်းမည့်ငွေပမာဏထည်");
       return;
 
     }

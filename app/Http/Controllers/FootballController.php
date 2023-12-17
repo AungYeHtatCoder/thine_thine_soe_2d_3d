@@ -199,19 +199,19 @@ class FootballController extends Controller
         $mixHistory = $this->football->getMixHistory(Session()->get('player')->id);
         return  response()->json($mixHistory->where());
     }
-    public function FMixDetailedById($voucher_id)
+    public function FMixDetailedById(Request $requestData)
     {
         $user = Auth::user();
         if ($user != null) {
             $mixHistory = DB::select('SELECT A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.created_at FROM mixbet A
             join odds B on A.odd_id = B.id
-            where A.p_id= ' . $user->id . ' and A.voucher_id = ' . $voucher_id);
+            where A.p_id= ' . $user->id . ' and A.voucher_id = "' . $requestData->voucher_id.'"');
             return  response()->json($mixHistory);
         } else {
             return response()->json(array('resCode' => (int)'401', 'resDesc' => 'Please Login.'));
         }
     }
-    public function FMMDetailedById($voucher_id)
+    public function FMMDetailedById(Request $requestData)
     {
 
         $user = Auth::user();
@@ -219,7 +219,7 @@ class FootballController extends Controller
             $mmHistory = DB::select(
                 'SELECT A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.created_at FROM mmbet A
         join odds B on A.odd_id = B.id
-        where A.p_id= ' . $user->id . ' and A.voucher_id = ' . $voucher_id
+        where A.p_id= ' . $user->id . ' and A.voucher_id = "' . $requestData->voucher_id.'"'
             );
             return  response()->json($mmHistory);
         } else {

@@ -387,8 +387,8 @@ Route::get('/pre-match','FootballController@PreMatch');
 Route::get('/mm-odds','FootballController@MMOdds');
 Route::get('/mix-parlay','FootballController@MixParlay');
 
-Route::get('/mp-history','FootballController@FMixDetailedById')->name('mp.detail');
-Route::get('/mm-history','FootballController@FMMDetailedById')->name('mm.detail');
+Route::post('/mp-history',[FootballController::class, 'FMixDetailedById'])->name('mp.detail');
+Route::post('/mm-history',[FootballController::class, 'FMMDetailedById'])->name('mm.detail');
 
 Route::post('/mm-odds-bet', [FootballController::class, 'mmOddBet'])->name('mmodds.bet');
 Route::post('/mix-parlay-bet', [FootballController::class, 'mixparlayBet'])->name('mixparlay.bet');
