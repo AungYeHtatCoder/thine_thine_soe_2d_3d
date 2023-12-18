@@ -378,6 +378,7 @@ Route::get('/goal', [App\Http\Controllers\User\WelcomeController::class, 'footba
 Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
 Route::get('/money-change', [App\Http\Controllers\User\WelcomeController::class, 'moneyChange']);
 Route::get('/f-history', [FootballController::class, 'FHistory']);
+Route::get('/history', [FootballController::class, 'AllFHistory']);
 
 
 //football

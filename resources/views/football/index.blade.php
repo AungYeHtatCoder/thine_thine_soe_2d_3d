@@ -23,7 +23,7 @@
     <img src="{{ asset('user_app/assets/images/football/history.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>လောင်းထားသောပွဲစဉ်များ</p>
    </a>
-   <a href="#" class="card w-100 text-decoration-none">
+   <a href="/history" class="card w-100 text-decoration-none">
     <img src="{{ asset('user_app/assets/images/football/schedule.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>ပွဲစဉ်ဟောင်းများ</p>
    </a>

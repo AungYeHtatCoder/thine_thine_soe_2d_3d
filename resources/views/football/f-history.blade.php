@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 @section('content')
-<div class="row" style="font-size:x-small;">
+<div class="row mt-3" style="font-size:x-small;">
 <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 160vh; ">
  <?php
 
@@ -46,7 +46,10 @@ if ($mmHistory != null) {
 
 ?>
 </div>
+
 </div>
+@include('frontend.layouts.footer')
+
 <div class="modal fade col-sm-12" id="historyPnl" tabindex="-1" role="dialog" aria-labelledby="bet" aria-hidden="true">
                <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
@@ -67,7 +70,6 @@ if ($mmHistory != null) {
 
 
             
-@include('frontend.layouts.footer')
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <!-- Bootstrap JavaScript and dependencies -->
