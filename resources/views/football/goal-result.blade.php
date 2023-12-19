@@ -47,174 +47,88 @@
 <div class="row">
  <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 160vh; ">
   <p class="text-center mt-4 fw-bold">ဂိုးရလဒ်များ</p>
-
-  <div>
-   <div class="tab">
+  <div class="tab">
     <button class="tablinks active me-3 w-50 bet_styles" onclick="openTab(event, 'first_tab')">Yesterday</button>
     <button class="tablinks ms-3 w-50 bet_styles  " onclick="openTab(event, 'second_tab')">Today</button>
    </div>
+  
 
-   <div id="first_tab" class="tabcontent mt-4" style="display: block;">
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
+   <?php
 
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
+$json = Illuminate\Support\Facades\File::get(resource_path('views/football/yesterday.result.mock.json')); 
+  
+$json_data = json_decode($json,true); 
+echo '<div id="first_tab" class="tabcontent mt-4" style="display: block;">';
+
+foreach($json_data['Stages'] as $result){
+
+   echo '
+   <div>
+    <p class="py-2 px-3 fw-bold" style=" background: #c50408;
+       border: 1px solid gold;">'.$result['Cnm'].'-'.$result['Snm'].'</p>
+
+    ';
+   foreach ($result['Events'] as $eve) {
+      $tmp_Esd = $eve['Esd'];
+      $tmp_tr1 =  isset($eve['Tr1'])?$eve['Tr1']:"";
+      $tmp_tr2 =  isset($eve['Tr2'])?$eve['Tr2']:"";
+
+     $dt_tmp = date(substr($tmp_Esd,0,4).'/'.substr($tmp_Esd,4,2).'/'.substr($tmp_Esd,6,2).' '.substr($tmp_Esd,8,2).':'.substr($tmp_Esd,10,2).':'.substr($tmp_Esd,12,2));
+     echo' <div class="d-flex justify-content-start align-items-center"> <p style="font-size: 12px;"> '.date('Y-m-d H:i:s', strtotime('+25 minutes', strtotime($dt_tmp))).'</p>
+     <p class="fw-bold" style="margin-left: 20%;">'.$eve['Eps'].'</p>
     </div>
+    <div class="d-flex justify-content-around">
+     <p>'.$eve['T1'][0]['Nm'].'</p>
+     <p>'.$tmp_tr1.'-'. $tmp_tr2.'</p>
+     <p>'.$eve['T2'][0]['Nm'].'</p>
+    </div>';
+    break;
+   }
+    echo '</div>';
+}
+echo '</div>';
+?>
 
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
 
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
+
+<?php
+
+$json = Illuminate\Support\Facades\File::get(resource_path('views/football/today.result.mock.json')); 
+  
+$json_data = json_decode($json,true); 
+echo '<div id="second_tab" class="tabcontent mt-4">';
+
+foreach($json_data['Stages'] as $result){
+
+   echo '
+   <div>
+    <p class="py-2 px-3 fw-bold" style=" background: #c50408;
+       border: 1px solid gold;">'.$result['Cnm'].'-'.$result['Snm'].'</p>
+
+    ';
+   foreach ($result['Events'] as $eve) {
+      $tmp_Esd = $eve['Esd'];
+      $tmp_tr1 =  isset($eve['Tr1'])?$eve['Tr1']:"";
+      $tmp_tr2 =  isset($eve['Tr2'])?$eve['Tr2']:"";
+
+     $dt_tmp = date(substr($tmp_Esd,0,4).'/'.substr($tmp_Esd,4,2).'/'.substr($tmp_Esd,6,2).' '.substr($tmp_Esd,8,2).':'.substr($tmp_Esd,10,2).':'.substr($tmp_Esd,12,2));
+     echo' <div class="d-flex justify-content-start align-items-center"> <p style="font-size: 12px;"> '.date('Y-m-d H:i:s', strtotime('+25 minutes', strtotime($dt_tmp))).'</p>
+     <p class="fw-bold" style="margin-left: 20%;">'.$eve['Eps'].'</p>
     </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold" style="margin-left: 20%;">FT</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>3 - 4</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-
-   </div>
-
-   <div id="second_tab" class="tabcontent mt-4">
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>v</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">AFC Cup</p>
-
-     <div>
-      <div class="d-flex justify-content-start align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p></p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-
-    <div>
-     <p class="py-2 px-3 fw-bold" style=" background: #c50408;
-        border: 1px solid gold;">Australia A-league</p>
-
-     <div>
-      <div class="d-flex justify-content-around align-items-center">
-       <p style="font-size: 12px;">12-12-2023 &nbsp; 12:00 AM</p>
-       <p class="fw-bold ">FT</p>
-       <p></p>
-      </div>
-      <div class="d-flex justify-content-around">
-       <p>၀က်စတန်းဆစ်ဒနီ</p>
-       <p>PP</p>
-       <p>မဲဘုန်း V</p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
+    <div class="d-flex justify-content-around">
+     <p>'.$eve['T1'][0]['Nm'].'</p>
+     <p>'.$tmp_tr1.'-'. $tmp_tr2.'</p>
+     <p>'.$eve['T2'][0]['Nm'].'</p>
+    </div>';
+    break;
+   }
+    echo '</div>';
+}
+echo '</div>';
+?>
 
  </div>
+ 
 </div>
 
 
