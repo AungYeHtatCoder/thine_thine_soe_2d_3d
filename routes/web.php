@@ -381,6 +381,13 @@ Route::get('/f-history', [FootballController::class, 'FHistory']);
 Route::get('/history', [FootballController::class, 'AllFHistory']);
 
 
+Route::get('/mmbet', [App\Http\Controllers\Admin\FootballController::class, 'ManageMMBet'])->name('admin.mmbetlist');
+Route::get('/admin-mm-pl', [App\Http\Controllers\Admin\FootballController::class, 'ManageMMPL'])->name('admin.mmprofitloss');
+
+Route::get('/mpbet', [App\Http\Controllers\Admin\FootballController::class, 'ManageMPBet'])->name('admin.mpbetlist');
+Route::get('/admin-mp-pl', [App\Http\Controllers\Admin\FootballController::class, 'ManageMPPL'])->name('admin.mpprofitloss');
+Route::get('/admin-football-config', [App\Http\Controllers\Admin\FootballController::class, 'fconfigue'])->name('admin.fconfig');
+Route::get('/fixture', [App\Http\Controllers\Admin\FootballController::class, 'ManageOdd'])->name('admin.fixture');
 //football
 Route::get('/livescore-football','FootballController@Livescore');
 Route::get('/getodds','FootballController@GetOdds');
@@ -395,3 +402,5 @@ Route::post('/mm-odds-bet', [FootballController::class, 'mmOddBet'])->name('mmod
 Route::post('/mix-parlay-bet', [FootballController::class, 'mixparlayBet'])->name('mixparlay.bet');
 
 
+Route::get('/admin/odd/status/{id}/{status}', [App\Http\Controllers\Admin\FootballController::class, 'ChangeOddStatus'])->name('admin.odd.status');
+Route::get('/admin/bet/status/{id}/{playerId}/{amount}/{status}', [App\Http\Controllers\Admin\FootballController::class, 'ChangeBetStatus'])->name('admin.mmbet.status');

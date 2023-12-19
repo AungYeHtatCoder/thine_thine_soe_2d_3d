@@ -369,7 +369,7 @@
               <span class="sidenav-mini-icon"> V </span>
               <span class="sidenav-normal  ms-2  ps-1"> Balance Accept </span>
             </a>
-          </li> 
+          </li>
           @endcan
           @can('user_access')
           <li class="nav-item ">
@@ -380,7 +380,7 @@
           </li>
           @endcan
           @can('user_access')
-           <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link text-white " href="{{ route('admin.CloseTwoD') }}">
               <span class="sidenav-mini-icon"> C </span>
               <span class="sidenav-normal  ms-2  ps-1"> CloseTwoD </span>
@@ -404,166 +404,235 @@
           </li>
           @endcan
         </ul>
-      </div> 
+      </div>
     </li>
     {{-- end lottery --}}
 
     {{-- 2d over amount limit --}}
 
-<li class="nav-item">
-   <a data-bs-toggle="collapse" href="#ecommerceExamplesOver" class="nav-link text-white " aria-controls="ecommerceExamplesOver"
-    role="button" aria-expanded="false">
-    <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
-    <span class="nav-link-text ms-2 ps-1">2D OverLimit</span>
-   </a>
-   <div class="collapse " id="ecommerceExamplesOver">
-    <ul class="nav ">
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
-       <span class="sidenav-mini-icon"> P </span>
-       <span class="sidenav-normal  ms-2  ps-1"> 2D Over AmountLimit <b class="caret"></b></span>
+    <li class="nav-item">
+      <a data-bs-toggle="collapse" href="#ecommerceExamplesOver" class="nav-link text-white " aria-controls="ecommerceExamplesOver" role="button" aria-expanded="false">
+        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
+        <span class="nav-link-text ms-2 ps-1">2D OverLimit</span>
       </a>
-      <div class="collapse " id="productsExample">
-       <ul class="nav nav-sm flex-column">
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-morning-number-over-amount-limit')}}">
-          <span class="sidenav-mini-icon"> 2D </span>
-          <span class="sidenav-normal  ms-2  ps-1"> 9:30 OverLimit </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/get-two-d-morning-number-over-amount-limit') }}">
-          <span class="sidenav-mini-icon"> 2D </span>
-          <span class="sidenav-normal  ms-2  ps-1"> 12:1 OverLimit </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-evening-number-over-amount-limit')}}">
-          <span class="sidenav-mini-icon"> 2D </span>
-          <span class="sidenav-normal  ms-2  ps-1"> 2 : OverLimit </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/get-two-d-evening-number-over-amount-limit') }}">
-          <span class="sidenav-mini-icon"> 2D </span>
-          <span class="sidenav-normal  ms-2  ps-1">4:30 OverLimit </span>
-         </a>
-        </li>
-       </ul>
+      <div class="collapse " id="ecommerceExamplesOver">
+        <ul class="nav ">
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
+              <span class="sidenav-mini-icon"> P </span>
+              <span class="sidenav-normal  ms-2  ps-1"> 2D Over AmountLimit <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="productsExample">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-morning-number-over-amount-limit')}}">
+                    <span class="sidenav-mini-icon"> 2D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> 9:30 OverLimit </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/get-two-d-morning-number-over-amount-limit') }}">
+                    <span class="sidenav-mini-icon"> 2D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> 12:1 OverLimit </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/get-two-d-early-evening-number-over-amount-limit')}}">
+                    <span class="sidenav-mini-icon"> 2D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> 2 : OverLimit </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/get-two-d-evening-number-over-amount-limit') }}">
+                    <span class="sidenav-mini-icon"> 2D </span>
+                    <span class="sidenav-normal  ms-2  ps-1">4:30 OverLimit </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
+              <span class="sidenav-mini-icon"> O </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="ordersExample">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="../../pages/ecommerce/orders/list.html">
+                    <span class="sidenav-mini-icon"> O </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="../../pages/ecommerce/orders/details.html">
+                    <span class="sidenav-mini-icon"> O </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
+              <span class="sidenav-mini-icon"> R </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
+            </a>
+          </li>
+        </ul>
       </div>
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
-       <span class="sidenav-mini-icon"> O </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
-      </a>
-      <div class="collapse " id="ordersExample">
-       <ul class="nav nav-sm flex-column">
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/list.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/details.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
-         </a>
-        </li>
-       </ul>
-      </div>
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
-       <span class="sidenav-mini-icon"> R </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </li>
+    </li>
     {{-- 2d over amount limit --}}
-    
-  <li class="nav-item">
-   <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples"
-    role="button" aria-expanded="false">
-    <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
-    <span class="nav-link-text ms-2 ps-1">3D</span>
-   </a>
-   <div class="collapse " id="ecommerceExamples">
-    <ul class="nav ">
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
-       <span class="sidenav-mini-icon"> P </span>
-       <span class="sidenav-normal  ms-2  ps-1"> ThreeDManagement <b class="caret"></b></span>
+
+    <li class="nav-item">
+      <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
+        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
+        <span class="nav-link-text ms-2 ps-1">3D</span>
       </a>
-      <div class="collapse " id="productsExample">
-       <ul class="nav nav-sm flex-column">
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/three-d-history')}}">
-          <span class="sidenav-mini-icon"> 3D H </span>
-          <span class="sidenav-normal  ms-2  ps-1"> 3D History </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('admin/threed-lotteries-match-time') }}">
-          <span class="sidenav-mini-icon"> OD </span>
-          <span class="sidenav-normal  ms-2  ps-1"> OpeninDate </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('/admin/three-d-prize-number-create') }}">
-          <span class="sidenav-mini-icon"> 3D </span>
-          <span class="sidenav-normal  ms-2  ps-1"> PrizeNoCreate </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('/admin/three-d-list-index') }}">
-          <span class="sidenav-mini-icon"> 3D </span>
-          <span class="sidenav-normal  ms-2  ps-1">  List </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="{{ url('/admin/three-d-winner') }}">
-          <span class="sidenav-mini-icon"> 3D </span>
-          <span class="sidenav-normal  ms-2  ps-1">  WinnerList </span>
-         </a>
-        </li>
-       </ul>
+      <div class="collapse " id="ecommerceExamples">
+        <ul class="nav ">
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
+              <span class="sidenav-mini-icon"> P </span>
+              <span class="sidenav-normal  ms-2  ps-1"> ThreeDManagement <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="productsExample">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/three-d-history')}}">
+                    <span class="sidenav-mini-icon"> 3D H </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> 3D History </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('admin/threed-lotteries-match-time') }}">
+                    <span class="sidenav-mini-icon"> OD </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> OpeninDate </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('/admin/three-d-prize-number-create') }}">
+                    <span class="sidenav-mini-icon"> 3D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> PrizeNoCreate </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('/admin/three-d-list-index') }}">
+                    <span class="sidenav-mini-icon"> 3D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> List </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ url('/admin/three-d-winner') }}">
+                    <span class="sidenav-mini-icon"> 3D </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> WinnerList </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
+              <span class="sidenav-mini-icon"> O </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="ordersExample">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="../../pages/ecommerce/orders/list.html">
+                    <span class="sidenav-mini-icon"> O </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="../../pages/ecommerce/orders/details.html">
+                    <span class="sidenav-mini-icon"> O </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
+              <span class="sidenav-mini-icon"> R </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
+            </a>
+          </li>
+        </ul>
       </div>
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
-       <span class="sidenav-mini-icon"> O </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
+    </li>
+
+    {{-- Football  --}}
+
+    <li class="nav-item">
+      <a data-bs-toggle="collapse" href="#footballNav" class="nav-link text-white " aria-controls="footballNav" role="button" aria-expanded="false">
+        <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">circle</i>
+        <span class="nav-link-text ms-2 ps-1">ဘောလုံး</span>
       </a>
-      <div class="collapse " id="ordersExample">
-       <ul class="nav nav-sm flex-column">
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/list.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/details.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
-         </a>
-        </li>
-       </ul>
+      <div class="collapse " id="footballNav">
+        <ul class="nav ">
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#mmFootball">
+              <span class="sidenav-mini-icon"> MP </span>
+              <span class="sidenav-normal  ms-2  ps-1"> မောင်းပွဲ <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="mmFootball">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ route('admin.mpbetlist')}}" >
+                    <span class="sidenav-mini-icon"> B </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> လောင်းပွဲများ </span>
+                  </a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ route('admin.mpprofitloss')}}" >
+                    <span class="sidenav-mini-icon"> PL </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> နိုင်/ရှုံး </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#mpFootball">
+              <span class="sidenav-mini-icon"> MM </span>
+              <span class="sidenav-normal  ms-2  ps-1"> မြန်မာကြေး <b class="caret"></b></span>
+            </a>
+            <div class="collapse " id="mpFootball">
+              <ul class="nav nav-sm flex-column">
+              
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ route('admin.mmbetlist')}}" >
+                    <span class="sidenav-mini-icon"> B </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> လောင်းပွဲများ </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ route('admin.mmprofitloss')}}" >
+                    <span class="sidenav-mini-icon"> PL </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> နှိုင်/ရှုံး </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link text-white " href="{{ route('admin.fixture')}}" >
+                    <span class="sidenav-mini-icon"> F </span>
+                    <span class="sidenav-normal  ms-2  ps-1"> ပွဲစဥ်များ </span>
+                  </a>
+                </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white " href="{{ route('admin.fconfig') }}">
+              <span class="sidenav-mini-icon"> R </span>
+              <span class="sidenav-normal  ms-2  ps-1"> Football Configure </span>
+            </a>
+          </li>
+        </ul>
       </div>
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
-       <span class="sidenav-mini-icon"> R </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </li>
+    </li>
 
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#authExamples" class="nav-link text-white " aria-controls="authExamples" role="button" aria-expanded="false">
@@ -579,7 +648,7 @@
             </a>
             <div class="collapse " id="signinExample">
               <ul class="nav nav-sm flex-column">
-                
+
                 <li class="nav-item">
                   <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link text-white">
                     <span class="sidenav-mini-icon"> L </span>
@@ -588,13 +657,13 @@
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                   </form>
-                  
+
                 </li>
-                
-                
+
+
               </ul>
             </div>
           </li>
-          
+
         </ul>
       </div>
