@@ -6,7 +6,13 @@
     </marquee>
   <div class="card px-3 pb-3">
    Balance
-   <h5 class="mt-1">246.76 Ks</h5>
+   <h5 class="mt-1">  @auth
+                    @if(Auth::user()->balance)
+                    {{ Auth::user()->balance }} MMK
+                    @else
+                    0 MMK
+                    @endif
+                    @endauth</h5>
   </div>
   <div class="d-flex justify-content-around mt-2 align-items-center text-center">
    <a href="{{ url('/maung') }}" class="card w-100 text-decoration-none me-1">
