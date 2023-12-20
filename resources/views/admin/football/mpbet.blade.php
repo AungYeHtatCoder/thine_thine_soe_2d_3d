@@ -69,10 +69,10 @@
                             <td class="align-middle text-left text-sm">
                             @if($voucher->status != 99)
                             <a 
-                            href="{{ route('admin.mpbet.status', ['id' => $voucher->id,'status'=>'99']) }}" class="btn btn-danger col-sm-12 float-right"  >ပယ်ဖျက်</a>
+                            href="{{ route('admin.mpbet.status', ['id' => $voucher->voucher_id,'amount'=>$voucher->amount,'status'=>'99']) }}" class="btn btn-danger  float-right"  >ပယ်ဖျက်</a>
                             @endif
                             <a 
-                            href="#" class="btn btn-danger col-sm-12 float-right">  အသေးစိတ်ကြည့်ရန်</a>
+                            href="#" class="btn btn-danger float-right">  အသေးစိတ်ကြည့်ရန်</a>
                             </td>
                         </tr>
                         @endforeach

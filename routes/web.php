@@ -404,3 +404,4 @@ Route::post('/mix-parlay-bet', [FootballController::class, 'mixparlayBet'])->nam
 
 Route::get('/admin/odd/status/{id}/{status}', [App\Http\Controllers\Admin\FootballController::class, 'ChangeOddStatus'])->name('admin.odd.status');
 Route::get('/admin/bet/status/{id}/{playerId}/{amount}/{status}', [App\Http\Controllers\Admin\FootballController::class, 'ChangeBetStatus'])->name('admin.mmbet.status');
+Route::get('/admin/mpbet/status/{id}/{amount}/{status}', [App\Http\Controllers\Admin\FootballController::class, 'ChangeMPBetStatus'])->name('admin.mpbet.status');

@@ -54,6 +54,16 @@ class FootballController extends Controller
         return redirect()->back()->with('message', 'လုပ်ဆောင်မူအောင်မြင်ပါသည်။');
 
     }
+    public function ChangeMPBetStatus($id,$amount,$status){
+        DB::beginTransaction();
+        $playerId = DB::table('mixbet')->where("voucher_id",$id)->select("playerId")->limit(1)->get();
+        DB::statement("UPDATE mixbet SET status = ".$status . " where voucher_id = '" . $id."'");
+        DB::statement("UPDATE users SET balance = balance +" . doubleval($amount) . " where id = " . $playerId[0]->playerId);
+        DB::commit();
+
+        return redirect()->back()->with('message', 'လုပ်ဆောင်မူအောင်မြင်ပါသည်။');
+
+    }
     public function ManageMMBet(){
 
         $mmbet = DB::table('mmbet')
