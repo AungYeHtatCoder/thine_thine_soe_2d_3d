@@ -103,7 +103,7 @@
 
                             </td>
                             <td class="align-middle text-left text-sm">
-                            @if($mbet->status == 99)
+                            @if($mbet->status != 99)
                             <a 
                             href="{{ route('admin.mmbet.status', ['id' => $mbet->id,'playerId'=>$mbet->playerId,'amount'=>$mbet->amount,'status'=>'99']) }}" class="btn btn-danger col-sm-12 float-right"  >ပယ်ဖျက်</a>
                             @endif
