@@ -193,6 +193,25 @@ class FootballController extends Controller
             return View('login');
         }
     }
+    public function AllFHistory(){
+        $user = Auth::user();
+        if ($user != null) {
+            $mixVoucher = DB::select('select voucher_id, count(*) as TotalBet,created_at,amount
+            from mixbet 
+            where status = 1 and p_id = "' . $user->id . '"
+            group by voucher_id,created_at,amount order by voucher_id desc');
+            $mixHistory = DB::select('SELECT A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.result_h,A.result_a,A.created_at,A.status FROM mixbet A
+            join odds B on A.odd_id = B.id
+            where A.p_id= ' . $user->id .' order by A.voucher_id desc');
+            $mmHistory = DB::select('SELECT B.league_name,A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.created_at FROM mmbet A
+        join odds B on A.odd_id = B.id
+        where A.status = 1 and  A.p_id= "' . $user->id . '" order by A.created_at desc');
+            return view('football.history')->with(['mixHistory' => $mixHistory, 'mmHistory' => $mmHistory, 'mixVoucher'=>$mixVoucher]);
+        } else {
+            return View('frontend.login');
+        }
+    }
+
     public function FMixDetailed()
     {
 

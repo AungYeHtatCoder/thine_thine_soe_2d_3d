@@ -6,7 +6,13 @@
     </marquee>
   <div class="card px-3 pb-3">
    Balance
-   <h5 class="mt-1">246.76 Ks</h5>
+   <h5 class="mt-1">  @auth
+                    @if(Auth::user()->balance)
+                    {{ Auth::user()->balance }} MMK
+                    @else
+                    0 MMK
+                    @endif
+                    @endauth</h5>
   </div>
   <div class="d-flex justify-content-around mt-2 align-items-center text-center">
    <a href="{{ url('/maung') }}" class="card w-100 text-decoration-none me-1">
@@ -23,7 +29,7 @@
     <img src="{{ asset('user_app/assets/images/football/history.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>လောင်းထားသောပွဲစဉ်များ</p>
    </a>
-   <a href="#" class="card w-100 text-decoration-none">
+   <a href="/history" class="card w-100 text-decoration-none">
     <img src="{{ asset('user_app/assets/images/football/schedule.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>ပွဲစဉ်ဟောင်းများ</p>
    </a>

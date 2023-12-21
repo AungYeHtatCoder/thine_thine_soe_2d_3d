@@ -1,0 +1,4534 @@
+{
+    "Stages": [
+        {
+            "Sid": "14920",
+            "Snm": "Club World Cup",
+            "Scd": "club-world-cup",
+            "badgeUrl": "2023-club-world-cup.png",
+            "firstColor": "8536D1",
+            "Cnm": "International",
+            "Csnm": "International",
+            "Ccd": "intl",
+            "CompId": "424",
+            "CompN": "Club World Cup",
+            "CompD": "FIFA",
+            "CompST": "FIFA",
+            "Scu": 1,
+            "Events": [
+                {
+                    "Eid": "1082171",
+                    "Pids": {
+                        "12": "SBTE_29844809",
+                        "8": "1082171"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "2",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Fluminense",
+                            "ID": "4840",
+                            "Img": "enet/9863.png",
+                            "Abr": "FLU"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al Ahly",
+                            "ID": "2860",
+                            "Img": "enet/101745.png",
+                            "Abr": "AHL"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "Semi Finals",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219000500,
+                    "EO": 269667197,
+                    "EOX": 269667197,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14500",
+            "Snm": "LaLiga",
+            "Scd": "laliga",
+            "badgeUrl": "2023-spain-laliga.png",
+            "firstColor": "8B0D11",
+            "Cnm": "Spain",
+            "Csnm": "Spain",
+            "Ccd": "spain",
+            "CompId": "75",
+            "CompN": "LaLiga",
+            "CompD": "Spain",
+            "CompST": "Spain",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "976495",
+                    "Pids": {
+                        "12": "SBTE_29789519",
+                        "8": "976495"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "0",
+                    "Trh1": "2",
+                    "Trh2": "0",
+                    "Tr1OR": "3",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Girona",
+                            "ID": "3586",
+                            "Img": "enet/7732.png",
+                            "NewsTag": "/team/girona-2021020913320920836-697/",
+                            "Abr": "GIR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Deportivo Alaves",
+                            "ID": "4482",
+                            "Img": "enet/9866.png",
+                            "Abr": "ALA"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219020500,
+                    "EO": 807388029,
+                    "EOX": 807388029,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14689",
+            "Snm": "Serie A",
+            "Scd": "serie-a",
+            "badgeUrl": "2023-italy-serie-a.png",
+            "firstColor": "1F3860",
+            "Cnm": "Italy",
+            "Csnm": "Italy",
+            "Ccd": "italy",
+            "CompId": "77",
+            "CompN": "Serie A",
+            "CompD": "Italy",
+            "CompST": "Italy",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1029180",
+                    "Pids": {
+                        "12": "SBTE_29781671",
+                        "8": "1029180"
+                    },
+                    "Tr1": "4",
+                    "Tr2": "1",
+                    "Trh1": "0",
+                    "Trh2": "1",
+                    "Tr1OR": "4",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Atalanta",
+                            "ID": "3416",
+                            "Img": "enet/8524.png",
+                            "NewsTag": "/team/atalanta-2021020913320920836-259/",
+                            "Abr": "ATA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Salernitana",
+                            "ID": "4765",
+                            "Img": "enet/6480.png",
+                            "NewsTag": "/team/salernitana-2021020913320920836-770/",
+                            "Abr": "USS"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "16",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219015000,
+                    "EO": 807388029,
+                    "EOX": 807388029,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14596",
+            "Snm": "Bundesliga",
+            "Scd": "bundesliga",
+            "badgeUrl": "2023-bundesliga.png",
+            "firstColor": "d20515",
+            "Cnm": "Germany",
+            "Csnm": "Germany",
+            "Ccd": "germany",
+            "CompId": "67",
+            "CompN": "Bundesliga",
+            "CompD": "Germany",
+            "CompST": "Germany",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "989429",
+                    "Pids": {
+                        "12": "SBTE_29817224",
+                        "8": "989429"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Werder Bremen",
+                            "ID": "3727",
+                            "Img": "enet/8697.png",
+                            "NewsTag": "/team/werder-bremen-2021020913320920836-226/",
+                            "Abr": "SVW"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "RB Leipzig",
+                            "ID": "4707",
+                            "Img": "enet/178475.png",
+                            "NewsTag": "/team/rb-leipzig-2021020913320920836-240/",
+                            "Abr": "RBL"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "16",
+                    "Et": 1,
+                    "Esd": 20231219233500,
+                    "EO": 899530919,
+                    "EOX": 899530919,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14486",
+            "Snm": "Championship",
+            "Scd": "championship",
+            "badgeUrl": "england-championship.png",
+            "firstColor": "B90B2F",
+            "Cnm": "England",
+            "Csnm": "England",
+            "Ccd": "england",
+            "CompId": "70",
+            "CompN": "Championship",
+            "CompD": "England",
+            "CompST": "England",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "973321",
+                    "Pids": {
+                        "12": "SBTE_29814171",
+                        "8": "973321"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "3",
+                    "Trh1": "1",
+                    "Trh2": "2",
+                    "Tr1OR": "2",
+                    "Tr2OR": "3",
+                    "T1": [
+                        {
+                            "Nm": "Birmingham City",
+                            "ID": "2858",
+                            "Img": "enet/8658.png",
+                            "NewsTag": "/team/birmingham-2021020913320920836-106/",
+                            "Abr": "BIR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Leicester City",
+                            "ID": "2901",
+                            "Img": "enet/8197.png",
+                            "NewsTag": "/team/leicester-2021020913320920836-81/",
+                            "Abr": "LEI"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "22",
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219020500,
+                    "EO": 874480509,
+                    "EOX": 874480509,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15790",
+            "Snm": "KNVB Beker Round 2",
+            "Scd": "knvb-beker-round-2",
+            "badgeUrl": "2023-knvb-beker.png",
+            "firstColor": "0079BF",
+            "Cnm": "Netherlands",
+            "Csnm": "Netherlands",
+            "Ccd": "holland",
+            "CompId": "303",
+            "CompN": "KNVB Beker",
+            "CompD": "Netherlands",
+            "Scu": 1,
+            "Events": [
+                {
+                    "Eid": "1112892",
+                    "Pids": {
+                        "12": "SBTE_29849874",
+                        "8": "1112892"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Quick Boys",
+                            "ID": "3043",
+                            "Img": "enet/2156.png",
+                            "Abr": "QUI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "De Graafschap",
+                            "ID": "259",
+                            "Img": "enet/8526.png",
+                            "NewsTag": "",
+                            "Abr": "DEG"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "2",
+                    "Et": 1,
+                    "Esd": 20231219235000,
+                    "EO": 269778951,
+                    "EOX": 269778951,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14918",
+            "Snm": "Super Lig",
+            "Scd": "super-lig",
+            "badgeUrl": "2023-super-lig.png",
+            "firstColor": "7E3339",
+            "Cnm": "Turkiye",
+            "Csnm": "Turkiye",
+            "Ccd": "turkey",
+            "CompId": "32",
+            "CompN": "Super Lig",
+            "CompD": "Turkiye",
+            "CompST": "Turkiye",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1019884",
+                    "Pids": {
+                        "12": "SBTE_29854817",
+                        "8": "1019884"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Istanbul Basaksehir",
+                            "ID": "3467",
+                            "Img": "enet/1933.png",
+                            "NewsTag": "/team/istanbul-basaksehir-2021020913320920836-539/",
+                            "Abr": "IST"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sivasspor",
+                            "ID": "3366",
+                            "Img": "enet/6265.png",
+                            "Abr": "SIV"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219200500,
+                    "EO": 807190567,
+                    "EOX": 807190567,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1019885",
+                    "Pids": {
+                        "12": "SBTE_29854819",
+                        "8": "1019885"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Gaziantep FK",
+                            "ID": "3489",
+                            "Img": "enet/4081.png",
+                            "Abr": "GAZ"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Adana Demirspor",
+                            "ID": "2765",
+                            "Img": "enet/1926.png",
+                            "NewsTag": "/team/adana-demirspor-2021020913320920836-1847/",
+                            "Abr": "ADA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219230500,
+                    "EO": 807190567,
+                    "EOX": 807190567,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1019889",
+                    "Pids": {
+                        "12": "SBTE_29854818",
+                        "8": "1019889"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Istanbulspor",
+                            "ID": "4752",
+                            "Img": "enet/106560.png",
+                            "Abr": "IST"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Trabzonspor",
+                            "ID": "378",
+                            "Img": "enet/9752.png",
+                            "NewsTag": "",
+                            "Abr": "TRA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219230500,
+                    "EO": 807190567,
+                    "EOX": 807190567,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14706",
+            "Snm": "Primeira Liga",
+            "Scd": "primeira-liga",
+            "badgeUrl": "2023-primeira-liga.png",
+            "firstColor": "25305F",
+            "Cnm": "Portugal",
+            "Csnm": "Portugal",
+            "Ccd": "portugal",
+            "CompId": "79",
+            "CompN": "Primeira Liga",
+            "CompD": "Portugal",
+            "CompST": "Portugal",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1000113",
+                    "Pids": {
+                        "12": "SBTE_29823850",
+                        "8": "1000113"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "0",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "2",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Sporting CP",
+                            "ID": "3442",
+                            "Img": "enet/9768.png",
+                            "NewsTag": "/team/sporting-cp-2021020913320920836-448/",
+                            "Abr": "SCP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "FC Porto",
+                            "ID": "262",
+                            "Img": "enet/9773.png",
+                            "NewsTag": "/team/fc-porto-2021020913320920836-451/",
+                            "Abr": "POR"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "14",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219022500,
+                    "EO": 874431357,
+                    "EOX": 874431357,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14583",
+            "Snm": "LaLiga 2",
+            "Scd": "laliga-2",
+            "badgeUrl": "2023-spain-laliga-2.png",
+            "firstColor": "8B0D11",
+            "Cnm": "Spain",
+            "Csnm": "Spain",
+            "Ccd": "spain",
+            "CompId": "406",
+            "CompN": "LaLiga 2",
+            "CompD": "Spain",
+            "CompST": "Spain",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "986033",
+                    "Pids": {
+                        "12": "SBTE_29822113",
+                        "8": "986033"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "0",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Villarreal B",
+                            "ID": "3277",
+                            "Img": "enet/161771.png",
+                            "Abr": "VIL"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Real Valladolid",
+                            "ID": "3658",
+                            "Img": "enet/10281.png",
+                            "NewsTag": "/team/real-valladolid-2021020913320920836-700/",
+                            "Abr": "REV"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "20",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219013500,
+                    "EO": 807322493,
+                    "EOX": 807322493,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14411",
+            "Snm": "Ekstraklasa",
+            "Scd": "ekstraklasa",
+            "badgeUrl": "2023-poland-ekstraklasa.png",
+            "firstColor": "3364FF",
+            "Cnm": "Poland",
+            "Csnm": "Poland",
+            "Ccd": "poland",
+            "CompId": "92",
+            "CompN": "Ekstraklasa",
+            "CompD": "Poland",
+            "CompST": "Poland",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "967885",
+                    "Pids": {
+                        "12": "SBTE_29822111",
+                        "8": "967885"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "3",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Piast Gliwice",
+                            "ID": "6081",
+                            "Img": "enet/8028.png",
+                            "Abr": "PIA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Stal Mielec",
+                            "ID": "7762",
+                            "Img": "enet/458623.png",
+                            "Abr": "STA"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "19",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219000500,
+                    "EO": 807289725,
+                    "EOX": 807289725,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14568",
+            "Snm": "Liga 1",
+            "Scd": "liga-1",
+            "badgeUrl": "2023-romania-liga-i.png",
+            "firstColor": "002B7F",
+            "Cnm": "Romania",
+            "Csnm": "Romania",
+            "Ccd": "romania",
+            "CompId": "436",
+            "CompN": "Liga 1",
+            "CompD": "Romania",
+            "CompST": "Romania",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "984472",
+                    "Pids": {
+                        "12": "SBTE_29825994",
+                        "8": "984472"
+                    },
+                    "Tr1": "0",
+                    "Tr2": "2",
+                    "Trh1": "0",
+                    "Trh2": "1",
+                    "Tr1OR": "0",
+                    "Tr2OR": "2",
+                    "T1": [
+                        {
+                            "Nm": "Botosani",
+                            "ID": "6139",
+                            "Img": "enet/188191.png",
+                            "Abr": "BOT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Dinamo Bucuresti",
+                            "ID": "6140",
+                            "Img": "enet/10271.png",
+                            "Abr": "DIN"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219000500,
+                    "EO": 807289725,
+                    "EOX": 807289725,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "984438",
+                    "Pids": {
+                        "12": "SBTE_29841246",
+                        "8": "984438"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "U Craiova 1948",
+                            "ID": "100644",
+                            "Img": "enet/1178890.png",
+                            "Abr": "UCR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Petrolul Ploiesti",
+                            "ID": "7286",
+                            "Img": "enet/188187.png",
+                            "Abr": "PET"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "21",
+                    "Et": 1,
+                    "Esd": 20231219213500,
+                    "EO": 807157927,
+                    "EOX": 807157927,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14975",
+            "Snm": "1st Lig",
+            "Scd": "1st-lig",
+            "badgeUrl": "2023-turkiye-1st-lig.png",
+            "firstColor": "7E3339",
+            "Cnm": "Turkiye",
+            "Csnm": "Turkiye",
+            "Ccd": "turkey",
+            "CompId": "165",
+            "CompN": "1st Lig",
+            "CompD": "Turkiye",
+            "CompST": "Turkiye",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1030220",
+                    "Pids": {
+                        "12": "SBTE_29819056",
+                        "8": "1030220"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Tuzlaspor",
+                            "ID": "464",
+                            "Img": "enet/468172.png",
+                            "Abr": "TUZ"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sakaryaspor",
+                            "ID": "3695",
+                            "Img": "enet/4124.png",
+                            "Abr": "SAK"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1030216",
+                    "Pids": {
+                        "12": "SBTE_29818520",
+                        "8": "1030216"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Giresunspor",
+                            "ID": "4590",
+                            "Img": "enet/5759.png",
+                            "Abr": "GIR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Genclerbirligi",
+                            "ID": "4831",
+                            "Img": "enet/7800.png",
+                            "Abr": "GEN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219200500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1030215",
+                    "Pids": {
+                        "12": "SBTE_29819062",
+                        "8": "1030215"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Kocaelispor",
+                            "ID": "3700",
+                            "Img": "enet/1569.png",
+                            "Abr": "KOC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Bodrum FK",
+                            "ID": "3708",
+                            "Img": "enet/658811.png",
+                            "NewsTag": "",
+                            "Abr": "BOD"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219230500,
+                    "EO": 806895623,
+                    "EOX": 806895623,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15866",
+            "Snm": "CAF Champions League: Group A",
+            "Scd": "champions-league-group-a",
+            "badgeUrl": "caf-champions-league.png",
+            "firstColor": "0C6F32",
+            "Cnm": "Africa",
+            "Csnm": "Africa",
+            "Ccd": "africa",
+            "CompId": "223",
+            "CompN": "CAF Champions League",
+            "CompD": "CAF",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1100151",
+                    "Pids": {
+                        "8": "1100151"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "TP Mazembe",
+                            "ID": "2893",
+                            "Img": "enet/128879.png",
+                            "Abr": "TPM"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "FC Nouadhibou",
+                            "ID": "4177",
+                            "Img": "enet/1111245.png",
+                            "Abr": "FCN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "4",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1100153",
+                    "Pids": {
+                        "8": "1100153"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Pyramids FC",
+                            "ID": "4192",
+                            "Img": "enet/517894.png",
+                            "Abr": "PYR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Mamelodi Sundowns FC",
+                            "ID": "2971",
+                            "Img": "enet/4530.png",
+                            "Abr": "MAM"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "4",
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15867",
+            "Snm": "CAF Champions League: Group B",
+            "Scd": "champions-league-group-b",
+            "badgeUrl": "caf-champions-league.png",
+            "firstColor": "0C6F32",
+            "Cnm": "Africa",
+            "Csnm": "Africa",
+            "Ccd": "africa",
+            "CompId": "223",
+            "CompN": "CAF Champions League",
+            "CompD": "CAF",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1100200",
+                    "Pids": {
+                        "8": "1100200"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Simba SC",
+                            "ID": "4545",
+                            "Img": "enet/165086.png",
+                            "NewsTag": "",
+                            "Abr": "SIM"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Wydad Casablanca",
+                            "ID": "3292",
+                            "Img": "enet/102050.png",
+                            "NewsTag": "",
+                            "Abr": "WYD"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "4",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807174151,
+                    "EOX": 807174151,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1100204",
+                    "Pids": {
+                        "8": "1100204"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "ASEC Mimosas",
+                            "ID": "4446",
+                            "Img": "enet/6130.png",
+                            "Abr": "ASE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Galaxy",
+                            "ID": "3800",
+                            "Img": "enet/658418.png",
+                            "Abr": "GAL"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "4",
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15868",
+            "Snm": "CAF Champions League: Group C",
+            "Scd": "champions-league-group-c",
+            "badgeUrl": "caf-champions-league.png",
+            "firstColor": "0C6F32",
+            "Cnm": "Africa",
+            "Csnm": "Africa",
+            "Ccd": "africa",
+            "CompId": "223",
+            "CompN": "CAF Champions League",
+            "CompD": "CAF",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1100180",
+                    "Pids": {
+                        "8": "1100180"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Petro Atletico",
+                            "ID": "3291",
+                            "Img": "enet/101668.png",
+                            "Abr": "PET"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Esperance",
+                            "ID": "3285",
+                            "Img": "enet/8153.png",
+                            "Abr": "ESP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "4",
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "16139",
+            "Snm": "Cup",
+            "Scd": "cup",
+            "Cnm": "Azerbaijan",
+            "Csnm": "Azerbaijan",
+            "Ccd": "azerbaijan",
+            "Scu": 1,
+            "Events": [
+                {
+                    "Eid": "1123747",
+                    "Pids": {
+                        "8": "1123747"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Irevan",
+                            "ID": "269853",
+                            "NewsTag": "",
+                            "Abr": "IRE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Araz PFK",
+                            "ID": "264551",
+                            "Img": "enet/485832.png",
+                            "Abr": "ARA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "round_of_16",
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219150500,
+                    "EO": 269496326,
+                    "EOX": 269496326,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1123746",
+                    "Pids": {
+                        "8": "1123746"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Imisli FK",
+                            "ID": "231682",
+                            "NewsTag": "",
+                            "Abr": "IMI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Gabala FK",
+                            "ID": "128074",
+                            "Img": "enet/8076.png",
+                            "Abr": "GAB"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "round_of_16",
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219180500,
+                    "EO": 269496326,
+                    "EOX": 269496326,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15252",
+            "Snm": "Premier League",
+            "Scd": "premier-league",
+            "Cnm": "Bahrain",
+            "Csnm": "Bahrain",
+            "Ccd": "bahrain",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1049250",
+                    "Pids": {
+                        "12": "SBTE_29853164",
+                        "8": "1049250"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Busaiteen",
+                            "ID": "4853",
+                            "Img": "enet/101601.png",
+                            "Abr": "BUS"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al-Hidd",
+                            "ID": "4815",
+                            "Img": "enet/105952.png",
+                            "NewsTag": "",
+                            "Abr": "ALH"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1049251",
+                    "Pids": {
+                        "12": "SBTE_29853165",
+                        "8": "1049251"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Manama",
+                            "ID": "4864",
+                            "Img": "enet/101608.png",
+                            "Abr": "MAN"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al-Najma",
+                            "ID": "4852",
+                            "Img": "enet/101600.png",
+                            "Abr": "ALN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15265",
+            "Snm": "Pro League U21",
+            "Scd": "u21-pro-league",
+            "Cnm": "Belgium",
+            "Csnm": "Belgium",
+            "Ccd": "belgium",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1126747",
+                    "Pids": {
+                        "12": "SBTE_29853424",
+                        "8": "1126747"
+                    },
+                    "Tr1": "0",
+                    "Tr2": "1",
+                    "Tr1OR": "0",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "FCV Dender EH U21",
+                            "ID": "231410",
+                            "Abr": "FCV"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "SK Beveren U21",
+                            "ID": "180293",
+                            "Abr": "SKB(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 807145732,
+                    "EOX": 807145732,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1116351",
+                    "Pids": {
+                        "12": "SBTE_29853425",
+                        "8": "1116351"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "3",
+                    "Tr1OR": "3",
+                    "Tr2OR": "3",
+                    "T1": [
+                        {
+                            "Nm": "Lierse Kempenzonen U21",
+                            "ID": "196739",
+                            "Abr": "LIE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "RWD Molenbeek U21",
+                            "ID": "100532",
+                            "Abr": "RWD"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 807145732,
+                    "EOX": 807145732,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "16156",
+            "Snm": "Copa de la Division Profesional: Play-off",
+            "Scd": "copa-de-la-division-profesional-play-off",
+            "Cnm": "Bolivia",
+            "Csnm": "Bolivia",
+            "Ccd": "bolivia",
+            "Scu": 1,
+            "Events": [
+                {
+                    "Eid": "1130989",
+                    "Pids": {
+                        "12": "SBTE_29853680",
+                        "8": "1130989"
+                    },
+                    "seriesInfo": {
+                        "totalLegs": 2,
+                        "currentLeg": 2,
+                        "aggScoreTeam1": 3,
+                        "aggScoreTeam2": 1
+                    },
+                    "Tr1": "1",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Bolivar",
+                            "ID": "4930",
+                            "Img": "enet/5983.png",
+                            "Abr": "BLV"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Jorge Wilstermann",
+                            "ID": "4978",
+                            "Img": "enet/1892.png",
+                            "Abr": "JOR"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "ErnInf": "final",
+                    "Ewt": 1,
+                    "Awt": 1,
+                    "Et": 1,
+                    "Esd": 20231219060500,
+                    "EO": 269750532,
+                    "EOX": 269750532,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "16103",
+            "Snm": "Liga de Ascenso: Apertura: Play-off",
+            "Scd": "liga-de-ascenso-apertura-play-off",
+            "Cnm": "Costa Rica",
+            "Csnm": "Costa Rica",
+            "Ccd": "costa-rica",
+            "Scu": 1,
+            "Events": [
+                {
+                    "Eid": "1124286",
+                    "Pids": {
+                        "12": "SBTE_29854853",
+                        "8": "1124286"
+                    },
+                    "seriesInfo": {
+                        "totalLegs": 2,
+                        "currentLeg": 2,
+                        "aggScoreTeam1": 3,
+                        "aggScoreTeam2": 2
+                    },
+                    "Tr1": "2",
+                    "Tr2": "1",
+                    "Trh1": "1",
+                    "Trh2": "1",
+                    "Tr1OR": "2",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Santa Ana",
+                            "ID": "4828",
+                            "Img": "enet/861724.png",
+                            "Abr": "SAN"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Cariari",
+                            "ID": "12285",
+                            "Img": "enet/188436.png",
+                            "Abr": "CAR"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "ErnInf": "final",
+                    "Ewt": 1,
+                    "Awt": 1,
+                    "Et": 1,
+                    "Esd": 20231219070500,
+                    "EO": 806621444,
+                    "EOX": 806621444,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15615",
+            "Snm": "2. Division A",
+            "Scd": "2-division-a",
+            "Cnm": "Egypt",
+            "Csnm": "Egypt",
+            "Ccd": "egypt",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1079981",
+                    "Pids": {
+                        "12": "SBTE_29853167",
+                        "8": "1079981"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Dekernes",
+                            "ID": "7437",
+                            "Img": "enet/517927.png",
+                            "Abr": "DEK"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Proxy",
+                            "ID": "237828",
+                            "Img": "enet/1413128.png",
+                            "Abr": "PRO"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219183500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1079982",
+                    "Pids": {
+                        "12": "SBTE_29853168",
+                        "8": "1079982"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Itesalat",
+                            "ID": "208356",
+                            "Img": "enet/101765.png",
+                            "Abr": "ITE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Tanta",
+                            "ID": "4471",
+                            "Img": "enet/316494.png",
+                            "Abr": "TAN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219183500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1079985",
+                    "Pids": {
+                        "8": "1079985"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Nogoom FC",
+                            "ID": "7717",
+                            "Img": "enet/517909.png",
+                            "Abr": "NOG"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Petrojet",
+                            "ID": "7480",
+                            "Img": "enet/103017.png",
+                            "Abr": "PET"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219183500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15206",
+            "Snm": "Premier League 2: Division 1",
+            "Scd": "premier-league-2-division-1",
+            "badgeUrl": "2023-premier-league.png",
+            "firstColor": "3F1152",
+            "Cnm": "England",
+            "Csnm": "England",
+            "Ccd": "england",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1042024",
+                    "Pids": {
+                        "12": "SBTE_29853983",
+                        "8": "1042024"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "5",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "5",
+                    "T1": [
+                        {
+                            "Nm": "Crystal Palace U21",
+                            "ID": "180498",
+                            "Img": "enet/1267874.png",
+                            "Abr": "CRY(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "West Ham United U21",
+                            "ID": "195506",
+                            "Img": "enet/773649.png",
+                            "Abr": "WHU(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 807141389,
+                    "EOX": 807141389,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1042029",
+                    "Pids": {
+                        "12": "SBTE_29853978",
+                        "8": "1042029"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "2",
+                    "Trh1": "2",
+                    "Trh2": "2",
+                    "Tr1OR": "2",
+                    "Tr2OR": "2",
+                    "T1": [
+                        {
+                            "Nm": "Reading U21",
+                            "ID": "266617",
+                            "Img": "enet/773686.png",
+                            "Abr": "RDG(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Middlesbrough U21",
+                            "ID": "230032",
+                            "Img": "enet/773660.png",
+                            "Abr": "MID(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 806879245,
+                    "EOX": 806879245,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1042031",
+                    "Pids": {
+                        "12": "SBTE_29853981",
+                        "8": "1042031"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "1",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "3",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Stoke City U21",
+                            "ID": "230038",
+                            "Img": "enet/773650.png",
+                            "Abr": "STK(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Nottingham Forest U21",
+                            "ID": "228422",
+                            "Img": "enet/1389162.png",
+                            "Abr": "NOT(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 807141389,
+                    "EOX": 807141389,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1042030",
+                    "Pids": {
+                        "12": "SBTE_29853979",
+                        "8": "1042030"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "2",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "2",
+                    "T1": [
+                        {
+                            "Nm": "Sunderland U21",
+                            "ID": "228424",
+                            "Img": "enet/773657.png",
+                            "Abr": "SUN(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Arsenal U21",
+                            "ID": "83839",
+                            "Img": "enet/950214.png",
+                            "Abr": "ARS(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 806879245,
+                    "EOX": 806879245,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1042033",
+                    "Pids": {
+                        "12": "SBTE_29853982",
+                        "8": "1042033"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "0",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Tottenham Hotspur U21",
+                            "ID": "195511",
+                            "Img": "enet/860802.png",
+                            "Abr": "TOT(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Leeds United U21",
+                            "ID": "100740",
+                            "Img": "enet/1177187.png",
+                            "Abr": "LEE(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 806879245,
+                    "EOX": 806879245,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1042032",
+                    "Pids": {
+                        "12": "SBTE_29853980",
+                        "8": "1042032"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "2",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "2",
+                    "T1": [
+                        {
+                            "Nm": "Wolves U21",
+                            "ID": "195494",
+                            "Img": "enet/773683.png",
+                            "Abr": "WOL(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Blackburn Rovers U21",
+                            "ID": "229937",
+                            "Img": "enet/773685.png",
+                            "Abr": "BLB(21)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219010500,
+                    "EO": 807141389,
+                    "EOX": 807141389,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15210",
+            "Snm": "Premier League U18",
+            "Scd": "premier-league-u18",
+            "badgeUrl": "2023-premier-league.png",
+            "firstColor": "3F1152",
+            "Cnm": "England",
+            "Csnm": "England",
+            "Ccd": "england",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1043400",
+                    "Pids": {
+                        "8": "1043400"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Chelsea U18",
+                            "ID": "494",
+                            "Img": "enet/1113552.png",
+                            "Abr": "CHE(18)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Southampton U18",
+                            "ID": "4563",
+                            "Img": "enet/1113567.png",
+                            "Abr": "SOU(18)"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15314",
+            "Snm": "Professional Development League",
+            "Scd": "professional-development-league",
+            "Cnm": "England",
+            "Csnm": "England",
+            "Ccd": "england",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1118916",
+                    "Pids": {
+                        "12": "SBTE_29853169",
+                        "8": "1118916"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Ipswich Town U21",
+                            "ID": "229280",
+                            "Abr": "IPS(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Bristol City U21",
+                            "ID": "229283",
+                            "Abr": "BRC(21)"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1118917",
+                    "Pids": {
+                        "12": "SBTE_29853170",
+                        "8": "1118917"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Sheffield Wednesday U21",
+                            "ID": "229275",
+                            "Abr": "SHW(21)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Birmingham City U21",
+                            "ID": "229272",
+                            "NewsTag": "",
+                            "Abr": "BIR(21)"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219195000,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14816",
+            "Snm": "Championnat National",
+            "Scd": "national",
+            "badgeUrl": "2023-french-championnat-national.png",
+            "firstColor": "445B65",
+            "Cnm": "France",
+            "Csnm": "France",
+            "Ccd": "france",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1011794",
+                    "Pids": {
+                        "12": "SBTE_29841286",
+                        "8": "1011794"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "2",
+                    "Trh1": "1",
+                    "Trh2": "1",
+                    "Tr1OR": "2",
+                    "Tr2OR": "2",
+                    "T1": [
+                        {
+                            "Nm": "Versailles",
+                            "ID": "4578",
+                            "Img": "enet/191111.png",
+                            "Abr": "VER"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Red Star",
+                            "ID": "200",
+                            "Img": "enet/6390.png",
+                            "Abr": "RED"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "16",
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219020500,
+                    "EO": 807158029,
+                    "EOX": 807158029,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14825",
+            "Snm": "Women's Bundesliga",
+            "Scd": "bundesliga-women",
+            "Cnm": "Germany",
+            "Csnm": "Germany",
+            "Ccd": "germany",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1086210",
+                    "Pids": {
+                        "8": "1086210"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Wolfsburg Women",
+                            "ID": "6741",
+                            "Img": "enet/394121.png",
+                            "Abr": "WOB(W)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Werder Bremen Women",
+                            "ID": "12073",
+                            "Img": "enet/672089.png",
+                            "Abr": "SVW(W)"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219003500,
+                    "EO": 807174525,
+                    "EOX": 807174525,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15686",
+            "Snm": "Super League 2: South",
+            "Scd": "super-league-2-south",
+            "Cnm": "Greece",
+            "Csnm": "Greece",
+            "Ccd": "greece",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1124909",
+                    "Pids": {
+                        "12": "SBTE_29853183",
+                        "8": "1124909"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Egaleo",
+                            "ID": "2818",
+                            "Img": "enet/6278.png",
+                            "Abr": "EGA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "AO Tilikratis Lefkada",
+                            "ID": "11247",
+                            "Img": "enet/792371.png",
+                            "Abr": "AOT"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "12",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124955",
+                    "Pids": {
+                        "12": "SBTE_29853182",
+                        "8": "1124955"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "PAE Chania",
+                            "ID": "271708",
+                            "Img": "enet/488110.png",
+                            "NewsTag": "",
+                            "Abr": "PAE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Ionikos",
+                            "ID": "3803",
+                            "Img": "enet/8552.png",
+                            "Abr": "ION"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "12",
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15874",
+            "Snm": "I-League",
+            "Scd": "i-league",
+            "Cnm": "India",
+            "Csnm": "India",
+            "Ccd": "india",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1100404",
+                    "Pids": {
+                        "12": "SBTE_29851637",
+                        "8": "1100404"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Sreenidi Deccan",
+                            "ID": "201278",
+                            "Img": "enet/1320491.png",
+                            "Abr": "SRE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Gokulam FC",
+                            "ID": "3413",
+                            "Img": "enet/898335.png",
+                            "Abr": "GOK"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "12",
+                    "Et": 1,
+                    "Esd": 20231219153500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14935",
+            "Snm": "Persian Gulf Pro League",
+            "Scd": "pro-league",
+            "badgeUrl": "2023-persian-gulf-league.jpg",
+            "firstColor": "FEA406",
+            "Cnm": "Iran",
+            "Csnm": "Iran",
+            "Ccd": "iran",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1108520",
+                    "Pids": {
+                        "12": "SBTE_29853187",
+                        "8": "1108520"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Havadar SC",
+                            "ID": "4344",
+                            "Img": "enet/955322.png",
+                            "NewsTag": "",
+                            "Abr": "HAV"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sepahan",
+                            "ID": "5019",
+                            "Img": "enet/101611.png",
+                            "Abr": "SEP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219163500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1108522",
+                    "Pids": {
+                        "12": "SBTE_29853186",
+                        "8": "1108522"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Aluminium Arak",
+                            "ID": "4349",
+                            "Img": "enet/664861.png",
+                            "Abr": "ALU"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Gol Gohar",
+                            "ID": "5048",
+                            "Img": "enet/389880.png",
+                            "Abr": "GOL"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219173500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1108524",
+                    "Pids": {
+                        "12": "SBTE_29853189",
+                        "8": "1108524"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Esteghlal Khuzestan",
+                            "ID": "4308",
+                            "Img": "enet/394619.png",
+                            "Abr": "EST"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Persepolis",
+                            "ID": "5059",
+                            "Img": "enet/101610.png",
+                            "Abr": "PER"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219173500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1108521",
+                    "Pids": {
+                        "12": "SBTE_29853188",
+                        "8": "1108521"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Shams Azar Qazvin",
+                            "ID": "193366",
+                            "Img": "enet/1303998.png",
+                            "Abr": "SHA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sanat Naft Abadan",
+                            "ID": "5018",
+                            "Img": "enet/101624.png",
+                            "Abr": "SAN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219173500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1108539",
+                    "Pids": {
+                        "12": "SBTE_29853190",
+                        "8": "1108539"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Zob Ahan",
+                            "ID": "5045",
+                            "Img": "enet/101618.png",
+                            "Abr": "ZOB"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Foolad Khuzestan",
+                            "ID": "4591",
+                            "Img": "enet/139914.png",
+                            "Abr": "FOO"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1108542",
+                    "Pids": {
+                        "12": "SBTE_29853191",
+                        "8": "1108542"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Esteghlal",
+                            "ID": "4592",
+                            "Img": "enet/101614.png",
+                            "Abr": "EST"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Nassaji Mazandaran FC",
+                            "ID": "5060",
+                            "Img": "enet/392200.png",
+                            "Abr": "NAS"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "13",
+                    "Et": 1,
+                    "Esd": 20231219200500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15376",
+            "Snm": "Azadegan League",
+            "Scd": "azadegan-league",
+            "Cnm": "Iran",
+            "Csnm": "Iran",
+            "Ccd": "iran",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1107684",
+                    "Pids": {
+                        "8": "1107684"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Kheybar Khorramabad",
+                            "ID": "10992",
+                            "Img": "enet/664862.png",
+                            "Abr": "KHE"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Shahr Raz FC",
+                            "ID": "4272",
+                            "Img": "enet/1082763.png",
+                            "Abr": "SHA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219163500,
+                    "EO": 807141383,
+                    "EOX": 807141383,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1107685",
+                    "Pids": {
+                        "8": "1107685"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Shahrdari Astara",
+                            "ID": "101981",
+                            "Img": "enet/1206193.png",
+                            "Abr": "SHA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Naft Gachsaran",
+                            "ID": "268925",
+                            "Img": "enet/490775.png",
+                            "Abr": "NAF"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219163500,
+                    "EO": 806879239,
+                    "EOX": 806879239,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "16012",
+            "Snm": "Iraq Stars League",
+            "Scd": "iraq-stars-league",
+            "badgeUrl": "2023-iraq-stars-league.png",
+            "Cnm": "Iraq",
+            "Csnm": "Iraq",
+            "Ccd": "iraq",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1115882",
+                    "Pids": {
+                        "8": "1115882"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Al Karkh",
+                            "ID": "6391",
+                            "Img": "enet/191818.png",
+                            "Abr": "ALK"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al Hedood",
+                            "ID": "6472",
+                            "Img": "enet/165213.png",
+                            "Abr": "ALH"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219163500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1115881",
+                    "Pids": {
+                        "8": "1115881"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Naft Al Junoob",
+                            "ID": "6468",
+                            "Img": "enet/101646.png",
+                            "Abr": "NAF"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Erbil",
+                            "ID": "6464",
+                            "Img": "enet/101649.png",
+                            "Abr": "ERB"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219173500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1115879",
+                    "Pids": {
+                        "8": "1115879"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Naft Maysan",
+                            "ID": "6386",
+                            "Img": "enet/191820.png",
+                            "Abr": "NAF"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Newroz",
+                            "ID": "190416",
+                            "Img": "enet/1298364.png",
+                            "Abr": "NEW"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219173500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1115883",
+                    "Pids": {
+                        "8": "1115883"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Naft Al Wasat",
+                            "ID": "6395",
+                            "Img": "enet/580993.png",
+                            "Abr": "NAF"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al Minaa",
+                            "ID": "6387",
+                            "Img": "enet/101644.png",
+                            "Abr": "ALM"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219200500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14476",
+            "Snm": "Premier League",
+            "Scd": "premier-league",
+            "Cnm": "Israel",
+            "Csnm": "Israel",
+            "Ccd": "israel",
+            "CompId": "276",
+            "CompN": "Premier League",
+            "CompD": "Israel",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "971579",
+                    "Pids": {
+                        "12": "SBTE_29854766",
+                        "8": "971579"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Petah Tikva",
+                            "ID": "327",
+                            "Img": "enet/9755.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Maccabi Bnei Reineh",
+                            "ID": "4526",
+                            "Img": "enet/1121750.png",
+                            "NewsTag": "",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219230500,
+                    "EO": 815546375,
+                    "EOX": 815546375,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "971555",
+                    "Pids": {
+                        "12": "SBTE_29847216",
+                        "8": "971555"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Jerusalem",
+                            "ID": "4312",
+                            "Img": "enet/459591.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Hapoel Hadera",
+                            "ID": "3596",
+                            "Img": "enet/857444.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "10",
+                    "Et": 1,
+                    "Esd": 20231219233500,
+                    "EO": 815546375,
+                    "EOX": 815546375,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15334",
+            "Snm": "Liga Alef: North",
+            "Scd": "liga-alef-north",
+            "Cnm": "Israel",
+            "Csnm": "Israel",
+            "Ccd": "israel",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1124183",
+                    "Pids": {
+                        "8": "1124183"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maccabi Ahi Nazareth",
+                            "ID": "313",
+                            "Img": "enet/2534.png",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Tzeirey Um El Fahem",
+                            "ID": "268602",
+                            "NewsTag": "",
+                            "Abr": "TZE"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219175500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124181",
+                    "Pids": {
+                        "8": "1124181"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Migdal Haemeq",
+                            "ID": "102152",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Maccabi Ironi Kiryat Ata",
+                            "ID": "84149",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219180500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124185",
+                    "Pids": {
+                        "12": "SBTE_29853201",
+                        "8": "1124185"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Ironi Nesher",
+                            "ID": "84150",
+                            "Abr": "IRO"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "SC Tzeirey Taibe",
+                            "ID": "193033",
+                            "NewsTag": "",
+                            "Abr": "SCT"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219183500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124186",
+                    "Pids": {
+                        "8": "1124186"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Kaukab",
+                            "ID": "84154",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "FC Tzeirei Kfar Kanna",
+                            "ID": "236006",
+                            "NewsTag": "",
+                            "Abr": "TZE"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124182",
+                    "Pids": {
+                        "8": "1124182"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Kafr Kanna",
+                            "ID": "268598",
+                            "NewsTag": "",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Hapoel Raanana",
+                            "ID": "3315",
+                            "Img": "enet/2096.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219220500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1124187",
+                    "Pids": {
+                        "8": "1124187"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maccabi Ironi Acre",
+                            "ID": "268594",
+                            "NewsTag": "",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Baqa Al-Gharbiyye",
+                            "ID": "268593",
+                            "NewsTag": "",
+                            "Abr": "BAQ"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219230500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15554",
+            "Snm": "Liga Alef: South",
+            "Scd": "liga-alef-south",
+            "Cnm": "Israel",
+            "Csnm": "Israel",
+            "Ccd": "israel",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1128683",
+                    "Pids": {
+                        "12": "SBTE_29853203",
+                        "8": "1128683"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maccabi Shaaraim",
+                            "ID": "186442",
+                            "Img": "enet/770545.png",
+                            "NewsTag": "",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Hapoel Marmorek",
+                            "ID": "12004",
+                            "Img": "enet/177775.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219175000,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1128684",
+                    "Pids": {
+                        "8": "1128684"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Hapoel Kfar Shalem",
+                            "ID": "100566",
+                            "Img": "enet/1177310.png",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Agudat Sport Ashdod",
+                            "ID": "4472",
+                            "Img": "enet/1121751.png",
+                            "NewsTag": "",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219180000,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1130966",
+                    "Pids": {
+                        "12": "SBTE_29853202",
+                        "8": "1130966"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maccabi Ironi Ashdod FC",
+                            "ID": "84032",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Hapoel Bikat Hayarden",
+                            "ID": "101029",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219180500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1128685",
+                    "Pids": {
+                        "8": "1128685"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maccabi Ironi Kiryat Malakhi",
+                            "ID": "83476",
+                            "Abr": "MAC"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Shimshon Kafr Qasim",
+                            "ID": "99650",
+                            "Abr": "SHI"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219180500,
+                    "EO": 270020614,
+                    "EOX": 270020614,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1130967",
+                    "Pids": {
+                        "8": "1130967"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Dimona Sport Club",
+                            "ID": "236005",
+                            "Abr": "DIM"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Hapoel Herzelia",
+                            "ID": "102158",
+                            "Abr": "HAP"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219223500,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15242",
+            "Snm": "Serie C: Group B",
+            "Scd": "serie-c-group-b",
+            "badgeUrl": "2023-italy-serie-c.png",
+            "firstColor": "1F3860",
+            "Cnm": "Italy",
+            "Csnm": "Italy",
+            "Ccd": "italy",
+            "CompId": "199",
+            "CompN": "Serie C: Group B",
+            "CompD": "Italy",
+            "CompST": "Italy",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1046721",
+                    "Pids": {
+                        "12": "SBTE_29835066",
+                        "8": "1046721"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "0",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "2",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "S.S. Arezzo",
+                            "ID": "4221",
+                            "Img": "enet/9849.png",
+                            "Abr": "S.S"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Perugia",
+                            "ID": "4437",
+                            "Img": "enet/8685.png",
+                            "Abr": "PER"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "18",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219013500,
+                    "EO": 807158125,
+                    "EOX": 807158125,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15243",
+            "Snm": "Serie C: Group C",
+            "Scd": "serie-c-group-c",
+            "badgeUrl": "2023-italy-serie-c.png",
+            "firstColor": "1F3860",
+            "Cnm": "Italy",
+            "Csnm": "Italy",
+            "Ccd": "italy",
+            "CompId": "200",
+            "CompN": "Serie C: Group C",
+            "CompD": "Italy",
+            "CompST": "Italy",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1047072",
+                    "Pids": {
+                        "12": "SBTE_29835236",
+                        "8": "1047072"
+                    },
+                    "Tr1": "2",
+                    "Tr2": "0",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "2",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Audace Cerignola",
+                            "ID": "3899",
+                            "Img": "enet/867620.png",
+                            "Abr": "AUD"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Foggia",
+                            "ID": "3907",
+                            "Img": "enet/6466.png",
+                            "Abr": "FOG"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "18",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219015000,
+                    "EO": 807158125,
+                    "EOX": 807158125,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1070106",
+                    "Pids": {
+                        "12": "SBTE_29835233",
+                        "8": "1070106"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "1",
+                    "Trh1": "1",
+                    "Trh2": "0",
+                    "Tr1OR": "3",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Casertana",
+                            "ID": "4261",
+                            "Img": "enet/277990.png",
+                            "Abr": "CAS"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Giugliano",
+                            "ID": "3944",
+                            "Img": "enet/6040.png",
+                            "Abr": "GIU"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "18",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219015000,
+                    "EO": 806895981,
+                    "EOX": 806895981,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1047068",
+                    "Pids": {
+                        "12": "SBTE_29835234",
+                        "8": "1047068"
+                    },
+                    "Tr1": "0",
+                    "Tr2": "1",
+                    "Trh1": "0",
+                    "Trh2": "1",
+                    "Tr1OR": "0",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Catania",
+                            "ID": "4042",
+                            "Img": "enet/8530.png",
+                            "Abr": "CAT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sorrento",
+                            "ID": "3855",
+                            "Img": "enet/88998.png",
+                            "Abr": "SOR"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "18",
+                    "Ewt": 2,
+                    "Et": 1,
+                    "Esd": 20231219015000,
+                    "EO": 807158125,
+                    "EOX": 807158125,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1047069",
+                    "Pids": {
+                        "12": "SBTE_29835235",
+                        "8": "1047069"
+                    },
+                    "Tr1": "0",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "0",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Latina",
+                            "ID": "3808",
+                            "Img": "enet/212660.png",
+                            "Abr": "LAT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Benevento",
+                            "ID": "4805",
+                            "Img": "enet/6266.png",
+                            "Abr": "BEN"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "18",
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219015000,
+                    "EO": 807190909,
+                    "EOX": 807190909,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15998",
+            "Snm": "Premier League",
+            "Scd": "premier-league",
+            "Cnm": "Jamaica",
+            "Csnm": "Jamaica",
+            "Ccd": "jamaica",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1115597",
+                    "Pids": {
+                        "12": "SBTE_29854470",
+                        "8": "1115597"
+                    },
+                    "Tr1": "3",
+                    "Tr2": "0",
+                    "Trh1": "3",
+                    "Trh2": "0",
+                    "Tr1OR": "3",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Harbour View",
+                            "ID": "4428",
+                            "Img": "enet/6186.png",
+                            "Abr": "HAR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Lime Hall Academy",
+                            "ID": "276605",
+                            "Img": "enet/1572400.png",
+                            "Abr": "LIM"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219040500,
+                    "EO": 806891780,
+                    "EOX": 806891780,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1115621",
+                    "Pids": {
+                        "12": "SBTE_29854807",
+                        "8": "1115621"
+                    },
+                    "Tr1": "4",
+                    "Tr2": "1",
+                    "Trh1": "2",
+                    "Trh2": "1",
+                    "Tr1OR": "4",
+                    "Tr2OR": "1",
+                    "T1": [
+                        {
+                            "Nm": "Waterhouse FC",
+                            "ID": "4244",
+                            "Img": "enet/165421.png",
+                            "Abr": "WAT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Treasure Beach",
+                            "ID": "276604",
+                            "Img": "enet/1572401.png",
+                            "Abr": "TRE"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 2,
+                    "ErnInf": "10",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219063500,
+                    "EO": 806883588,
+                    "EOX": 806883588,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14345",
+            "Snm": "Pro League",
+            "Scd": "pro-league",
+            "Cnm": "Jordan",
+            "Csnm": "Jordan",
+            "Ccd": "jordan",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1077816",
+                    "Pids": {
+                        "12": "SBTE_29853205",
+                        "8": "1077816"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Al-Hussein SC",
+                            "ID": "12081",
+                            "Img": "enet/101688.png",
+                            "NewsTag": "",
+                            "Abr": "ALH"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sahab SC",
+                            "ID": "30281",
+                            "Img": "enet/683633.png",
+                            "Abr": "SAH"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "11",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1077799",
+                    "Pids": {
+                        "12": "SBTE_29853204",
+                        "8": "1077799"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Shabab Al-Ordon",
+                            "ID": "12099",
+                            "Img": "enet/101681.png",
+                            "Abr": "SHA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al-Faisaly",
+                            "ID": "12639",
+                            "Img": "enet/101665.png",
+                            "NewsTag": "",
+                            "Abr": "ALF"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "11",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1077792",
+                    "Pids": {
+                        "12": "SBTE_29853206",
+                        "8": "1077792"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Aqaba",
+                            "ID": "12098",
+                            "Img": "enet/675599.png",
+                            "Abr": "AQA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al-Wehdat",
+                            "ID": "11680",
+                            "Img": "enet/101690.png",
+                            "NewsTag": "",
+                            "Abr": "ALW"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "11",
+                    "Et": 1,
+                    "Esd": 20231219213500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14482",
+            "Snm": "I Liga",
+            "Scd": "i-liga",
+            "badgeUrl": "2023-poland-i-liga.png",
+            "firstColor": "D32C12",
+            "Cnm": "Poland",
+            "Csnm": "Poland",
+            "Ccd": "poland",
+            "CompId": "197",
+            "CompN": "I Liga",
+            "CompD": "Poland",
+            "CompST": "Poland",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "972236",
+                    "Pids": {
+                        "12": "SBTE_29846458",
+                        "8": "972236"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Zaglebie Sosnowiec",
+                            "ID": "8309",
+                            "Img": "enet/8026.png",
+                            "Abr": "ZAG"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Chrobry Glogow",
+                            "ID": "7957",
+                            "Img": "enet/273525.png",
+                            "Abr": "CHR"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219223500,
+                    "EO": 807157767,
+                    "EOX": 807157767,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14963",
+            "Snm": "U23 Liga Revelacao: Group A",
+            "Scd": "u23-liga-revelacao-group-a",
+            "badgeUrl": "2023-u23-liga-revelacao.png",
+            "firstColor": "25305F",
+            "Cnm": "Portugal",
+            "Csnm": "Portugal",
+            "Ccd": "portugal",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1121534",
+                    "Pids": {
+                        "12": "SBTE_29853213",
+                        "8": "1121534"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Famalicao U23",
+                            "ID": "82140",
+                            "NewsTag": "",
+                            "Abr": "FAM(23)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Vizela U23",
+                            "ID": "183669",
+                            "NewsTag": "",
+                            "Abr": "VIZ"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1121535",
+                    "Pids": {
+                        "12": "SBTE_29853216",
+                        "8": "1121535"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Rio Ave U23",
+                            "ID": "82423",
+                            "Abr": "RIO"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Gil Vicente U23",
+                            "ID": "230184",
+                            "NewsTag": "",
+                            "Abr": "GVI"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1121533",
+                    "Pids": {
+                        "12": "SBTE_29853212",
+                        "8": "1121533"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "SC Braga U23",
+                            "ID": "81987",
+                            "NewsTag": "",
+                            "Abr": "SBR(23)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Leixoes SC U23",
+                            "ID": "82044",
+                            "Abr": "LEI"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1122593",
+                    "Pids": {
+                        "12": "SBTE_29853214",
+                        "8": "1122593"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Torreense U23",
+                            "ID": "264358",
+                            "NewsTag": "",
+                            "Abr": "TOR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Academico Viseu U23",
+                            "ID": "264359",
+                            "NewsTag": "",
+                            "Abr": "ACA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14964",
+            "Snm": "U23 Liga Revelacao: Group B",
+            "Scd": "u23-liga-revelacao-group-b",
+            "badgeUrl": "2023-u23-liga-revelacao.png",
+            "firstColor": "25305F",
+            "Cnm": "Portugal",
+            "Csnm": "Portugal",
+            "Ccd": "portugal",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1119441",
+                    "Pids": {
+                        "12": "SBTE_29853211",
+                        "8": "1119441"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Benfica U23",
+                            "ID": "81946",
+                            "Abr": "SLB(23)"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Mafra U23",
+                            "ID": "230185",
+                            "Abr": "MAF"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1118909",
+                    "Pids": {
+                        "12": "SBTE_29853215",
+                        "8": "1118909"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Portimonense U23",
+                            "ID": "81947",
+                            "Abr": "PRT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Estrela da Amadora U23",
+                            "ID": "230186",
+                            "Abr": "EST"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219210500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "14979",
+            "Snm": "1st Division",
+            "Scd": "division-1",
+            "Cnm": "Saudi Arabia",
+            "Csnm": "Saudi Arabia",
+            "Ccd": "saudi-arabia",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1118914",
+                    "Pids": {
+                        "12": "SBTE_29853219",
+                        "8": "1118914"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Al Ain",
+                            "ID": "7660",
+                            "Img": "enet/1017732.png",
+                            "NewsTag": "",
+                            "Abr": "AIN"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al Jabalain",
+                            "ID": "7416",
+                            "Img": "enet/1115133.png",
+                            "NewsTag": "",
+                            "Abr": "JAB"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219182500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1118913",
+                    "Pids": {
+                        "12": "SBTE_29853218",
+                        "8": "1118913"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Al Jandal",
+                            "ID": "264762",
+                            "NewsTag": "",
+                            "Abr": "ALJ"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Al-Taraji Club",
+                            "ID": "264754",
+                            "NewsTag": "",
+                            "Abr": "ALT"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219183000,
+                    "EO": 806891526,
+                    "EOX": 806891526,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1118915",
+                    "Pids": {
+                        "8": "1118915"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Al Faisaly",
+                            "ID": "3372",
+                            "Img": "enet/205687.png",
+                            "NewsTag": "",
+                            "Abr": "FAI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Jeddah",
+                            "ID": "7827",
+                            "Img": "enet/1017737.png",
+                            "Abr": "JED"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219205500,
+                    "EO": 807153670,
+                    "EOX": 807153670,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15357",
+            "Snm": "1st Division",
+            "Scd": "1st-division",
+            "Cnm": "South Africa",
+            "Csnm": "South Africa",
+            "Ccd": "south-africa",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1068315",
+                    "Pids": {
+                        "8": "1068315"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Magesi FC",
+                            "ID": "231812",
+                            "Img": "enet/429859.png",
+                            "Abr": "MAG"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Upington City",
+                            "ID": "268844",
+                            "Img": "enet/1528633.png",
+                            "Abr": "UPI"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219193500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1068314",
+                    "Pids": {
+                        "8": "1068314"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Milford FC",
+                            "ID": "268845",
+                            "Img": "enet/727278.png",
+                            "Abr": "MIL"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Black Leopards",
+                            "ID": "3845",
+                            "Img": "enet/102090.png",
+                            "Abr": "BLA"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219193500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1068312",
+                    "Pids": {
+                        "8": "1068312"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "MM Platinum",
+                            "ID": "231813",
+                            "Img": "enet/1399039.png",
+                            "Abr": "MMP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Venda",
+                            "ID": "183831",
+                            "Img": "enet/1284741.png",
+                            "Abr": "VEN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219193500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1068322",
+                    "Pids": {
+                        "8": "1068322"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "University of Pretoria",
+                            "ID": "3151",
+                            "Img": "enet/316436.png",
+                            "Abr": "UNI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Orbit College",
+                            "ID": "268846",
+                            "Img": "enet/915983.png",
+                            "Abr": "ORB"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219193500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1068355",
+                    "Pids": {
+                        "8": "1068355"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Maritzburg United",
+                            "ID": "3383",
+                            "Img": "enet/149599.png",
+                            "Abr": "MAR"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Baroka FC",
+                            "ID": "2983",
+                            "Img": "enet/474451.png",
+                            "Abr": "BAR"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "17",
+                    "Et": 1,
+                    "Esd": 20231219233500,
+                    "EO": 807145478,
+                    "EOX": 807145478,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15249",
+            "Snm": "Premier League",
+            "Scd": "premier-league",
+            "Cnm": "Tanzania",
+            "Csnm": "Tanzania",
+            "Ccd": "tanzania",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1048977",
+                    "Pids": {
+                        "8": "1048977"
+                    },
+                    "Tr1": "1",
+                    "Tr2": "0",
+                    "Trh1": "0",
+                    "Trh2": "0",
+                    "Tr1OR": "1",
+                    "Tr2OR": "0",
+                    "T1": [
+                        {
+                            "Nm": "Dodoma Jiji FC",
+                            "ID": "100542",
+                            "Img": "enet/1177034.png",
+                            "Abr": "DOD"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Ihefu FC",
+                            "ID": "100278",
+                            "Img": "enet/1171766.png",
+                            "Abr": "IHE"
+                        }
+                    ],
+                    "Eps": "FT",
+                    "Esid": 6,
+                    "Epr": 2,
+                    "Ecov": 0,
+                    "ErnInf": "14",
+                    "Ewt": 1,
+                    "Et": 1,
+                    "Esd": 20231219000500,
+                    "EO": 807141645,
+                    "EOX": 807141645,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1048975",
+                    "Pids": {
+                        "8": "1048975"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Mtibwa Sugar",
+                            "ID": "4602",
+                            "Img": "enet/165088.png",
+                            "NewsTag": "",
+                            "Abr": "MTI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Mashujaa",
+                            "ID": "261255",
+                            "Img": "enet/1499086.png",
+                            "NewsTag": "",
+                            "Abr": "MAS"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 0,
+                    "ErnInf": "14",
+                    "Et": 1,
+                    "Esd": 20231219190500,
+                    "EO": 806879239,
+                    "EOX": 806879239,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15044",
+            "Snm": "2nd Lig: White Group",
+            "Scd": "2nd-lig-white-group",
+            "badgeUrl": "2023-turkiye-2nd-lig.png",
+            "firstColor": "7E3339",
+            "Cnm": "Turkiye",
+            "Csnm": "Turkiye",
+            "Ccd": "turkey",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1031735",
+                    "Pids": {
+                        "12": "SBTE_29855427",
+                        "8": "1031735"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Ankara Demirspor",
+                            "ID": "3709",
+                            "Img": "enet/163000.png",
+                            "Abr": "ANK"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Van Spor Kulubu",
+                            "ID": "432",
+                            "Img": "enet/146408.png",
+                            "Abr": "VAN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219160500,
+                    "EO": 807161862,
+                    "EOX": 807161862,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031741",
+                    "Pids": {
+                        "12": "SBTE_29855431",
+                        "8": "1031741"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Altinordu",
+                            "ID": "292",
+                            "Img": "enet/146397.png",
+                            "Abr": "ALT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Karacabey Belediye Spor",
+                            "ID": "3540",
+                            "Img": "enet/162990.png",
+                            "Abr": "KAR"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806899718,
+                    "EOX": 806899718,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031746",
+                    "Pids": {
+                        "12": "SBTE_29855429",
+                        "8": "1031746"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Beyoglu Yeni Carsi FK",
+                            "ID": "469",
+                            "Img": "enet/551694.png",
+                            "NewsTag": "",
+                            "Abr": "BEY"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Yeni Mersin Idmanyurdu",
+                            "ID": "10054",
+                            "Img": "enet/5760.png",
+                            "NewsTag": "",
+                            "Abr": "ICE"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806899718,
+                    "EOX": 806899718,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15043",
+            "Snm": "2nd Lig: Red Group",
+            "Scd": "2nd-lig-red-group",
+            "badgeUrl": "2023-turkiye-2nd-lig.png",
+            "firstColor": "7E3339",
+            "Cnm": "Turkiye",
+            "Csnm": "Turkiye",
+            "Ccd": "turkey",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1031437",
+                    "Pids": {
+                        "12": "SBTE_29855430",
+                        "8": "1031437"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Arnavutkoy Belediyespor",
+                            "ID": "100895",
+                            "Img": "enet/1181150.png",
+                            "Abr": "ARN"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Inegolspor",
+                            "ID": "401",
+                            "Img": "enet/5761.png",
+                            "Abr": "INE"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 807161862,
+                    "EOX": 807161862,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031429",
+                    "Pids": {
+                        "12": "SBTE_29855426",
+                        "8": "1031429"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Etimesgut Belediyespor",
+                            "ID": "3719",
+                            "Img": "enet/551690.png",
+                            "Abr": "ETI"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Fethiyespor",
+                            "ID": "398",
+                            "Img": "enet/8375.png",
+                            "Abr": "FET"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 807161862,
+                    "EOX": 807161862,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031431",
+                    "Pids": {
+                        "12": "SBTE_29855424",
+                        "8": "1031431"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Iskenderun FK",
+                            "ID": "3688",
+                            "Img": "enet/551689.png",
+                            "NewsTag": "",
+                            "Abr": "ERZ"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Sariyer",
+                            "ID": "366",
+                            "Img": "enet/2090.png",
+                            "Abr": "SAR"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 807161862,
+                    "EOX": 807161862,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031430",
+                    "Pids": {
+                        "12": "SBTE_29855425",
+                        "8": "1031430"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Isparta 32 Spor",
+                            "ID": "84681",
+                            "Img": "enet/1181205.png",
+                            "Abr": "ISP"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Kastamonuspor 1966",
+                            "ID": "465",
+                            "Img": "enet/162995.png",
+                            "Abr": "KAS"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806899718,
+                    "EOX": 806899718,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1031441",
+                    "Pids": {
+                        "12": "SBTE_29855428",
+                        "8": "1031441"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Usakspor",
+                            "ID": "3563",
+                            "Img": "enet/4111.png",
+                            "Abr": "USA"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Denizlispor",
+                            "ID": "4539",
+                            "Img": "enet/4455.png",
+                            "Abr": "DEN"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "ErnInf": "18",
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806899718,
+                    "EOX": 806899718,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        },
+        {
+            "Sid": "15284",
+            "Snm": "3rd Lig: Group 1",
+            "Scd": "3rd-lig-group-1",
+            "Cnm": "Turkiye",
+            "Csnm": "Turkiye",
+            "Ccd": "turkey",
+            "Scu": 0,
+            "Events": [
+                {
+                    "Eid": "1128351",
+                    "Pids": {
+                        "8": "1128351"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Antalya Kepezspor",
+                            "ID": "276223",
+                            "NewsTag": "",
+                            "Abr": "ANT"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Gumushanespor",
+                            "ID": "3711",
+                            "Img": "enet/162998.png",
+                            "Abr": "GUM"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806907910,
+                    "EOX": 806907910,
+                    "Spid": 1,
+                    "Pid": 8
+                },
+                {
+                    "Eid": "1118258",
+                    "Pids": {
+                        "8": "1118258"
+                    },
+                    "T1": [
+                        {
+                            "Nm": "Talasgucu Belediyespor",
+                            "ID": "267893",
+                            "Img": "enet/1559140.png",
+                            "NewsTag": "",
+                            "Abr": "TAL"
+                        }
+                    ],
+                    "T2": [
+                        {
+                            "Nm": "Arguvan Belediyespor",
+                            "ID": "225853",
+                            "Img": "enet/1383484.png",
+                            "Abr": "ARG"
+                        }
+                    ],
+                    "Eps": "NS",
+                    "Esid": 1,
+                    "Epr": 0,
+                    "Ecov": 2,
+                    "Ewt": 0,
+                    "Et": 1,
+                    "Esd": 20231219170500,
+                    "EO": 806907910,
+                    "EOX": 806907910,
+                    "Spid": 1,
+                    "Pid": 8
+                }
+            ]
+        }
+    ]
+}
