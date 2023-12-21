@@ -396,13 +396,8 @@
             </a>
           </li>
           @endcan
-<<<<<<< HEAD
-          @can('admin_access')
-           <li class="nav-item ">
-=======
           @can('user_access')
           <li class="nav-item ">
->>>>>>> 5cee46494ce96150e148cc43a5169ae7646b9895
             <a class="nav-link text-white " href="{{ route('admin.CloseTwoD') }}">
               <span class="sidenav-mini-icon"> C </span>
               <span class="sidenav-normal  ms-2  ps-1"> CloseTwoD </span>
@@ -433,27 +428,11 @@
     {{-- end lottery --}}
 
     {{-- 2d over amount limit --}}
-<<<<<<< HEAD
-@can('admin_access')
-<li class="nav-item">
-   <a data-bs-toggle="collapse" href="#ecommerceExamplesOver" class="nav-link text-white " aria-controls="ecommerceExamplesOver"
-    role="button" aria-expanded="false">
-    <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
-    <span class="nav-link-text ms-2 ps-1">2D OverLimit</span>
-   </a>
-   <div class="collapse " id="ecommerceExamplesOver">
-    <ul class="nav ">
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
-       <span class="sidenav-mini-icon"> P </span>
-       <span class="sidenav-normal  ms-2  ps-1"> 2D Over AmountLimit <b class="caret"></b></span>
-=======
 
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#ecommerceExamplesOver" class="nav-link text-white " aria-controls="ecommerceExamplesOver" role="button" aria-expanded="false">
         <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
         <span class="nav-link-text ms-2 ps-1">2D OverLimit</span>
->>>>>>> 5cee46494ce96150e148cc43a5169ae7646b9895
       </a>
       <div class="collapse " id="ecommerceExamplesOver">
         <ul class="nav ">
@@ -521,55 +500,6 @@
           </li>
         </ul>
       </div>
-<<<<<<< HEAD
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#ordersExample">
-       <span class="sidenav-mini-icon"> O </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Orders <b class="caret"></b></span>
-      </a>
-      <div class="collapse " id="ordersExample">
-       <ul class="nav nav-sm flex-column">
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/list.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order List </span>
-         </a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link text-white " href="../../pages/ecommerce/orders/details.html">
-          <span class="sidenav-mini-icon"> O </span>
-          <span class="sidenav-normal  ms-2  ps-1"> Order Details </span>
-         </a>
-        </li>
-       </ul>
-      </div>
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
-       <span class="sidenav-mini-icon"> R </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </li>
-@endcan
-    {{-- 2d over amount limit --}}
-@can('admin_access')
-  <li class="nav-item">
-   <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples"
-    role="button" aria-expanded="false">
-    <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
-    <span class="nav-link-text ms-2 ps-1">3D</span>
-   </a>
-   <div class="collapse " id="ecommerceExamples">
-    <ul class="nav ">
-     <li class="nav-item ">
-      <a class="nav-link text-white " data-bs-toggle="collapse" aria-expanded="false" href="#productsExample">
-       <span class="sidenav-mini-icon"> P </span>
-       <span class="sidenav-normal  ms-2  ps-1"> ThreeDManagement <b class="caret"></b></span>
-=======
     </li>
     {{-- 2d over amount limit --}}
 
@@ -577,7 +507,6 @@
       <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link text-white " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
         <i class="material-icons-round {% if page.brand == 'RTL' %}ms-2{% else %} me-2{% endif %}">shopping_basket</i>
         <span class="nav-link-text ms-2 ps-1">3D</span>
->>>>>>> 5cee46494ce96150e148cc43a5169ae7646b9895
       </a>
       <div class="collapse " id="ecommerceExamples">
         <ul class="nav ">
@@ -722,21 +651,7 @@
           </li>
         </ul>
       </div>
-<<<<<<< HEAD
-     </li>
-     <li class="nav-item ">
-      <a class="nav-link text-white " href="../../pages/ecommerce/referral.html">
-       <span class="sidenav-mini-icon"> R </span>
-       <span class="sidenav-normal  ms-2  ps-1"> Referral </span>
-      </a>
-     </li>
-    </ul>
-   </div>
-  </li>
-@endcan
-=======
     </li>
->>>>>>> 5cee46494ce96150e148cc43a5169ae7646b9895
 
     <li class="nav-item">
       <a data-bs-toggle="collapse" href="#authExamples" class="nav-link text-white " aria-controls="authExamples" role="button" aria-expanded="false">

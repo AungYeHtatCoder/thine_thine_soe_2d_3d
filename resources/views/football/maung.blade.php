@@ -40,7 +40,7 @@
 @section('content')
 <!-- content section -->
 <div class="row">
-  <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 160vh; ">
+  <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="min-height: 100vh; ">
     <h5 class="text-center mt-4">မောင်း</h5>
    
     <?php
