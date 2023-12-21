@@ -2,8 +2,8 @@
 @section('content')
 <div class="row">
  <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers" style="height: 120vh;">
-  <h5 class="text-center text-white mt-4">နည်းနည်းလောင်း များများနိုင်</h5>
-  <marquee behavior="" class="mt-3 text-white" direction="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, numquam.</marquee>
+  <marquee behavior="" class="mt-3 text-white" direction="left">  <h5 class="text-center text-white mt-4">နည်းနည်းလောင်း များများနိုင်</h5>
+    </marquee>
   <div class="card px-3 pb-3">
    Balance
    <h5 class="mt-1">246.76 Ks</h5>
@@ -19,7 +19,7 @@
    </a>
   </div>
   <div class="d-flex justify-content-around mt-2 align-items-center text-center">
-   <a href="#" class="card w-100 text-decoration-none me-1">
+   <a href="/f-history" class="card w-100 text-decoration-none me-1">
     <img src="{{ asset('user_app/assets/images/football/history.png') }}" class="mx-auto" width="40px" height="40px" alt="">
     <p>လောင်းထားသောပွဲစဉ်များ</p>
    </a>

@@ -26,7 +26,7 @@ use App\Http\Controllers\Admin\TwoDEveningWinnerController;
 use App\Http\Controllers\Admin\TwoDWinnerHistoryController;
 use App\Http\Controllers\User\FillBalance\FillBalanceController;
 use App\Http\Controllers\Admin\ThreeD\DailyThreeDIncomeOutComeController;
-
+use App\Http\Controllers\FootballController;
 // Route::get('/', function () {
 //     return view('two_d.api_test');
 // });
@@ -437,5 +437,20 @@ Route::get('/index', [App\Http\Controllers\User\WelcomeController::class, 'footb
 Route::get('/maung', [App\Http\Controllers\User\WelcomeController::class, 'footballMaung']);
 Route::get('/goal', [App\Http\Controllers\User\WelcomeController::class, 'footballGoal']);
 Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
-Route::get('/goal-result', [App\Http\Controllers\User\WelcomeController::class, 'goalResult']);
+
 Route::get('/money-change', [App\Http\Controllers\User\WelcomeController::class, 'moneyChange']);
+Route::get('/f-history', [FootballController::class, 'FHistory']);
+
+
+//football
+Route::get('/livescore-football',[FootballController::class, 'Livescore']);
+Route::get('/getodds',[FootballController::class, 'GetOdds']);
+Route::get('/pre-match',[FootballController::class, 'PreMatch']);
+Route::get('/mm-odds',[FootballController::class, 'MMOdds']);
+Route::get('/mix-parlay',[FootballController::class, 'MixParlay']);
+
+Route::post('/mp-history',[FootballController::class, 'FMixDetailedById'])->name('mp.detail');
+Route::post('/mm-history',[FootballController::class, 'FMMDetailedById'])->name('mm.detail');
+
+Route::post('/mm-odds-bet', [FootballController::class, 'mmOddBet'])->name('mmodds.bet');
+Route::post('/mix-parlay-bet', [FootballController::class, 'mixparlayBet'])->name('mixparlay.bet');
