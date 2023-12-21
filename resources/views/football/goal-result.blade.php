@@ -45,7 +45,7 @@
 
 @section('content')
 <div class="row">
- <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 160vh; ">
+ <div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="min-height: 100vh; ">
   <p class="text-center mt-4 fw-bold">ဂိုးရလဒ်များ</p>
   <div class="tab">
     <button class="tablinks active me-3 w-50 bet_styles" onclick="openTab(event, 'first_tab')">Yesterday</button>

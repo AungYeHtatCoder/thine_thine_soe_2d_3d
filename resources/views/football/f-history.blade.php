@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 @section('content')
 <div class="row mt-3" style="font-size:x-small;">
-<div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 160vh; ">
+<div class="col-lg-4 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="min-height: 100vh; ">
  <?php
 
 if ($mixHistory != null) {
