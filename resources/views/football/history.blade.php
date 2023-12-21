@@ -3,7 +3,7 @@
 
 <?php $flagHistory = 0; ?>
 <div class="row mb-5" style="font-size:x-small;">
-<div class="col-lg-4 mb-5 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="height: 100%; ">
+<div class="col-lg-4 mb-5 col-md-4 text-white offset-lg-4 offset-md-4 mt-4 pt-4 headers" style="min-height: 100vh; ">
 <div class="card child-div mt-5">
       <div id="div-filter" class="row pt-2 text-center">
         <div  class="col active">
