@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Admin\Transfer;
+namespace App\Models\Admin\Transter;
 
 use App\Models\User;
 use Illuminate\Database\Eloquent\Model;

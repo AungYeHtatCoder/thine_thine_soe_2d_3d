@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Admin\Transfer\TransferLog;
+use App\Models\Admin\Transter\TransferLog;
 
 class TransferLogController extends Controller
 {
