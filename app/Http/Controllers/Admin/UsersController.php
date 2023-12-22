@@ -7,10 +7,12 @@ use App\Models\Admin\Role;
 use Illuminate\Http\Request;
 use App\Models\Admin\Permission;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 //use Gate;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
+
 class UsersController extends Controller
 {
     /**
@@ -19,7 +21,7 @@ class UsersController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden |You cannot  Access this page because you do not have permission');
-         
+
         // users data with order by id desc
         $users = User::orderBy('id', 'desc')->with('roles')->get();
         return response()->view('admin.users.index', compact('users'));
@@ -31,7 +33,7 @@ class UsersController extends Controller
     public function create()
     {
         abort_if(Gate::denies('user_create'), Response::HTTP_FORBIDDEN, '403 Forbidden |You cannot  Access this page because you do not have permission');
-        
+
         $roles = Role::all()->pluck('title', 'id');
         return response()->view('admin.users.create', compact('roles'));
     }
@@ -72,7 +74,7 @@ class UsersController extends Controller
     public function show(string $id)
     {
         abort_if(Gate::denies('user_show'), Response::HTTP_FORBIDDEN, '403 Forbidden |You cannot  Access this page because you do not have permission');
-    
+
         $user_detail = User::with(['roles', 'roles.permissions'])->findOrFail($id);
     $roles = Role::all();
     $permissions = Permission::all();
@@ -85,7 +87,7 @@ class UsersController extends Controller
     public function edit(string $id)
     {
         abort_if(Gate::denies('user_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden |You cannot  Access this page because you do not have permission');
-         
+
         $user_edit = User::find($id);
         $roles = Role::all()->pluck('title', 'id');
         return response()->view('admin.users.edit', compact('user_edit', 'roles'));
@@ -108,7 +110,7 @@ class UsersController extends Controller
     public function destroy(string $id)
     {
         abort_if(Gate::denies('user_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden |You cannot  Access this page because you do not have permission');
-        
+
         $user = User::find($id);
         $user->delete();
         return redirect()->route('admin.users.index')->with('success', 'User deleted successfully');
@@ -119,6 +121,15 @@ class UsersController extends Controller
     {
         User::whereIn('id', request('ids'))->delete();
         return response(null, 204);
+    }
+    public function banUser($id)
+    {
+        $user = User::find($id);
+        $user->update(['status' => $user->status == 1 ? 0 : 1]);
+        if(Auth::check() && Auth::id() == $id){
+            Auth::logout();
+        }
+        return redirect()->back()->with('success', 'User ' . ($user->status == 1 ? 'activated' : 'banned') . ' successfully');
     }
 
 }

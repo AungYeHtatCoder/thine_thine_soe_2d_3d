@@ -54,6 +54,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::resource('roles', RolesController::class);
   // Users
   Route::delete('users/destroy', [UsersController::class, 'massDestroy'])->name('users.massDestroy');
+  Route::put('users/{id}/ban', [UsersController::class, 'banUser'])->name('users.ban');
   // master list route
   Route::get('/real-live-master-list', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'index'])->name('real-live-master-list');
   // master create route
@@ -68,6 +69,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/real-live-master-show/{id}', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'show'])->name('real-live-master-show');
   // master delete route
   Route::delete('/real-live-master-delete/{id}', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'destroy'])->name('real-live-master-delete');
+  // real master transfer route
+  Route::get('/real-master-transfer/{id}', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'transfer'])->name('real-master-transfer');
+  // store real master transfer route
+  Route::post('/real-master-transfer-store', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'MastertransferStore'])->name('real-master-transfer-store');
+  // real master cash out route
+  Route::get('/real-master-cash-out/{id}', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'transferCashOut'])->name('real-master-cash-out');
+  // store real master cash out route
+  Route::put('/real-master-cash-out-update/{id}', [App\Http\Controllers\Admin\Master\AdminCreateMasterController::class, 'MasterCashOutUpdate'])->name('real-master-cash-out-update');
   // agent list route
   Route::get('/agent-list', [App\Http\Controllers\Admin\Master\MasterController::class, 'index'])->name('agent-list');
   // agent create route
@@ -82,6 +91,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/agent-show/{id}', [App\Http\Controllers\Admin\Master\MasterController::class, 'show'])->name('agent-show');
   // agent delete route
   Route::delete('/agent-delete/{id}', [App\Http\Controllers\Admin\Master\MasterController::class, 'destroy'])->name('agent-delete');
+  // agent transfer route
+  Route::get('/agent-transfer/{id}', [App\Http\Controllers\Admin\Master\MasterController::class, 'transfer'])->name('agent-transfer');
+  // store agent transfer route
+  Route::post('/agent-transfer-store', [App\Http\Controllers\Admin\Master\MasterController::class, 'AgenttransferStore'])->name('agent-transfer-store');
+  // agent cash out route
+  Route::get('/agent-cash-out/{id}', [App\Http\Controllers\Admin\Master\MasterController::class, 'transferCashOut'])->name('agent-cash-out');
+  // store agent cash out route
+  Route::put('/agent-cash-out-store/{id}', [App\Http\Controllers\Admin\Master\MasterController::class, 'AgentCashOutStore'])->name('agent-cash-out-store');
     Route::resource('/promotions', PromotionController::class);
   // agent user list route
   Route::get('/agent-user-list', [App\Http\Controllers\Admin\Agent\AgentController::class, 'index'])->name('agent-user-list');
@@ -97,6 +114,33 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/agent-user-show/{id}', [App\Http\Controllers\Admin\Agent\AgentController::class, 'show'])->name('agent-user-show');
   // agent user delete route
   Route::delete('/agent-user-delete/{id}', [App\Http\Controllers\Admin\Agent\AgentController::class, 'destroy'])->name('agent-user-delete');
+  // agent user transfer route
+  Route::get('/agent-user-transfer/{id}', [App\Http\Controllers\Admin\Agent\AgentController::class, 'transfer'])->name('agent-user-transfer');
+  // store agent user transfer route
+  Route::post('/agent-user-transfer-store', [App\Http\Controllers\Admin\Agent\AgentController::class, 'AgentUsertransferStore'])->name('agent-user-transfer-store');
+  // agent user cash out route
+  Route::get('/agent-user-cash-out/{id}', [App\Http\Controllers\Admin\Agent\AgentController::class, 'transferCashOut'])->name('agent-user-cash-out');
+  // store agent user cash out route
+  Route::put('/agent-user-cash-out-store/{id}', [App\Http\Controllers\Admin\Agent\AgentController::class, 'AgentUserCashOutStore'])->name('agent-user-cash-out-store');
+  // get all transfer log route
+  Route::get('/get-all-admin-to-master-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AdminToMasterTransferLog'])->name('get-all-admin-master-transfer-log');
+  // admin daily status transfer log route
+  Route::get('/get-all-admin-to-master-daily-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AdminToMasterDailyStatusTransferLog'])->name('get-all-admin-master-daily-status-transfer-log');
+  // admin monthly status transfer log route
+  Route::get('/get-all-admin-to-master-monthly-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AdminToMasterMonthlyStatusTransferLog'])->name('get-all-admin-master-monthly-status-transfer-log');
+  // get all total daily master to agent transfer log route
+  Route::get('/get-all-master-to-agent-daily-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'MasterToAgentDailyStatusTransferLog'])->name('get-all-master-agent-daily-status-transfer-log');
+  // get all total monthly master to agent transfer log route
+  Route::get('/get-all-master-to-agent-monthly-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'MasterToAgentMonthlyStatusTransferLog'])->name('get-all-master-agent-monthly-status-transfer-log');
+  // get all total daily agent to user transfer log route
+  Route::get('/get-all-agent-to-user-daily-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AgentToUserDailyStatusTransferLog'])->name('get-all-agent-user-daily-status-transfer-log');
+  // get all total monthly agent to user transfer log route
+  Route::get('/get-all-agent-to-user-monthly-status-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AgentToUserMonthlyStatusTransferLog'])->name('get-all-agent-user-monthly-status-transfer-log');
+  // get all master to agent transfer log route
+  Route::get('/get-all-master-to-agent-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'MasterToAgentTransferLog'])->name('get-all-master-agent-transfer-log');
+  // get all agent to user transfer log route
+  Route::get('/get-all-agent-to-user-transfer-log', [App\Http\Controllers\Admin\Transfer\TransferLogController::class, 'AgentToUserTransferLog'])->name('get-all-agent-user-transfer-log');
+    Route::resource('/promotions', PromotionController::class);
   // agent user play early morning 9:30 am route
   Route::get('/agent-user-play-early-morning', [App\Http\Controllers\Admin\Agent\GetEarlyMorning2DPlayUserByAgentController::class, 'playEarlyMorning'])->name('agent-user-play-early-morning');
   // agent user play morning 12:00 pm route
@@ -111,7 +155,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/agent-three-d-list', [App\Http\Controllers\Admin\Agent\AgentThreeDListController::class, 'index'])->name('agent-three-d-list');
   // agent 3d list show route
   Route::get('/agent-three-d-list-show/{id}', [App\Http\Controllers\Admin\Agent\AgentThreeDListController::class, 'show'])->name('agent-three-d-list-show');
-  
+
   Route::resource('users', UsersController::class);
   Route::get('/two-d-users', [App\Http\Controllers\Admin\TwoUsersController::class, 'index'])->name('two-d-users-index');
   // details route
@@ -200,7 +244,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/yearly-income-json', [App\Http\Controllers\Admin\DailyTwodIncomeOutComeController::class, 'getTotalAmountsYearly'])->name('getTotalAmountsYearly');
 
   // 3d lottery routes
-  // 3d daily income 
+  // 3d daily income
   Route::get('/threed-lotteries-daily-income', [DailyThreeDIncomeOutComeController::class, 'getTotalAmountsDaily']);
   // 3d daily income weekly
   Route::get('/threed-lotteries-daily-income-money', [DailyThreeDIncomeOutComeController::class, 'getTotalAmounts']);
@@ -221,7 +265,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::get('/three-d-list-index', [App\Http\Controllers\Admin\ThreeD\ThreeDListController::class, 'index'])->name('three-d-list-index');
   // three d list show
   Route::get('/three-d-list-show/{id}', [App\Http\Controllers\Admin\ThreeD\ThreeDListController::class, 'show'])->name('three-d-list-show');
-  // 3d winner list 
+  // 3d winner list
   Route::get('/three-d-winner', [App\Http\Controllers\Admin\ThreeD\ThreeDWinnerController::class, 'index'])->name('three-d-winner');
 
   // Permissions
@@ -271,7 +315,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
   Route::post('/two-d-session-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'SessionReset'])->name('SessionReset');
 
   Route::post('/two-d-session-over-amount-limit-reset', [App\Http\Controllers\Admin\SessionResetControlller::class, 'OverAmountLimitSessionReset'])->name('OverAmountLimitSessionReset');
-  // three d reset 
+  // three d reset
   Route::post('/three-d-reset', [App\Http\Controllers\Admin\ThreeD\ThreeDResetController::class, 'ThreeDReset'])->name('ThreeDReset');
 
   Route::get('/close-two-d', [App\Http\Controllers\Admin\CloseTwodController::class, 'index'])->name('CloseTwoD');
@@ -351,7 +395,7 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
   Route::get('/two-d-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'play_confirm'])->name('twod-play-confirm-quick');
   // store
   Route::post('/twod-play-quick-confirm', [App\Http\Controllers\User\TwodQuick\TwoDQicklyPlayController::class, 'store'])->name('twod-play-quickly-confirm.store');
-  // money transfer 
+  // money transfer
   Route::get('/wallet-deposite', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'index'])->name('deposite-wallet');
   Route::get('/fill-balance', [App\Http\Controllers\User\FillBalance\FillBalanceController::class, 'topUpWallet'])->name('topUpWallet');
 
@@ -385,13 +429,13 @@ Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Cont
 
   // money transfer end
 
-  // two d winner history 
+  // two d winner history
   Route::get('/two-d-winners-history', [App\Http\Controllers\User\WinHistory\TwoDWinnerHistoryController::class, 'winnerHistory'])->name('winnerHistory');
 
   // twod-dream-book
   Route::get('/two-d-dream-book', [App\Http\Controllers\User\Dream\TwodDreamBookController::class, 'index'])->name('two-d-dream-book-index');
 
-  // three d 
+  // three d
   Route::get('/three-d-play-index', [ThreeDPlayController::class, 'index'])->name('three-d-play-index');
   // three d choice play
   Route::get('/three-d-choice-play-index', [ThreeDPlayController::class, 'choiceplay'])->name('three-d-choice-play');
@@ -418,7 +462,7 @@ Route::get('/inviteCode', [App\Http\Controllers\User\WelcomeController::class, '
 Route::get('/changePassword', [App\Http\Controllers\User\WelcomeController::class, 'changePassword']);
 // promotion route
 Route::get('/promotion', [App\Http\Controllers\User\WelcomeController::class, 'promotion']);
-// promotion detail 
+// promotion detail
 Route::get('/promotion-detail', [App\Http\Controllers\User\WelcomeController::class, 'promotionDetail'])->name('promotionDetail');
 // Route::get('/promotion-detail/{id}', [App\Http\Controllers\User\WelcomeController::class, 'promotionDetail'])->name('promotionDetail');
 
@@ -432,7 +476,7 @@ Route::get('/3dHistory', [App\Http\Controllers\User\WelcomeController::class, 't
 
 //Route::get('/3dWinnerHistory', [App\Http\Controllers\User\WelcomeController::class, 'threedWinner']);
 
-//football 
+//football
 Route::get('/index', [App\Http\Controllers\User\WelcomeController::class, 'footballIndex']);
 Route::get('/maung', [App\Http\Controllers\User\WelcomeController::class, 'footballMaung']);
 Route::get('/goal', [App\Http\Controllers\User\WelcomeController::class, 'footballGoal']);
