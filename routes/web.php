@@ -44,7 +44,7 @@ Route::post('/register', [App\Http\Controllers\User\WelcomeController::class, 'r
 Route::get('/register', [App\Http\Controllers\User\WelcomeController::class, 'userRegister'])->name('register');
 //auth routes
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Controllers\Admin', 'middleware' => ['auth', 'checkBanned']], function () {
 
   // Permissions
   Route::delete('permissions/destroy', [PermissionController::class, 'massDestroy'])->name('permissions.massDestroy');
@@ -351,7 +351,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'App\Http\Co
 
 
 
-Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Controllers\User', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'user', 'as' => 'user.', 'namespace' => 'App\Http\Controllers\User', 'middleware' => ['auth', 'checkBanned']], function () {
 
   //profile management
   Route::put('editProfile/{profile}', [ProfileController::class, 'update'])->name('editProfile');

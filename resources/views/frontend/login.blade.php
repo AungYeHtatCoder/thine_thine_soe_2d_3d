@@ -1,24 +1,33 @@
 @extends('frontend.layouts.app')
 @section('content')
-<div class="row">
+<div class="row"  style="min-height:100vh;">
     <div
-      class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers"
-      style="height:100vh;"
-    >
+      class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 mt-4 py-4 headers">
+    
     {{-- <img src="{{ asset('user_app/assets/images/login.jpg') }}" class="w-100 mt-4" alt="" /> --}}
-    <form class="mt-5" action="{{ route('login') }}" method="POST">
+    <form action="{{ route('login') }}" method="POST" style="margin-top: 30%;">
         @csrf
+        <div class="text-center">
+          <a href="{{ url('/') }}" class="text-decoration-none">
+            <img src="{{ asset('user_app/assets/images/Logo Black PNG.png') }}" class="rounded-circle" width="100px" alt="" />
+            <span class="d-block my-4 fw-bold" style="color:#f5bd02;">အကောင့်ဝင်ပါ</span>
+          </a>
+        </div>
+        
       <div class="mb-4">
         <div class="input-group px-3">
+          <span class="input-group-text bg-white border border-0">
+            <i class="fas fa-phone-volume text-purple"></i>
+          </span>
           <input
             type="text"
-            name="login"
+            name="phone"
             class="form-control w-75 py-2 mx-auto"
-            placeholder="ဖုန်းနံပါတ် (သို့) အီးမေးလ်"
+            placeholder="ဖုန်းနံပါတ်"
           />
         </div>
-        @error('login')
-            <span class="d-block ps-3" style="color:rgb(255, 255, 255); text-shadow: 1px 2px 3px #ff0000;">{{ "*The email or phone field is required." }}</span>
+        @error('phone')
+            <span class="d-block ps-3" style="color:rgb(255, 255, 255); text-shadow: 1px 2px 3px #ff0000;">{{ "*The phone field is required." }}</span>
         @enderror
       </div>
       <div class="mb-4 px-3">
@@ -34,13 +43,13 @@
           @enderror
       </div>
 
-      <div class="d-flex justify-content-end align-items-center me-3">
+      {{-- <div class="d-flex justify-content-end align-items-center me-3">
         <small
           ><a href="#" style="text-decoration: none; color: #f5bd02;" class=""
             >လျှို့ဝှက်နံပါတ် မေ့နေပါသလား။</a
           ></small
         >
-      </div>
+      </div> --}}
 
       <div class="d-flex justify-content-center align-items-center px-3">
         <button
@@ -54,7 +63,7 @@
 
       <hr />
 
-      <div class="d-flex justify-content-center align-items-center px-3">
+      {{-- <div class="d-flex justify-content-center align-items-center px-3">
         <a
           href="{{ url('/register') }}"
           type="button"
@@ -64,7 +73,7 @@
           3px 5px 10px 0 rgba(0, 0, 0, 0.19);"
           >အကောင့် အသစ်ဖွင့်မည်</a
         >
-      </div>
+      </div> --}}
     </form>
     </div>
 </div>

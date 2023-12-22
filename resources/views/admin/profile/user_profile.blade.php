@@ -16,13 +16,18 @@
     </style>
 @endsection
 @section('content')
-    <div class="container-fluid my-3 py-3">
-        <div class="row mb-5">
+    <div class="container-fluid">
+        <div class="row">
             <div class="col-lg-3 position-sticky col-md-6">
-                <div class="card  top-1 mb-3">
+                <div class="card top-1 mb-3">
                     <div class="card-header mx-4 p-3 text-center">
                         <div class="avatar avatar-xl position-relative">
-                            <img src="{{ Auth::user()->profile }}" alt="bruce" class="w-100 rounded-circle shadow-sm">
+                            @if (Auth::user()->profile == NULL)
+                                    <i class="fas fa-user-circle text-dark" style="font-size: 50px;"></i>
+                                @else
+                                <img src="{{ Auth::user()->profile }}" alt="bruce"
+                                    class="w-100 rounded-circle shadow-sm">
+                                @endif
                         </div>
                     </div>
                     <form action="{{ route('admin.profiles.update', Auth::user()->id) }}" method="POST"
@@ -44,7 +49,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="card top-1">
+                <div class="card top-1 mb-3">
                     <div class="card-header mx-4 p-3 text-center">
                         <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
                             <i class="material-icons opacity-10">account_balance_wallet</i>
@@ -109,14 +114,18 @@
                 </div>
 
             </div>
-            <div class="col-lg-9 mt-lg-0 mt-4">
+            <div class="col-lg-9 mt-lg-0">
                 <!-- Card Profile -->
                 <div class="card card-body" id="profile">
                     <div class="row justify-content-center align-items-center">
                         <div class="col-sm-auto col-4">
                             <div class="avatar avatar-xl position-relative">
+                                @if (Auth::user()->profile == NULL)
+                                <i class="fas fa-user-circle text-dark" style="font-size: 50px;"></i>
+                                @else
                                 <img src="{{ Auth::user()->profile }}" alt="bruce"
                                     class="w-100 rounded-circle shadow-sm">
+                                @endif
                             </div>
                         </div>
                         <div class="col-sm-auto col-8 my-auto">
@@ -129,19 +138,13 @@
                                 </p>
                             </div>
                         </div>
-                        {{-- <div class="col-sm-auto ms-sm-auto mt-sm-0 mt-3 d-flex">
-      <a class="btn btn-icon btn-3 btn-primary" href="{{ url('/admin/profile/fill_money') }}">
-
-       <span class="btn-inner--icon"><i class="material-icons">play_arrow</i></span>
-       <span class="btn-inner--text">Fill Money</span>
-      </a>
-     </div>  --}}
+                        
                     </div>
                 </div>
                 <!-- Card Basic Info -->
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="card mt-4" id="basic-info">
+                        <div class="card mt-4 p-3" id="basic-info">
                             <div class="card-header">
                                 <h5>Basic Info</h5>
                             </div>
@@ -188,7 +191,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="card mt-4" id="password">
+                        <div class="card mt-4 p-3" id="password">
                             <div class="card-header">
                                 <h5>Change Password</h5>
                             </div>
