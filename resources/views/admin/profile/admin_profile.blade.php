@@ -16,13 +16,17 @@
     </style>
 @endsection
 @section('content')
-    <div class="container-fluid my-3 py-3">
+    <div class="container-fluid mb-3 pb-3">
         <div class="row mb-5">
             <div class="col-lg-3 position-sticky col-md-6">
                 <div class="card  top-1 mb-3">
                     <div class="card-header mx-4 p-3 text-center">
                         <div class="avatar avatar-xl position-relative">
+                            @if (Auth::user()->profile == NULL)
+                                <i class="fas fa-user-circle text-dark" style="font-size: 50px;"></i>
+                            @else
                             <img src="{{ Auth::user()->profile }}" alt="bruce" class="w-100 rounded-circle shadow-sm">
+                            @endif
                         </div>
                     </div>
                     <form action="{{ route('admin.profiles.update', Auth::user()->id) }}" method="POST"
@@ -102,12 +106,8 @@
                                 </div>
                             </div>
                         </form>
-
-
                     </div>
-
                 </div>
-
             </div>
             <div class="col-lg-9 mt-lg-0 mt-4">
                 <!-- Card Profile -->
@@ -115,8 +115,12 @@
                     <div class="row justify-content-center align-items-center">
                         <div class="col-sm-auto col-4">
                             <div class="avatar avatar-xl position-relative">
+                                @if (Auth::user()->profile == NULL)
+                                    <i class="fas fa-user-circle text-dark" style="font-size: 50px;"></i>
+                                @else
                                 <img src="{{ Auth::user()->profile }}" alt="bruce"
                                     class="w-100 rounded-circle shadow-sm">
+                                @endif
                             </div>
                         </div>
                         <div class="col-sm-auto col-8 my-auto">
@@ -141,7 +145,7 @@
                 <!-- Card Basic Info -->
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="card mt-4" id="basic-info">
+                        <div class="card mt-4 p-3" id="basic-info">
                             <div class="card-header">
                                 <h5>Basic Info</h5>
                             </div>
@@ -188,7 +192,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="card mt-4" id="password">
+                        <div class="card mt-4 p-4" id="password">
                             <div class="card-header">
                                 <h5>Change Password</h5>
                             </div>
@@ -450,7 +454,7 @@
                 </div> --}}
 
                 <!-- Card Delete Account -->
-                <div class="card mt-4" id="delete">
+                {{-- <div class="card mt-4" id="delete">
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-sm-0 mb-4">
                             <div class="w-50">
@@ -466,7 +470,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
