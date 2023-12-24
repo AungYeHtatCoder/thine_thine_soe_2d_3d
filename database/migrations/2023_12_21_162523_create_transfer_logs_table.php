@@ -8,6 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * transfer_logs
      */
     public function up(): void
     {
@@ -19,8 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('to_user_id');
             $table->decimal('cash_in', 10, 2)->nullable();
             $table->decimal('cash_out', 10, 2)->nullable();
-            $table->decimal('cash_balance', 10, 2)->default(1);
+            $table->decimal('cash_balance', 10, 2)->default(0);
             $table->string('note')->nullable();
+            $table->unsignedBigInteger('pid')->nullable();
             $table->timestamps();
             // Add foreign key constraints if needed
             $table->foreign('from_user_id')->references('id')->on('users')->onDelete('cascade');

@@ -17,7 +17,8 @@ class Lotto extends Model
         'total_amount',
         'user_id',
         //'session',
-        'lottery_match_id'
+        'lottery_match_id',
+        'pid'
     ];
     protected $dates = ['created_at', 'updated_at'];
 
@@ -41,7 +42,7 @@ class Lotto extends Model
     }
 
     public function DisplayThreeDigits()
-    { 
+    {
         return $this->belongsToMany(ThreeDigit::class, 'lotto_three_digit_copy', 'lotto_id', 'three_digit_id')->withPivot('sub_amount', 'prize_sent', 'created_at');
     }
 }

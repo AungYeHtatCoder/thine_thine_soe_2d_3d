@@ -18,6 +18,7 @@ class TransferLog extends Model
         'cash_out',
         'cash_balance',
         'note',
+        'pid'
     ];
     protected $dates = ['created_at', 'updated_at'];
 

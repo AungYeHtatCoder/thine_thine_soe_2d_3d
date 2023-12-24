@@ -49,12 +49,12 @@ class TwoDplay9AMController extends Controller
     $lottery_matches = LotteryMatch::where('id', 1)->whereNotNull('is_active')->first();
 
     return view('two_d.9_am.play_confirm', compact('twoDigits', 'remainingAmounts', 'lottery_matches'));
-    } 
+    }
 
 
     public function store(Request $request)
 {
-    
+
     Log::info($request->all());
     $validatedData = $request->validate([
         'selected_digits' => 'required|string',
@@ -84,7 +84,8 @@ class TwoDplay9AMController extends Controller
             'pay_amount' => $request->totalAmount,
             'total_amount' => $request->totalAmount,
             'user_id' => $request->user_id,
-            'session' => $currentSession
+            'session' => $currentSession,
+            'pid' => $user->id,
         ]);
 
         foreach ($request->amounts as $two_digit_string => $sub_amount) {

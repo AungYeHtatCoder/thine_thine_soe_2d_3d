@@ -64,10 +64,10 @@
   <div class="container mt-2">
    <div class="d-flex justify-content-between">
     <h6>Master Information -- <span>
-    Master ID : {{ $transfer_user->id }} 
+    Master ID : {{ $transfer_user->id }}
     </span>
    <span>
-    Master Balance : 
+    Master Balance :
    </span>
    </h6>
     <a class="btn btn-icon btn-2 btn-primary" href="{{ url('/admin/real-live-master-list') }}">
@@ -98,7 +98,7 @@
          @endforeach
         </td>
        </tr>
-      
+
        <tr>
         <th>Create Date</th>
         <td>{!! $transfer_user->created_at !!}</td>
@@ -113,8 +113,8 @@
    </div>
   </div>
  </div>
- 
- 
+
+
 </div>
 <div class="row mt-4">
  <div class="col-lg-12">
@@ -123,10 +123,30 @@
     <div class="card-header pb-0">
      <div class="d-lg-flex">
       <div>
-       <h5 class="mb-0">Master - {{ $logs->name ?? "" }} ထံမှ ငွေထုတ်ယူမည် || 
-        <span>Current Balance - {{ $logs->cash_balance }} MMK ||
-          <span id="current_date"></span>
+         {{-- {{ $logs->name ?? "" }}  --}}
+
+       <h5 class="mb-0">Master -
+      {{-- Check if $logs is not null before accessing properties --}}
+@if($logs?->name !== null)
+    <p>
+        <span class="text-danger">Master {{ $logs->name }}</span>
+    </p>
+@else
+    {{-- Handle the case where $logs is null --}}
+    <p>
+        <span class="text-danger">Master name not available</span>
+    </p>
+@endif
+
+        <span>Current Balance -
+            @if ($logs->cash_balance !== null)
+                {{ $logs->cash_balance }}
+            @else
+                0
+            @endif
         </span>
+          <span id="current_date"></span>
+
        </h5>
 
       </div>
@@ -149,7 +169,7 @@
       <div class="input-group input-group-outline is-valid my-3">
         <label class="form-label">Master Real Name</label>
         <input type="text" class="form-control" name="name" value="{{ $transfer_user->name ?? "" }}" readonly>
-         
+
       </div>
       @error('name')
         <span class="d-block text-danger">*{{ $message }}</span>
@@ -159,7 +179,7 @@
       <div class="input-group input-group-outline is-valid my-3">
         <label class="form-label">Phone</label>
         <input type="text" class="form-control" name="phone" value="{{ $transfer_user->phone }}" readonly>
-         
+
       </div>
       @error('phone')
         <span class="d-block text-danger">*{{ $message }}</span>
@@ -174,7 +194,7 @@
     <input type="hidden" name="cash_balance" value="{{ $logs->cash_balance }}">
    </div>
   </div>
-   
+
   <div class="row">
     <div class="col-md-6">
       <div class="input-group input-group-outline is-valid my-3">
@@ -189,7 +209,7 @@
       <div class="input-group input-group-outline is-valid my-3">
         <label class="form-label">Addition Note (optional)</label>
         <input type="text" class="form-control" name="note">
-         
+
       </div>
       @error('note')
         <span class="d-block text-danger">*{{ $message }}</span>
@@ -216,7 +236,7 @@
      <h4>Admin To Master Transfer History</h4>
     </div>
     <div class="card-body">
-    
+
     <table class="table">
       <tr>
         <th>#</th>
@@ -228,7 +248,7 @@
         <th>CurrentCashBalance</th>
         <th>Date</th>
       </tr>
-     <tbody> 
+     <tbody>
        @foreach ($transfer_logs as $index => $log)
             <tr>
                 <td>{{ $index + 1 }}</td>
@@ -249,8 +269,8 @@
                   @endif
                 </td>
                 <td>
-                @php 
-                
+                @php
+
                 $profit = $log->cash_in - $log->cash_out;
                   @endphp
                   {{-- if profit value is -, show span red color. else profit value is +, show profit value with green color --}}
@@ -266,7 +286,7 @@
         @endforeach
      </tbody>
     </table>
-    
+
     </div>
    </div>
   </div>

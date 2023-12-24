@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('total_amount')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lottery_match_id')->default(1);
+             $table->unsignedBigInteger('pid')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('lottery_match_id')->references('id')->on('lottery_matches')->onDelete('cascade');
 
