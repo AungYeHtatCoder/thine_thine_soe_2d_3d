@@ -190,7 +190,7 @@ class FootballController extends Controller
         where A.p_id= "' . $user->id . '"');
             return view('football.f-history')->with(['mixHistory' => $mixHistory, 'mmHistory' => $mmHistory]);
         } else {
-            return view('auth.login');
+            return view('frontend.login');
         }
     }
     public function AllFHistory(){
