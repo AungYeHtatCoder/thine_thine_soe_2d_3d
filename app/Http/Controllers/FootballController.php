@@ -182,7 +182,7 @@ class FootballController extends Controller
         if ($user != null) {
 
             $mixHistory = DB::select('select voucher_id, count(*) as TotalBet,created_at,amount
-        from mixbet 
+        from mixbet
         where p_id = "' . $user->id . '"
         group by voucher_id,created_at,amount');
             $mmHistory = DB::select('SELECT A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.created_at FROM mmbet A
@@ -190,14 +190,14 @@ class FootballController extends Controller
         where A.p_id= "' . $user->id . '"');
             return view('football.f-history')->with(['mixHistory' => $mixHistory, 'mmHistory' => $mmHistory]);
         } else {
-            return View('login');
+            return view('auth.login');
         }
     }
     public function AllFHistory(){
         $user = Auth::user();
         if ($user != null) {
             $mixVoucher = DB::select('select voucher_id, count(*) as TotalBet,created_at,amount
-            from mixbet 
+            from mixbet
             where status = 1 and p_id = "' . $user->id . '"
             group by voucher_id,created_at,amount order by voucher_id desc');
             $mixHistory = DB::select('SELECT A.voucher_id,A.league_name,A.home,A.away, A.rate, B.money_line_h,B.money_line_a,A.bet,A.amount,A.result_h,A.result_a,A.created_at,A.status FROM mixbet A
@@ -245,10 +245,10 @@ class FootballController extends Controller
             return response()->json(array('resCode' => (int)'401', 'resDesc' => 'Please Login.'));
         }
     }
-  
+
     public function livescore()
     {
         return view('/livescore-football');
     }
-   
+
 }
